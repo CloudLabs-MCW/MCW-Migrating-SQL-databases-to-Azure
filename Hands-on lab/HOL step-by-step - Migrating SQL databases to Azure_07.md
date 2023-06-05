@@ -68,9 +68,9 @@ In this task, you will use JumpBox VM and then, using Visual Studio on the JumpB
 
 In this task, you update the WWI gamer info web application to connect to and utilize the SQL MI database.
 
-1. In the Azure portal `https://portal.azure.com`, select **Resource groups** from the Azure services list.
+1. Navigate to the [Azure portal](https://portal.azure.com). Using the search bar, search for **Resouce group (1)** and **select (2)** from the suggestions
 
-   ![Resource groups is highlighted in the Azure services list.](media/azure-services-resource-groups.png "Azure services")
+   ![Resource groups is highlighted in the Azure services list.](media/a1.7.png "Azure services")
 
 2. Select the <inject key="Resource Group Name" enableCopy="false"/> resource group from the list.
 
@@ -92,11 +92,11 @@ In this task, you update the WWI gamer info web application to connect to and ut
 
     
 `` 
-Server=tcp:your-sqlmi-host-fqdn-value,1433;Database=WideWorldImportersSUFFIX;User     ID=contosoadmin;Password=IAE5fAijit0w^rDM;Trusted_Connection=False;Encrypt=True;TrustServerCertificate=True;
+Server=tcp:your-sqlmi-host-fqdn-value,1433;Database=WideWorldImportersSUFFIX;User     ID=sqlmiuser;Password=Password.1234567890;Trusted_Connection=False;Encrypt=True;TrustServerCertificate=True;
 ``
    
 
-7. In the Add/Edit connection string dialog, replace `your-sqlmi-host-fqdn-value` with the fully qualified domain name for your SQL MI that you copied to a text editor earlier from the Azure Cloud Shell and replace suffix with value: <inject key="suffix" /> and also change the UserID with `contosoadmin` and Password with `IAE5fAijit0w^rDM`.
+7. In the Add/Edit connection string dialog, replace `your-sqlmi-host-fqdn-value` with the fully qualified domain name for your SQL MI that you copied to a text editor earlier from the Azure Cloud Shell and replace suffix with value: <inject key="suffix" /> and also change the UserID with `sqlmiuser` and Password with `Password.1234567890`.
 
    ![The your-sqlmi-host-fqdn-value string is highlighted in the connection string.](https://raw.githubusercontent.com/CloudLabs-MCW/MCW-Migrating-SQL-databases-to-Azure/fix/Hands-on%20lab/media/images/9.png "Edit Connection String")
 
