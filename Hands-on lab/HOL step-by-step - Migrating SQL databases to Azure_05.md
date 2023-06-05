@@ -12,9 +12,9 @@ In this exercise, you use the Microsoft Data Migration Assistant (DMA) to perfor
 In this task, you perform some configuration for the `WideWorldImporters` database on the SQL Server 2008 R2 instance to prepare it for migration.
 
 
-1. Navigate to the [Azure portal](https://portal.azure.com) and select **Resource groups** from the Azure services list.
+1. Navigate to the [Azure portal](https://portal.azure.com). Using the search bar, search for **Resouce group (1)** and **select (2)** from the suggestions
 
-   ![Resource groups is highlighted in the Azure services list.](media/azure-services-resource-groups.png "Azure services")
+   ![Resource groups is highlighted in the Azure services list.](media/a1.7.png "Azure services")
 
 1. Select the **<inject key="Resource Group Name" enableCopy="false"/>** resource group from the list.
 
