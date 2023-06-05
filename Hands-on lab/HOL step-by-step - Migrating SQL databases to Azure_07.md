@@ -68,9 +68,9 @@ In this task, you will use JumpBox VM and then, using Visual Studio on the JumpB
 
 In this task, you update the WWI gamer info web application to connect to and utilize the SQL MI database.
 
-1. In the Azure portal `https://portal.azure.com`, select **Resource groups** from the Azure services list.
+1. Navigate to the [Azure portal](https://portal.azure.com). Using the search bar, search for **Resouce group (1)** and **select (2)** from the suggestions
 
-   ![Resource groups is highlighted in the Azure services list.](media/azure-services-resource-groups.png "Azure services")
+   ![Resource groups is highlighted in the Azure services list.](media/a1.7.png "Azure services")
 
 2. Select the <inject key="Resource Group Name" enableCopy="false"/> resource group from the list.
 
