@@ -146,3 +146,9 @@ In this task, you use the Microsoft Data Migration Assistant (DMA) to assess the
 1. Once you have reviewed the migration possibilites for both Azure SQL Database and Azure SQL Managed Instance, cancel the migration process.
 
    ![](./media/cancel-migration.png)
+
+## Summary
+
+In this hands-on lab, you connected to your SQL 2019 VM and used the Azure Data Studio to perform assessments on the `WideWorldImporters` database. You reviewed assessments: one for SQL DB and a second for SQL MI.
+
+### You have successfully completed the lab.
