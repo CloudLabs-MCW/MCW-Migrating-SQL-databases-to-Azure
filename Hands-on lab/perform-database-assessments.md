@@ -15,7 +15,7 @@ In this lab, you will perform the following tasks:
 
 ## Task 1: Connect to the WideWorldImporters database on the SQL 2019 VM
 
-In this task, you perform some configuration for the `WideWorldImporters` database on the SQL Server 2008 R2 instance to prepare it for migration.
+In this task, you will create `WideWorldImporters` database on the SQL 2019 VM instance, assess it for Azure SQL Database and Azure SQL Managed Instance using Azure SQL Migration extension inside Azure Data Studio for migration.
 
 1. Navigate to the [Azure portal](https://portal.azure.com) and select **Resource groups** from the Azure services list.
 
