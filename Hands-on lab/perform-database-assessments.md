@@ -76,7 +76,7 @@ In this task, you will create `WideWorldImporters` database on the SQL 2019 VM i
    Invoke-Sqlcmd -Query "CREATE DATABASE WideWorldImporters;" -ServerInstance <YOUR SQL VM NAME>
    ```
 
-   > **Note**: Replace <YOUR SQL VM NAME> with your actual SQL 2019 VM name.
+   > **Note**: Replace "YOUR SQL VM NAME" with your actual SQL 2019 VM name **sql2019-<inject key="DeploymentID" enableCopy="false"/>**,
 
 1. Next, open **Azure Data Studio** by entering "Azure Data Studio" into the search bar in the Windows Start menu and selecting **Azure Data Studio** from the search results.
 
