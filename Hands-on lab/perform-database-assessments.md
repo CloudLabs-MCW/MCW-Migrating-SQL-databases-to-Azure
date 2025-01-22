@@ -70,6 +70,12 @@ In this task, you perform some configuration for the `WideWorldImporters` databa
 
    ![](media/Ex1-install-s6.png "Windows start menu search")
 
+1. Open Windows PowerShell and run the below command to create database named 'WideWorldImporters'.
+
+   ```
+   Invoke-Sqlcmd -Query "CREATE DATABASE WideWorldImporters;" -ServerInstance **sql2019-<inject key="DeploymentID" enableCopy="false"/>**
+   ```
+
 1. Next, open **Azure Data Studio** by entering "Azure Data Studio" into the search bar in the Windows Start menu and selecting **Azure Data Studio** from the search results.
 
    ![](./media/azure-data-studio-select.png)
