@@ -1,10 +1,8 @@
 # Lab 03: Perform database assessments
 
-### Estimated Duration: 45 minutes
+**Estimated Duration: 45 minutes**
 
 In this hands-on lab, you use the Azure Data Studio to perform assessments on the `WideWorldImporters` database. You create two assessments: one for SQL DB and a second for SQL MI. These assessments provide reports about any feature parity and compatibility issues between the on-premises database and the Azure managed SQL database service options.
-
-> Azure Data Studio helps you upgrade to a modern data platform by detecting compatibility issues that can impact database functionality in your new version of SQL Server or Azure SQL Database. Azure Data Studio recommends performance and reliability improvements for your target environment and allows you to move your schema, data, and uncontained objects from your source server to your target server.
 
 ## Lab Objectives
 
@@ -150,5 +148,12 @@ In this task, you use the Microsoft Data Migration Assistant (DMA) to assess the
 ## Summary
 
 In this hands-on lab, you connected to your SQL 2019 VM and used the Azure Data Studio to perform assessments on the `WideWorldImporters` database. You reviewed assessments: one for SQL DB and a second for SQL MI.
+
+## Review
+
+In this lab you have:
+
+- Connected to the WideWorldImporters database on the SQL 2019 VM
+- Performed assessments for migration
 
 ### You have successfully completed the lab.
