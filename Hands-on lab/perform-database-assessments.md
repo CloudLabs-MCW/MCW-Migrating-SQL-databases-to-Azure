@@ -10,8 +10,8 @@ In this hands-on lab, you use the Azure Data Studio to perform assessments on th
 
 In this lab, you will perform the following tasks:
 
-- Task 1: Task 1: Connect to the WideWorldImporters database on the SQL 2019 VM
-- Task 2: Task 2: Perform assessments for migration
+- Task 1: Connect to the WideWorldImporters database on the SQL 2019 VM
+- Task 2: Perform assessments for migration
 
 ## Task 1: Connect to the WideWorldImporters database on the SQL 2019 VM
 
