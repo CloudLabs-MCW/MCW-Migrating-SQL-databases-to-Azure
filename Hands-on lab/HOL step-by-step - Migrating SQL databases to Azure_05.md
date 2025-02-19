@@ -140,7 +140,7 @@ With one PaaS offering ruled out due to feature parity, perform a second DMA ass
 
 2. In **Step 1: Database for assessment**, select **widewordimplantation (1)**, click on **Next (2)**. 
 
-   ![The new project icon is highlighted in DMA.](media/E2T2S2-1902-S2-1.png "New DMA project")
+   ![The new project icon is highlighted in DMA.](media/E2T2S2-1902.png "New DMA project")
 
 3. In **Step 2: Assessment summary and SKU recommendation (1)**, you will view the summary and SKU recommendations for your SQL server. Click on **Next (2)**. 
 
