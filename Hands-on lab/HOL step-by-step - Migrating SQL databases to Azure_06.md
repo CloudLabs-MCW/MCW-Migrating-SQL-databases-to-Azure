@@ -124,7 +124,7 @@ To perform online data migrations, DMS looks for database and transaction log ba
     - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
     - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
     
-      <validation step="050bb3d9-aedd-4284-89b9-9fbf3a0ee6bb" />
+      <validation step="413d413d-17c5-4298-ada0-dc777f97d7ec" />
 
 ### Task 4: Retrieve SQL MI and SQL Server 2022 VM connection information
 
@@ -174,11 +174,11 @@ In this task, you use the Azure Cloud shell to retrieve the information necessar
 
 In this task, you create a new online data migration project in DMS for the `WideWorldImporters` database.
 
-1. In Azure Data Studio click on >  **SQLVM2022 (1)** **Azure SQL migration (2)** and select **+ New migration (3)**.
+1. In Azure Data Studio click on >  **SQLVM2022** **Azure SQL migration (1)** and select **+ New migration (2)**.
 
     ![](media/sql6.png)
 
-2. In **Step 1: Database for assessment** blade, select **widewordimporters**, click on **Next**. 
+2. In **Step 1: Database for assessment** blade, select **widewordimporters (1)**, click on **Next (2)**. 
 
      ![](media/new-image77-1.png)
 
@@ -186,7 +186,7 @@ In this task, you create a new online data migration project in DMS for the `Wid
 
    ![The new project settings for doing a SQL Server to Azure SQL Database migration assessment are entered into the dialog.](media/data-migration-02-1.png "New project settings")
 
-4. In **Step 3: Target Platform and Assessment Results**, Select **Azure SQL Managed Instance (1)** from the drop down. Ensure **WideWorldImporters (2)** is selected under the Database option and click on the **Next**.
+4. In **Step 3: Target Platform and Assessment Results**, Select **Azure SQL Managed Instance (1)** from the drop down. Ensure the **WideWorldImporters (2)** is selected under the Database option and click on the **Next**.
 
    ![](media/Ex2-Task5-S4.png)
 
@@ -259,7 +259,8 @@ In this task, you create a new online data migration project in DMS for the `Wid
       - **Target database name**: Enter **WideWorldImporters<inject key="Suffix"  enableCopy="false"/>** **(6)**.
       - **Network share path**: Enter **\\\SQLVM2022\dms-backups** **(7)**.
 
-         ![](media/E2T5S15-1.png)
+         ![](media/E3T5S15.1-1902.png)
+         ![](media/E3T5S15.2-1902.png)
 
 16. In the Run Validate page wait till all the validation steps are successful then click on **Done**.
 
@@ -341,9 +342,9 @@ Since you performed an "online data migration," the migration wizard continuousl
 
      ![](media/new-image36.png)
      
-1. Navigate back to the **Azure Data studio**, click on **Azure SQL Migration**, click on **Migrations** and select **WideWorldImporters** under source database. 
+1. Navigate back to the **Azure Data studio**, click on **SQLVM2022 (1)**, select **Azure SQL Migration (2)**, click on **Migrations (3)** and select **WideWorldImporters (4)** under source database. 
 
-      ![](media/data-migration-07-1-1.png)
+      ![](media/E3T6S12-1902.png)
 
 1. After verifying the transaction log status of **Restored**, select **Complete cutover**.
 
