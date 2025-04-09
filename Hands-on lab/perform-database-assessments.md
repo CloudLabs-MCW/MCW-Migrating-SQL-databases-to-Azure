@@ -1,6 +1,6 @@
 # Lab 03: Perform database assessments
 
-**Estimated Duration: 45 minutes**
+### Estimated Duration: 60 minutes
 
 In this hands-on lab, you use the Azure Data Studio to perform assessments on the `WideWorldImporters` database. You create two assessments: one for SQL DB and a second for SQL MI. These assessments provide reports about any feature parity and compatibility issues between the on-premises database and the Azure managed SQL database service options.
 
