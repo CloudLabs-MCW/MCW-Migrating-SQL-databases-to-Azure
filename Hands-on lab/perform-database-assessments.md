@@ -33,10 +33,10 @@ In this task, you will create `WideWorldImporters` database on the SQL 2019 VM i
 
    ![](./media/download-rdp-file.png)
 
-1. Open the downloaded RDP file, click on **More choices > Use a different account** and enter the following credentials when prompted, and then select **OK**:
+1. Open the downloaded RDP file, click on **More choices (1) > Use a different account (2)** and enter the following credentials when prompted, and then select **OK**:
 
-   - **Username**: `.\sqlmiuser`
-   - **Password**: `Password.1234567890`
+   - **Username**: `.\sqlmiuser` **(3)**
+   - **Password**: `Password.1234567890` **(4)**
 
    ![](./media/enter-creds.png) 
 
@@ -44,7 +44,7 @@ In this task, you will create `WideWorldImporters` database on the SQL 2019 VM i
 
    ![In the Remote Desktop Connection dialog box, a warning states that the remote computer's identity cannot be verified and asks if you want to continue anyway. At the bottom, the Yes button is circled.](./media/remote-desktop-connection-identity-verification-sqlserver2008.png "Remote Desktop Connection dialog")
 
-1. Open file explorer on your **sql2019-<inject key="DeploymentID" enableCopy="false"/>** virtual machine, naviagate to C:\ drive and double click on **IntegrationRuntime** installer.
+1. Open file explorer on your **sql2019-<inject key="DeploymentID" enableCopy="false"/>** virtual machine, naviagate to **C:\ drive (1)** and double click on **IntegrationRuntime (2)** installer.
 
    ![](./media/integration-runtime.png)
 
@@ -121,9 +121,9 @@ In this task, you use the Microsoft Data Migration Assistant (DMA) to assess the
 
    ![](./media/new-sql-migration.png) 
 
-1. In **Step 1: Database for assessment**, select **WideWordImporters**, click on **Next**. 
+1. In **Step 1: Database for assessment**, choose **No** in "Do you want to track the migration process in Azure Portal?" and then select **WideWordImporters** and click **Next** to proceed. 
 
-   ![](./media/step1-select-wwi.png)  
+   ![](./media/step1-select-wwi(1).png)  
 
 1. In **Step 2: Assessment summary and SKU recommendations**, review the assessment summary and SKU recommendations and Azure SQL targets and click on **Next**. 
 
