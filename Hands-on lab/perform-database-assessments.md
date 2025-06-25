@@ -1,6 +1,6 @@
 # Lab 03: Perform database assessments
 
-### Estimated Duration: 60 minutes
+### Estimated Duration: 60 Minutes
 
 In this hands-on lab, you use the Azure Data Studio to perform assessments on the `WideWorldImporters` database. You create two assessments: one for SQL DB and a second for SQL MI. These assessments provide reports about any feature parity and compatibility issues between the on-premises database and the Azure managed SQL database service options.
 
@@ -13,7 +13,7 @@ In this lab, you will perform the following tasks:
 
 ## Task 1: Connect to the WideWorldImporters database on the SQL 2019 VM
 
-In this task, you will create `WideWorldImporters` database on the SQL 2019 VM instance, assess it for Azure SQL Database and Azure SQL Managed Instance using Azure SQL Migration extension inside Azure Data Studio for migration.
+In this task, you will create `WideWorldImporters` database on the SQL 2019 VM instance, assess it for Azure SQL Database and Azure SQL Managed Instance using the Azure SQL Migration extension inside Azure Data Studio for migration.
 
 1. Navigate to the [Azure portal](https://portal.azure.com) and select **Resource groups** from the Azure services list.
 
@@ -33,10 +33,10 @@ In this task, you will create `WideWorldImporters` database on the SQL 2019 VM i
 
    ![](./media/download-rdp-file.png)
 
-1. Open the downloaded RDP file, click on **More choices (1) > Use a different account (2)** and enter the following credentials when prompted, and then select **OK**:
+1. Open the downloaded RDP file, click on **More choices (1) > Use a different account (2)** and enter the following credentials when prompted, and then select **OK:**
 
-   - **Username**: `.\sqlmiuser` **(3)**
-   - **Password**: `Password.1234567890` **(4)**
+   - **Username:** `.\sqlmiuser` **(3)**
+   - **Password:** `Password.1234567890` **(4)**
 
    ![](./media/enter-creds.png) 
 
@@ -68,13 +68,13 @@ In this task, you will create `WideWorldImporters` database on the SQL 2019 VM i
 
    ![](media/Ex1-install-s6.png "Windows start menu search")
 
-1. Open Windows PowerShell and run the below command to create database named 'WideWorldImporters'.
+1. Open Windows PowerShell and run the below command to create a database named 'WideWorldImporters'.
 
    ```
    Invoke-Sqlcmd -Query "CREATE DATABASE WideWorldImporters;" -ServerInstance <YOUR SQL VM NAME>
    ```
 
-   > **Note**: Replace "YOUR SQL VM NAME" with your actual SQL 2019 VM name **sql2019-<inject key="DeploymentID" enableCopy="false"/>**,
+   > **Note:** Replace "YOUR SQL VM NAME" with your actual SQL 2019 VM name **sql2019-<inject key="DeploymentID" enableCopy="false"/>**,
 
 1. Next, open **Azure Data Studio** by entering "Azure Data Studio" into the search bar in the Windows Start menu and selecting **Azure Data Studio** from the search results.
 
@@ -88,15 +88,15 @@ In this task, you will create `WideWorldImporters` database on the SQL 2019 VM i
   
    ![The SQL Server Connect to Search dialog is displayed, with SQL2008-entered into the Server name and Windows Authentication selected.](media/Ex1-Task1-S10.png "Connect to Server")
     
-   > **Note**: If you see **Connection error** pop-up click on **Enable Trust server certificate**.
+   > **Note:** If you see **Connection error** pop-up click on **Enable Trust server certificate**.
 
    ![](media/ex1-note.png "Connect issue")
 
-1. Once connected, verify you see the `WideWorldImporters`(1) database listed under databases. On the **sql2019-<inject key="DeploymentID" enableCopy="false"/>(1)** connection, navigate to **Home (2)**, and select **New Query (3)** from the Azure Data Studio toolbar.
+1. Once connected, verify that you see the `WideWorldImporters`(1) database listed under databases. On the **sql2019-<inject key="DeploymentID" enableCopy="false"/>(1)** connection, navigate to **Home (2)**, and select **New Query (3)** from the Azure Data Studio toolbar.
 
    ![](./media/wwi-new-query.png)
 
-1. Next, copy and paste the SQL script below into the new query window. This script enables Service broker and changes the database recovery model to FULL.
+1. Next, copy and paste the SQL script below into the new query window. This script enables the Service Broker and changes the database recovery model to FULL.
 
    ```sql
    USE master;
@@ -109,7 +109,7 @@ In this task, you will create `WideWorldImporters` database on the SQL 2019 VM i
    GO
    ```
 
-1. To run the script, click on **Run (1)** from the Azure Data Studio toolbar and verify the results from **Messages (2)** tab.
+1. To run the script, click on **Run (1)** from the Azure Data Studio toolbar and verify the results from the **Messages (2)** tab.
 
    ![](./media/run-query-messages.png) 
 
@@ -141,7 +141,7 @@ In this task, you use the Microsoft Data Migration Assistant (DMA) to assess the
 
 1. The database, including the Service Broker feature, can be migrated as is, providing an opportunity for WWI to have a fully managed PaaS database running in Azure. Previously, their only option for migrating a database using features incompatible with Azure SQL Database, such as Service Broker, was to deploy the database to a virtual machine running in Azure (IaaS) or modify the database and associated applications to remove the use of the unsupported features. The introduction of Azure SQL MI, however, provides the ability to migrate databases into a managed Azure SQL database service with _near 100% compatibility_, including the features that prevented them from using Azure SQL Database.
 
-1. Once you have reviewed the migration possibilites for both Azure SQL Database and Azure SQL Managed Instance, cancel the migration process.
+1. Once you have reviewed the migration possibilities for both Azure SQL Database and Azure SQL Managed Instance, cancel the migration process.
 
    ![](./media/cancel-migration.png)
 
@@ -151,7 +151,7 @@ In this hands-on lab, you connected to your SQL 2019 VM and used the Azure Data 
 
 ## Review
 
-In this lab you have:
+In this lab, you have:
 
 - Connected to the WideWorldImporters database on the SQL 2019 VM
 - Performed assessments for migration
