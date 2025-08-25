@@ -18,7 +18,7 @@ In this task, you perform some configuration for the `WideWorldImporters` databa
 
 1. Navigate to the Azure portal: [https://portal.azure.com](https://portal.azure.com)
 
-1. On the Azure portal home page, in the **Search resources, services, and docs (1)** box at the top, type **Resource groups** and then select **Resource groups (2)** from the search results.
+1. On the Azure portal home page, in the **Search resources** box at the top, type **Resource groups (1)** and then select **Resource groups (2)** from the search results.
 
    ![](media/gs-g-et-4.png)
 
@@ -30,9 +30,9 @@ In this task, you perform some configuration for the `WideWorldImporters` databa
 
     ![](media/sql50-1.png)
 
-1. From the overview page of the **sql2022-<inject key="Suffix" enableCopy="false"/>** VM, select **Connect > Connect**.
+1. On the **sql2022-<inject key="Suffix" enableCopy="false"/>** virtual machine **Overview** page, click **Connect (1)** and then select **Connect (2)** from the drop-down menu.
 
-    ![](media/sql51.png)
+    ![](media/gs-g-et-6.png)
 
 1. On the **sql2022-<inject key="Suffix" enableCopy="false"/> | Connect** page, click on **Download RDP file (2)**. 
   
