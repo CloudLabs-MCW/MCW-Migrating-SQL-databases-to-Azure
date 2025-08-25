@@ -17,60 +17,62 @@ In this lab, you will complete the following tasks:
 
 ### Task 1: Deploy the web app to Azure
 
-In this task, you will use JumpBox VM and then, using Visual Studio on the JumpBox, deploy the `WideWorldImporters` web application into the App Service in Azure.
-
 1. You have already logged in to JumpBox VM, use this VM to continue with the lab. 
 
-1. In the File Explorer dialog, navigate to the `C:\hands-on-lab` folder and then drill down to `MCW-Migrating-SQL-databases-to-Azure-master\Hands-on lab\lab-files`. In the `lab-files` folder, double-click `WideWorldImporters.sln` to open the solution in Visual Studio.
+1. In the File Explorer dialog, navigate to the `C:\hands-on-lab\MCW-Migrating-SQL-databases-to-Azure-master\Hands-on lab\lab-files`. In the `lab-files` folder, double-click `WideWorldImporters.sln` to open the solution in Visual Studio.
 
    ![The folder at the path specified above is displayed, and WideWorldImporters.sln is highlighted.](media/windows-explorer-lab-files-web-solution.png "Windows Explorer")
 
-1. If prompted about how you want to open the file, select **Visual Studio 2022**, and then select **OK**.
+1. If prompted about **How you want to open the file?**, select **Visual Studio 2022**, and then select **OK**.
 
-    ![In the Visual Studio version selector, Visual Studio 2019 is selected and highlighted.](media/datamod2.png "Visual Studio")
+    ![](media/new-image38.png)
 
-1. Select **Sign in** and enter the following Azure account credentials when prompted:
+1. Select **Sign in** and choose **Work or school account** > **Continue** and enter the following **Azure account** credentials if prompted:
    
    * Email/Username: <inject key="AzureAdUserEmail"></inject>
    * Password: <inject key="AzureAdUserPassword"></inject>
 
-        ![On the Visual Studio welcome screen, the Sign in button is highlighted.](media/datamod3.png "Visual Studio")
+     ![](media/new-image39.png)
+
+     ![](media/new-image40.png)
+
+1. On the **Stay signed in to all your apps** pop-up, click on **OK**. Then on **You're all set** page, select **Done**. 
 
 1. Once you signed in, Click on **Start Visual Studio**.
 
-    ![On the Visual Studio welcome screen, the Sign in button is highlighted.](media/datamod4.png "Visual Studio")
+    ![](media/new-image45.png)
 
-1. At the security warning prompt, uncheck **Ask me for every project in this solution**, and then select **OK**.
+1. If you are prompted with a security warning, uncheck **Ask me for every project in this solution**, and then select **OK**.
 
     ![A Visual Studio security warning is displayed, and the Ask me for every project in this solution checkbox is unchecked and highlighted.](media/visual-studio-security-warning.png "Visual Studio")
 
-1. Once logged into Visual Studio, right-click the `WideWorldImporters.Web` project in the Solution Explorer, and then select **Publish**.
+1. Once logged into **Visual Studio**, right-click the **`WideWorldImporters.Web`** project in the **Solution Explorer**, and then select **Publish**.
 
     ![In the Solution Explorer, the context menu for the WideWorldImporters.Web project is displayed, and Publish is highlighted.](media/visual-studio-project-publish.png "Visual Studio")
 
-1. On the **Publish** dialog, select **Azure** in the Target box, and select **Next**.
+1. On the **Publish** dialog, select **Azure** in the **Target** box, and click **Next**.
 
-    ![In the Publish dialog, Azure is selected and highlighted in the Target box. The Next button is highlighted.](media/updated15.png "Publish API App to Azure")
+    ![](media/new-image46.png)
 
-1. Next, in the **Specific target** box, select **Azure App Service (Windows)**.
+1. Next, in the **Specific target** box, select **Azure App Service (Windows)** and click **Next**.
 
-    ![In the Publish dialog, Azure App Service (Windows) is selected and highlighted in the Specific Target box. The Next button is highlighted.](media/datamod6.png "Publish API App to Azure")
+    ![](media/new-image47.png)
 
-1. Finally, in the **App Service** box, select your subscription, expand the **hands-on-lab-<inject key="Suffix" enableCopy="false"/>** resource group, and select the **wwi-web-<inject key="Suffix" enableCopy="false"/>** Web App.
+1. Finally, in the **App Service** box, select your subscription, expand the **hands-on-lab-<inject key="Suffix" enableCopy="false"/>** resource group, and select the **wwi-web-<inject key="Suffix" enableCopy="false"/>** Web App then click on **Finish**
 
-    ![On the Visual Studio welcome screen, the Sign in button is highlighted.](media/datamod7.png "Visual Studio")
+    ![](media/new-image48.png)
 
 1. Select **Close**.
 
-    ![In the Publish dialog, The wwi-web-UNIQUEID Web App is selected and highlighted under the hands-on-lab- resource group.](media/close.png "Publish API App to Azure")
+    ![](media/new-image49.png)
 
 1. Back on the Visual Studio Publish page for the `WideWorldImporters.Web` project, select **Publish** to start the process of publishing your Web API to your Azure API App.
 
-    ![The Publish button is highlighted on the Publish page in Visual Studio.](media/wwi-web-publish.png "Publish")
+    ![](media/new-image50.png)
 
 1. When the publish completes, you will see a message on the Visual Studio Output page that the publish succeeded.
 
-    ![The Publish Succeeded message is displayed in the Visual Studio Output pane.](media/visual-studio-output-publish-succeeded.png "Visual Studio")
+    ![](media/sql32.png)
 
 2. If you select the link of the published web app from the Visual Studio output window, an error page is returned because the database connection strings have not been updated to point to the SQL MI database. You address this in the next task.
 
@@ -80,59 +82,74 @@ In this task, you will use JumpBox VM and then, using Visual Studio on the JumpB
 
 In this task, you update the WWI gamer info web application to connect to and utilize the SQL MI database.
 
-1. In the Azure portal `https://portal.azure.com`, select **Resource groups** from the Azure services list.
+1. Navigate back to Azure portal, search and select **Resource groups** from the Azure services list.
 
-   ![Resource groups is highlighted in the Azure services list.](media/datamod13.png "Azure services")
+   ![](media/new-image2.png)
 
-2. Select the **hands-on-lab<inject key="Resource Group Name" enableCopy="false"/>** resource group from the list.
+2. Select the **<inject key="Resource Group Name" enableCopy="false"/>** resource group from the list.
 
-   ![Resource groups is selected in the Azure navigation pane, and the "hands-on-lab-< resource group is highlighted.](./media/resource-groups.png "Resource groups list")
+     ![](media/new-image(3).png)
+ 
+3. Select the **wwi-web-<inject key="Suffix" enableCopy="false"/>** App Service from the list of resources.
 
-3. In the list of resources for your resource group, select the **<inject key="Resource Group Name" enableCopy="false"/>** resource group and then select the **wwi-web-<inject key="Suffix" enableCopy="false"/>** App Service from the list of resources.
+   ![](media/new-image57.png)
 
-   ![The wwi-web-UNIQUEID App Service is highlighted in the list of resource group resources.](media/datamod9.png "Resource group")
+4. On the App Service blade, select **Environment variables** **(1)** under Settings from the left-hand pane, select **Connection strings** **(2)** and click on **Advanced edit** **(3)**.
 
-4. On the App Service blade, select **Configuration** under Settings on the left-hand side.
+   ![](media/new-image51.png)
 
-   ![The Configuration item is selected under Settings.](media/app-service-configuration-menu.png "Configuration")
-
-5. On the Configuration blade, locate the **Connection strings** section and then select the Pencil (Edit) icon to the right of the `WwiContext` connection string.
-
-   ![In the Connection string section, the pencil icon is highlighted to the right of the WwiContext connection string.](media/app-service-configuration-connection-strings.png "Connection Strings")
-
-6. The value of the connection string should look like this:
+6. Replace the **value** of the connection string of `wwiContext` with the below and replace **`your-sqlmi-host-fqdn-value`** with the fully qualified domain name for your SQL MI that you copied to a text editor earlier from the Azure Cloud Shell and replace the suffix with value: <inject key="suffix" />.
     
     ``
     Server=tcp:your-sqlmi-host-fqdn-value,1433;Database=WideWorldImportersSuffix;User ID=contosoadmin;Password=IAE5fAijit0w^rDM;Trusted_Connection=False;Encrypt=True;TrustServerCertificate=True;
     ``
 
-8. In the Add/Edit connection string dialog, replace `your-sqlmi-host-fqdn-value` with the fully qualified domain name for your SQL MI that you copied to a text editor earlier from the Azure Cloud Shell and replace suffix with value: <inject key="suffix" />.
+   >**Note**: Copy the name and value of **`wwiContext`** and paste them into a text editor they will be used in a later step.
 
-   ![The your-sqlmi-host-fqdn-value string is highlighted in the connection string.](https://raw.githubusercontent.com/CloudLabs-MCW/MCW-Migrating-SQL-databases-to-Azure/fix/Hands-on%20lab/media/images/9.png "Edit Connection String")
+7. Repeat **steps 5**, this time for the **`wwiReadOnlyContext`** connection string.
 
-9. The updated value should look similar to the following screenshot.
+    ![The save button on the Configuration blade is highlighted.](media/WwiReadOnlyContext1.png "Save")
 
-   ![The updated connection string is displayed, with the fully qualified domain name of SQL MI highlighted within the string.](media/app-service-configuration-edit-conn-string-value.png "Connection string value")
+    >**Note**: Copy the name and value of **`WwiReadOnlyContext`** and paste them into a text editor they will be used in a later step.
+   
+8. Select **OK**.
 
-10. Select **OK**.
+9. Click on **Apply** and then select **confirm**. 
 
-11. Repeat steps 3 - 7, this time for the `WwiReadOnlyContext` connection string.
+    ![The save button on the Configuration blade is highlighted.](media/WwiReadOnlyContextapplay.png "Save")
 
-12. Select **Save** at the top of the Configuration blade.
+   ![](media/new-image52.png)
+     
+10. Back on **wwi-web-<inject key="Suffix" enableCopy="false"/> | Environment variables**, Click on **Add** from the **App settings**.
+     
+      ![](media/new-image53.png)
+    
+11. Add the **Name** and **Value** of `wwiContext` which you recorded in notepad and click on **Apply**
 
-    ![The save button on the Configuration blade is highlighted.](media/app-service-configuration-save.png "Save")
+    ![](media/new-image54.png)
 
-13. When prompted that changes to application settings and connection strings will restart your application, select **Continue**.
+12. Repeat above step for **`wwiReadOnlyContext`** and paste the **Name** and **Value** which you recorded in notepad and click on **Apply**
 
-    ![The prompt warning that the application will be restarted is displayed, and the Continue button is highlighted.](media/app-service-restart.png "Restart prompt")
+      ![](media/new-image55.png)
 
-14. Select **Overview** to the left of the Configuration blade to return to the overview blade of your App Service.
+13. Click on **Apply**.
 
-    ![Overview is highlighted on the left-hand menu for App Service](media/app-service-overview-menu-item.png "Overview menu item")
+14. When prompted that Your app may restart if you are updating connection strings. Are you sure you want to continue?, select **Confirm**.
 
-15. At this point, selecting the **URL** for the App Service on the Overview blade still results in an error being returned. The error occurs because the SQL Managed Instance has a private IP address in its VNet. To connect an application, you need to configure access to the VNet where the Managed Instance is deployed, which you handle in the next exercise.
+     ![](media/new-image52.png)
 
+15. From the left menu, select **Overview** to return to the **Overview** blade of your **App Service**. Then, click on **Default Domain** in the Overview blade. still results in an error being returned. The error occurs because the SQL Managed Instance has a private IP address in its VNet. To connect an application, you need to configure access to the VNet where the Managed Instance is deployed, which you handle in the next exercise.
+
+    ![](media/new-image62.png)
+    
     ![An error screen is displayed because the application cannot connect to SQL MI within its private virtual network.](media/web-app-error-screen.png "Web App error")
+
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+- If you receive a success message, you can proceed to the next task.
+- If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+- If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
+    
+<validation step="aee6215e-2948-4239-a9f7-12907b6d0e08" />
 
 ## Summary
 
