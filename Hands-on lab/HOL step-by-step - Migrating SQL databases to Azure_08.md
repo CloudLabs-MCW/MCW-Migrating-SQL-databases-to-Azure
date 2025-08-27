@@ -25,7 +25,7 @@ In this task, you add the networking configuration to your App Service to enable
 
 3. On the **Networking (1)** page, under **Outbound Traffic Configuration**, click **Not Configured (2)** under **Virtual Network Integration**.
 
-    ![](media/sql40.png)
+   ![](media/sql40.png)
 
 4. Now click on **Add virtual network integration** under **Virtual Network Integration**.
 
@@ -40,7 +40,7 @@ In this task, you add the networking configuration to your App Service to enable
 
 6. Within a few minutes, the VNet is added, and your App Service is restarted to apply the changes. Select Refresh to confirm whether the Vnet is connected or not.
 
-    ![](media/new-image61(2).png)
+   ![](media/new-image61(2).png)
 
    > **Note**: If you receive a message adding the Virtual Network to the Web App fails, select **Disconnect** on the VNet Configuration blade, and repeat steps 3 - 5 above.
 
@@ -54,19 +54,19 @@ In this task, you verify your web application now loads, and you can see the hom
 
 2. Verify that the website and data are loaded correctly. The page should look similar to the following:
 
-    ![](media/new-image63.png)
+   ![](media/gs-g-et-60.png)
 
-    > **Note**: It can often take several minutes for the network configuration to be reflected in the web app. If you get an error screen, try selecting Refresh a few times in the browser window. If that does not work, try selecting **Restart** on the Azure Web App's toolbar.
+   > **Note**: It can often take several minutes for the network configuration to be reflected in the web app. If you get an error screen, try selecting Refresh a few times in the browser window. If that does not work, try selecting **Restart** on the Azure Web App's toolbar.
 
 3. Congratulations, you successfully connected your application to the new SQL MI database.
 
 4. Please note down the Managed database name **WideWorldImporters<inject key="Suffix" enableCopy="false"/>** and fully qualified domain name of your SQL-managed instance, which you copied from the Azure Cloud Shell as you need this database name for upcoming lab.
 
-    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-    - If you receive a success message, you can proceed to the next task.
-    - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-    - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
-    
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+- If you receive a success message, you can proceed to the next task.
+- If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+- If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
+
 <validation step="9cb677b1-ac46-4dcd-8bcb-dd0e9b141ea5" />
 
 ## Summary
@@ -74,5 +74,3 @@ In this task, you verify your web application now loads, and you can see the hom
 In this lab, you have configured VNet integration with App Services and opened the web application.
 
 ### You have successfully completed the lab!
-
-
