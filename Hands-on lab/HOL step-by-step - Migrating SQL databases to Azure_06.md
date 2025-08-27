@@ -26,17 +26,17 @@ In this task, you create a new SMB network share on the **sql2022-<inject key="S
 
    ![](media/sql8.png)
 
-2. In the Windows Explorer window, expand **This PC** in the tree view, select **Windows (C:) (1)**, and then select **dms-backups (2)**. Right-click on the folder and select **Give access to (3)** and **Specific people... (4)** in the context menu.
+1. In the Windows Explorer window, expand **This PC** in the tree view, select **Windows (C:) (1)**, and then select **dms-backups (2)**. Right-click on the folder and select **Give access to (3)** and **Specific people... (4)** in the context menu.
 
       > **Note:** If the folder doesn't exist, please create a new folder with the name **dms-backups**.
 
    ![](media/sql9.png)
 
-3. In the File Sharing dialog, ensure the **sqlmiuser** is listed with a **Read/Write** permission level, and then select **Share**.
+1. In the File Sharing dialog, ensure the **sqlmiuser** is listed with a **Read/Write** permission level, and then select **Share**.
 
    ![](media/sql10.png)
 
-4. Back on the File Sharing dialog, note the shared folder's path, ```\\SQLVM2022\dms-backups```, and select **Done** to complete the sharing process.
+1. Back on the File Sharing dialog, note the shared folder's path, ```\\SQLVM2022\dms-backups```, and select **Done** to complete the sharing process.
 
    ![](media/sql11.png)
 
@@ -82,42 +82,42 @@ To perform online data migrations, DMS looks for database and transaction log ba
 
     ![](media/sql17-1.png)
 
-2. In the SSMS **Connect to Server** dialog, enter **SQLVM2022 (1)** into the Server name box, ensure **Windows Authentication (2)** is selected, check the box for **Trust server certificate (3)** and then select **Connect (4)**.
+1. In the SSMS **Connect to Server** dialog, enter **SQLVM2022 (1)** into the Server name box, ensure **Windows Authentication (2)** is selected, check the box for **Trust server certificate (3)** and then select **Connect (4)**.
 
     ![](media/sql18.png)
 
-3. Once connected, expand **Databases** under **SQLVM2022** in the Object Explorer, and then right-click the **WideWorldImporters (1)** database. In the context menu, select **Tasks (2)** and then **Back Up... (3)**
+1. Once connected, expand **Databases** under **SQLVM2022** in the Object Explorer, and then right-click the **WideWorldImporters (1)** database. In the context menu, select **Tasks (2)** and then **Back Up... (3)**
 
     ![](media/sql70.png)
 
-4. In the Back Up Database dialog, you should see `C:\WideWorldImporters.bak` listed in the Destinations box. This device is no longer needed, so select it and then select **Remove**.
+1. In the Back Up Database dialog, you should see `C:\WideWorldImporters.bak` listed in the Destinations box. This device is no longer needed, so select it and then select **Remove**.
 
     ![](media/sql19.png)
 
-5. Next, select **Add** to add the SMB network share as a backup destination.
+1. Next, select **Add** to add the SMB network share as a backup destination.
 
     ![](media/sql20.png)
 
-6. In the Select Backup Destination dialog, select the Browse (`...`) button.
+1. In the Select Backup Destination dialog, select the Browse (`...`) button.
 
     ![](media/sql21.png)
 
-7. In the Location Database Files dialog, select the **`C:\dms-backups` (1)** folder, enter **WideWorldImporters.bak (2)** into the File name field, and then select **OK (3)**.
+1. In the Location Database Files dialog, select the **`C:\dms-backups` (1)** folder, enter **WideWorldImporters.bak (2)** into the File name field, and then select **OK (3)**.
 
     ![](media/sql22.png)
 
-8. Select **OK** to close the Select Backup Destination dialog.
+1. Select **OK** to close the Select Backup Destination dialog.
 
     ![](media/sql23.png)
 
-9. In the Back Up Database dialog box, select **Media Options (1)** in the Select a page pane, and then set the following:
+1. In the Back Up Database dialog box, select **Media Options (1)** in the Select a page pane, and then set the following:
 
    - Select **Back up to the existing media set** and then choose **Overwrite all existing backup sets (2)**.
    - Under **Reliability**, check the box for **Perform checksum before writing to media (3)**. A checksum is required by DMS when using the backup to restore the database to SQL MI. then Select **OK (4)** to perform the backup.
 
        ![](media/sql24.png)
 
-10. You will receive a message when the backup is complete. Select **OK**.
+1. You will receive a message when the backup is complete. Select **OK**.
 
     ![](media/sql25.png)
 
@@ -136,19 +136,19 @@ In this task, you use the Azure Cloud shell to retrieve the information necessar
 
     ![](media/sql26.png)
 
-2. In the Cloud Shell window that opens at the bottom of your browser window, select **PowerShell**.
+1. In the Cloud Shell window that opens at the bottom of your browser window, select **PowerShell**.
 
    ![](media/new-image29.png)
 
-3. On the Getting Started , Choose **mount a storage account (1)** select the **exisitng subscription (2)** then click on **Apply (3)**.
+1. On the Getting Started , Choose **mount a storage account (1)** select the **exisitng subscription (2)** then click on **Apply (3)**.
 
    ![](media/new-image30.png)
 
-4. Choose **I want to create a storage account (1)** , Click on **Next (2)**.
+1. Choose **I want to create a storage account (1)** , Click on **Next (2)**.
 
    ![](media/new-image28.png)
 
-5. Specify the following values and click on **Create (6)** to create storage account: 
+1. Specify the following values and click on **Create (6)** to create storage account: 
       - Subscription: Accept the **default (1)**
       - Resource Group: Select **<inject key="Resource Group Name" enableCopy="false"/>** **(2)**
       - Region: **Central US (3)**
@@ -157,18 +157,18 @@ In this task, you use the Azure Cloud shell to retrieve the information necessar
       
          ![](media/new-image27.png)
 
-6. After a moment, a message is displayed that you have successfully requested a Cloud Shell, and you are presented with a PS Azure prompt.
+1. After a moment, a message is displayed that you have successfully requested a Cloud Shell, and you are presented with a PS Azure prompt.
 
    ![In the Azure Cloud Shell dialog, a message is displayed that requesting a Cloud Shell succeeded, and the PS Azure prompt is displayed.](media/cloud-shell-ps-azure-prompt.png "Azure Cloud Shell")
 
-7. At the prompt, run the below command to retrieve information about SQL MI in the SQLMI-Shared-RG resource group by entering the following PowerShell command.
+1. At the prompt, run the below command to retrieve information about SQL MI in the SQLMI-Shared-RG resource group by entering the following PowerShell command.
 
    ```PowerShell
    $resourceGroup = "SQLMI-Shared-RG"
    az sql mi list --resource-group $resourceGroup
    ```
 
-8. Within the above command's output, locate and copy the value of the **`fullyQualifiedDomainName`** property. Paste the value into a text editor such as Notepad.exe which will be used in later steps, for reference below.
+1. Within the above command's output, locate and copy the value of the **`fullyQualifiedDomainName`** property. Paste the value into a text editor such as Notepad.exe which will be used in later steps, for reference below.
 
    ![The output from the az sql mi list command is displayed in the Cloud Shell, and the fullyQualifiedDomainName property and value are highlighted.](media/cloud-shell-az-sql-mi-list-output.png "Azure Cloud Shell")
 
@@ -180,23 +180,23 @@ In this task, you create a new online data migration project in DMS for the `Wid
 
     ![](media/sql6.png)
 
-2. In **Step 1: Database for assessment** blade, select **widewordimporters (1)**, click on **Next (2)**. 
+1. In **Step 1: Database for assessment** blade, select **widewordimporters (1)**, click on **Next (2)**. 
 
      ![](media/new-image77-1.png)
 
-3. In **Step 2: Assessment summary and SKU recommendation (1)**, you will view the summary and SKU recommendations for your SQL server. Click on **Next (2)**. 
+1. In **Step 2: Assessment summary and SKU recommendation (1)**, you will view the summary and SKU recommendations for your SQL server. Click on **Next (2)**. 
 
    ![The new project settings for doing a SQL Server to Azure SQL Database migration assessment are entered into the dialog.](media/data-migration-02-1.png "New project settings")
 
-4. In **Step 3: Target Platform and Assessment Results**, Select **Azure SQL Managed Instance (1)** from the drop down. Ensure the **WideWorldImporters (2)** is selected under the Database option and click on the **Next**.
+1. In **Step 3: Target Platform and Assessment Results**, Select **Azure SQL Managed Instance (1)** from the drop down. Ensure the **WideWorldImporters (2)** is selected under the Database option and click on the **Next**.
 
    ![](media/Ex2-Task5-S4.png)
 
-5. In **Step 4: Azure SQL target** blade, click on **Link account (1)**, and click on **Add an account (2)**.
+1. In **Step 4: Azure SQL target** blade, click on **Link account (1)**, and click on **Add an account (2)**.
 
       ![](media/new-image81-1.png)
    
-6. You'll be redirect to a web page, log in using your below **Azure credentials**. Once your account has been added successfully. go back to the Azure Data Studio, and click on **close**. 
+1. You'll be redirect to a web page, log in using your below **Azure credentials**. Once your account has been added successfully. go back to the Azure Data Studio, and click on **close**. 
 
    >**Note**: Click on **OK** on the **Internet Explorer** page to dismiss any pop-ups. Then, select the **Sign In** tab and enter the **Azure credentials** mentioned below.
 
@@ -205,13 +205,13 @@ In this task, you create a new online data migration project in DMS for the `Wid
    - **Email/Username**: <inject key="AzureAdUserEmail"></inject>
    - **Password**: <inject key="AzureAdUserPassword"></inject>
 
-7. The field will be populated with the details and click on **Next**. 
+1. The field will be populated with the details and click on **Next**. 
 
    ![](media/data-migration-04-1.png)
 
       > **Note**: If you encounter an error indicating that the **Azure SQL Managed Instance** is in a stopped state, please navigate to the Azure Portal, search for **Azure SQL Managed Instance**, and start the instance.
    
-8. In **Step 5: Azure Database Migration Service** blade, select the following details and click on **ConfigurelntegrationRuntime**
+1. In **Step 5: Azure Database Migration Service** blade, select the following details and click on **ConfigurelntegrationRuntime**
    
    - **Online migration** **(1)**, 
    - Select the location of the database backups to use during migration: **My database backups are on a network share** **(2)**.
@@ -221,35 +221,55 @@ In this task, you create a new online data migration project in DMS for the `Wid
 
       ![](media/Ex2-Task5-S7.png) 
    
-9. In the **Configure integration Runtime** select **I want to set up self-hosted integration runtime on another Windows machine that is not my local machine** **(1)** scroll down till Configure manually expand **Configure manually** **(2)** Copy any of the **Authentication keys** **(3)** to the notepad as it will be used later in the task, and minimize the **Azure Data Studio**.  
+1. In the **Configure integration Runtime** select **I want to set up self-hosted integration runtime on another Windows machine that is not my local machine** **(1)** scroll down till Configure manually expand **Configure manually** **(2)** Copy any of the **Authentication keys** **(3)** to the notepad as it will be used later in the task, and minimize the **Azure Data Studio**.  
 
    ![](media/data-migration-05.png)
    
    > **Note**: Don't close/cancel Azure Data Studio.
 
-10. On the **JumpBox-<inject key="Suffix"  enableCopy="false"/>** VM , in the search bar next to start search for `Microsoft Integration Runtime`
+1. On the **JumpBox-<inject key="Suffix"  enableCopy="false"/>** VM , in the search bar next to start search for `Microsoft Integration Runtime`
    
       ![](media/irt.png)
    
    > **Note**: If you do not find Integration Runtime in the Jumpbox VM, you can install it from **C:** drive location in the VM.
-   
-11. Paste the **Authentication key** in the box that you coped in earlier in the task and click on **Register**.
+
+1. In **Welcome to the Microsoft Integration Runtime Setup Wizard**, click on **Next**.
+
+   ![](media/Ex1-install-s2.png "Windows start menu search")
+
+1. In **End-User License Agreement**, select the checkbox **I accept the terms in the License Agreement**, and click on **Next**.
+
+   ![](media/Ex1-install-s3.png "Windows start menu search")
+
+1. In **Destination Folder**, click on **Next**.
+
+   ![](media/Ex1-install-s4.png "Windows start menu search")
+
+1. In **Ready to install Microsoft Integration Runtime**, click on **Install**.
+
+   ![](media/Ex1-install-s5.png "Windows start menu search")
+
+1. Once the deployment is completed click on **Finish** and minimize the application.
+
+   ![](media/Ex1-install-s6.png "Windows start menu search")
+
+1. Paste the **Authentication key** in the box that you coped in earlier in the task and click on **Register**.
 
     ![](media/Ex2-Task5-S10.png)
 
-12. In the New Integration Runtime (Self-hosted) Node leave default and click on **Finish**.
+1. In the New Integration Runtime (Self-hosted) Node leave default and click on **Finish**.
 
     ![](media/inr.png)
 
-13. Wait for the Integration Runtime to be successful to continue further.
+1. Wait for the Integration Runtime to be successful to continue further.
 
     ![](media/Ex2-Task5-S11b.png)
 
-14. Navigate back to the **Azure Data Studio**, close **Configure integration Runtime**, in the **Step 5: Azure Database Migration Service** click on **Refresh** **(1)** button you can view the **connected nodes** **(2)** and click on **Next** **(3)**. 
+1. Navigate back to the **Azure Data Studio**, close **Configure integration Runtime**, in the **Step 5: Azure Database Migration Service** click on **Refresh** **(1)** button you can view the **connected nodes** **(2)** and click on **Next** **(3)**. 
 
     ![](media/azure-sql-1.png)
           
-15. In **Step 6: Data source configuration** blade, enter the following details and click on **Run Validation** **(8)**:
+1. In **Step 6: Data source configuration** blade, enter the following details and click on **Run Validation** **(8)**:
 
       > **Note**: Make sure to replace the SUFFIX value with <inject key="Suffix" />   
  
@@ -264,19 +284,19 @@ In this task, you create a new online data migration project in DMS for the `Wid
          ![](media/E3T5S15.1-1902.png)
          ![](media/E3T5S15.2-1902.png)
 
-16. In the Run Validate page wait till all the validation steps are successful then click on **Done**.
+1. In the Run Validate page wait till all the validation steps are successful then click on **Done**.
 
       ![](media/Ex2-Task5-S14-1.png)
 
-17. Once you back to **Step 6: Data source configuration** blade, click on **Next**.
+1. Once you back to **Step 6: Data source configuration** blade, click on **Next**.
 
       ![](media/Ex2-Task5-S15-1-1.png)
 
-18. In **Step 7: Summary** blade, click on **Start migration** .
+1. In **Step 7: Summary** blade, click on **Start migration** .
 
     ![](media/enn-1-1-1.png)
 
-19. Click on **Migrations (1)**, from the dropdown menu set Status to **Status: All (2)**, feel free to **Refresh (3)** till the migration status is **Ready for cutover (4)**. 
+1. Click on **Migrations (1)**, from the dropdown menu set Status to **Status: All (2)**, feel free to **Refresh (3)** till the migration status is **Ready for cutover (4)**. 
     
     ![](media/data-migration-06-1.png)
 

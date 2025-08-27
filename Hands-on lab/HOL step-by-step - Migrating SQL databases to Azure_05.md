@@ -32,7 +32,6 @@ In this task, you perform some configuration for the `WideWorldImporters` databa
 
 1. On the **sql2022-<inject key="Suffix" enableCopy="false"/>** virtual machine **Overview** page, click **Connect (1)** and then select **Connect (2)** from the drop-down menu.
 
-
     ![](media/gs-g-et-6.png)
 
 1. On the **sql2022-<inject key="Suffix" enableCopy="false"/> | Connect** page, click on **Download RDP file (2)**. 
@@ -68,38 +67,6 @@ In this task, you perform some configuration for the `WideWorldImporters` databa
 
    >**Note**: Within **Azure Data Studio**, if prompted with any pop-ups related to updates, kindly disregard them and proceed with tasks.
 
-1. In the Azure Data Studio select **Extensions (1)** from the Activity Bar, enter **SQL Migration (2)** into the search bar, select **Azure SQL Migration (3)**, and click on **Install (4)**.  
-
-    ![](media/new-image8.png)
-
-1. In the Azure Data Studio select **Connections (1)** from the Activity Bar and click on **New Connection (2)**.
-  
-    ![The SQL Server Connect to Search dialog is displayed, with SQL2008-entered into the Server name and Windows Authentication selected.](media/Ex1-Task1-S10-1.png "Connect to Server")
-
-1. In **Welcome to the Microsoft Integration Runtime Setup Wizard**, click on **Next**.
-
-   ![](media/Ex1-install-s2.png "Windows start menu search")
-
-1. In **End-User License Agreement**, select the checkbox **I accept the terms in the License Agreement**, and click on **Next**.
-
-   ![](media/Ex1-install-s3.png "Windows start menu search")
-
-1. In **Destination Folder**, click on **Next**.
-
-   ![](media/Ex1-install-s4.png "Windows start menu search")
-
-1. In **Ready to install Microsoft Integration Runtime**, click on **Install**.
-
-   ![](media/Ex1-install-s5.png "Windows start menu search")
-
-1. Once the deployment is completed click on **Finish** and minimize the application.
-
-   ![](media/Ex1-install-s6.png "Windows start menu search")
-
-1. Next go back to LabVM, and open **Azure Data Studio** by entering "Azure Data Studio" into the search bar in the Windows Start menu and selecting **Azure Data Studio** from the search results.
-
-   ![](media/E1T1S15.png "Windows start menu search")
-   
 1. In the Azure Data Studio select **Extensions (1)** from the Activity Bar, enter **SQL Migration (2)** into the search bar, select **Azure SQL Migration (3)**, and click on **Install (4)**.  
 
     ![](media/new-image8.png)
@@ -147,15 +114,15 @@ In this task, you use the Microsoft Data Migration Assistant (DMA) to assess the
 
 1. In Azure Data Studio click on **SQLVM2022 (1)** > **Azure SQL migration (2)** and select **+ New migration (3)**.
 
-    ![](media/E2T2S1-1902.png)
+    ![](media/gs-g-et-9.png)
 
-1. In **Step 1: Database for assessment**, select **widewordimplantation (1)**, click on **Next (2)**. 
+1. In **Step 1: Databases for assessment**, select **No (1)** for both tracking options. Choose the database **WideWorldImporters (2)** and then click **Next (3)** to continue.
 
-   ![The new project icon is highlighted in DMA.](media/E2T2S2-1902.png "New DMA project")
+    ![](media/gs-g-et-13.png)
 
-1. In **Step 2: Assessment summary and SKU recommendation (1)**, you will view the summary and SKU recommendations for your SQL server. Click on **Next (2)**. 
+1. In **Step 2: Assessment summary and SKU recommendations (1)**, review the assessment results and recommended configurations for **Azure SQL Database, Azure SQL Managed Instance, and SQL Server on Azure Virtual Machine**. Click **Next (2)** to proceed.
 
-   ![The new project settings for doing a SQL Server to Azure SQL Database migration assessment are entered into the dialog.](media/E2T2S3-1902.png "New project settings")
+    ![](media/gs-g-et-14.png)
 
 1. In **Step 3: Target Platform and Assessment Results**, Select **Azure SQL DataBase(1)** from the drop down. Then select **WideWorldImporters(2)** under the database, review the migration assessment to determine the possibility of migrating to Azure SQL DB, and Click on the **Cancel (3)** button.
 
@@ -163,7 +130,7 @@ In this task, you use the Microsoft Data Migration Assistant (DMA) to assess the
 
 1. Click on **Yes** when prompted to Cancel Migration.
 
-    ![](media/sql7.png)
+    ![](media/gs-g-et-17.png)
 
 ### Task 3: Perform assessment for migration to Azure SQL Managed Instance
 
@@ -173,13 +140,13 @@ With one PaaS offering ruled out due to feature parity, perform a second DMA ass
 
     ![](media/sql6.png)
 
-1. In **Step 1: Database for assessment**, select **widewordimplantation (1)**, click on **Next (2)**. 
+1. In **Step 1: Databases for assessment**, select **No (1)** for both tracking options. Choose the database **WideWorldImporters (2)** and then click **Next (3)** to continue.
 
-   ![The new project icon is highlighted in DMA.](media/E2T2S2-1902.png "New DMA project")
+    ![](media/gs-g-et-13.png)
 
-1. In **Step 2: Assessment summary and SKU recommendation (1)**, you will view the summary and SKU recommendations for your SQL server. Click on **Next (2)**. 
+1. In **Step 2: Assessment summary and SKU recommendations (1)**, review the assessment results and recommended configurations for **Azure SQL Database, Azure SQL Managed Instance, and SQL Server on Azure Virtual Machine**. Click **Next (2)** to proceed.
 
-    ![The new project settings for doing a SQL Server to Azure SQL Database migration assessment are entered into the dialog.](media/E2T2S3-1902.png "New project settings")
+    ![](media/gs-g-et-14.png)
 
 1. In **Step 3: Target Platform and Assessment Results**, Select **Azure SQL Managed Instance (1)** from the drop down. Then select **WideWorldImporters (2)** under the database, review the migration assessment to determine the possibility of migrating to Azure SQL DB, and Click on the **Cancel (3)** button.
 
@@ -189,7 +156,7 @@ With one PaaS offering ruled out due to feature parity, perform a second DMA ass
 
 1. Click on **Yes** when prompted to Cancel Migration.
 
-    ![](media/sql7.png)
+    ![](media/gs-g-et-17.png)
 
 ## Summary
 
