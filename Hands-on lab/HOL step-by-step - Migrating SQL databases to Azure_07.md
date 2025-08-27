@@ -38,6 +38,8 @@ In this lab, you will complete the following tasks:
 
 1. On the **Stay signed in to all your apps** pop-up, click on **OK**. Then on **You're all set** page, select **Done**. 
 
+    ![](media/gs-g-et-45.png)
+
 1. Once you signed in, Click on **Start Visual Studio**.
 
     ![](media/new-image45.png)
@@ -74,7 +76,7 @@ In this lab, you will complete the following tasks:
 
     ![](media/sql32.png)
 
-2. If you select the link of the published web app from the Visual Studio output window, an error page is returned because the database connection strings have not been updated to point to the SQL MI database. You address this in the next task.
+1. If you select the link of the published web app from the Visual Studio output window, an error page is returned because the database connection strings have not been updated to point to the SQL MI database. You address this in the next task.
 
     ![An error screen is displayed because the database connection string has not been updated to point to SQL MI in the web app's configuration.](media/web-app-error-screen.png "Web App error")
 
@@ -84,21 +86,21 @@ In this task, you update the WWI gamer info web application to connect to and ut
 
 1. Navigate back to Azure portal, search and select **Resource groups** from the Azure services list.
 
-   ![](media/new-image2.png)
+   ![](media/gs-g-et-49.png)
 
-2. Select the **<inject key="Resource Group Name" enableCopy="false"/>** resource group from the list.
+1. Select the **<inject key="Resource Group Name" enableCopy="false"/>** resource group from the list.
 
      ![](media/new-image(3).png)
  
-3. Select the **wwi-web-<inject key="Suffix" enableCopy="false"/>** App Service from the list of resources.
+1. Select the **wwi-web-<inject key="Suffix" enableCopy="false"/>** App Service from the list of resources.
 
    ![](media/new-image57.png)
 
-4. On the App Service blade, select **Environment variables** **(1)** under Settings from the left-hand pane, select **Connection strings** **(2)** and click on **Advanced edit** **(3)**.
+1. On the App Service blade, select **Environment variables** **(1)** under Settings from the left-hand pane, select **Connection strings** **(2)** and click on **Advanced edit** **(3)**.
 
    ![](media/new-image51.png)
 
-6. Replace the **value** of the connection string of `wwiContext` with the below and replace **`your-sqlmi-host-fqdn-value`** with the fully qualified domain name for your SQL MI that you copied to a text editor earlier from the Azure Cloud Shell and replace the suffix with value: <inject key="suffix" />.
+1. Replace the **value** of the connection string of `wwiContext` with the below and replace **`your-sqlmi-host-fqdn-value`** with the fully qualified domain name for your SQL MI that you copied to a text editor earlier from the Azure Cloud Shell and replace the suffix with value: <inject key="suffix" />.
     
     ``
     Server=tcp:your-sqlmi-host-fqdn-value,1433;Database=WideWorldImportersSuffix;User ID=contosoadmin;Password=IAE5fAijit0w^rDM;Trusted_Connection=False;Encrypt=True;TrustServerCertificate=True;
@@ -106,43 +108,43 @@ In this task, you update the WWI gamer info web application to connect to and ut
 
    >**Note**: Copy the name and value of **`wwiContext`** and paste them into a text editor they will be used in a later step.
 
-7. Repeat **steps 5**, this time for the **`wwiReadOnlyContext`** connection string.
+1. Repeat **steps 5**, this time for the **`wwiReadOnlyContext`** connection string.
 
     ![The save button on the Configuration blade is highlighted.](media/WwiReadOnlyContext1.png "Save")
 
     >**Note**: Copy the name and value of **`WwiReadOnlyContext`** and paste them into a text editor they will be used in a later step.
    
-8. Select **OK**.
+1. Select **OK**.
 
-9. Click on **Apply** and then select **confirm**. 
+1. Click on **Apply** and then select **confirm**. 
 
     ![The save button on the Configuration blade is highlighted.](media/WwiReadOnlyContextapplay.png "Save")
 
    ![](media/new-image52.png)
      
-10. Back on **wwi-web-<inject key="Suffix" enableCopy="false"/> | Environment variables**, Click on **Add** from the **App settings**.
+1. Back on **wwi-web-<inject key="Suffix" enableCopy="false"/> | Environment variables**, Click on **Add** from the **App settings**.
      
       ![](media/new-image53.png)
     
-11. Add the **Name** and **Value** of `wwiContext` which you recorded in notepad and click on **Apply**
+1. Add the **Name** and **Value** of `wwiContext` which you recorded in notepad and click on **Apply**
 
     ![](media/new-image54.png)
 
-12. Repeat above step for **`wwiReadOnlyContext`** and paste the **Name** and **Value** which you recorded in notepad and click on **Apply**
+1. Repeat above step for **`wwiReadOnlyContext`** and paste the **Name** and **Value** which you recorded in notepad and click on **Apply**
 
       ![](media/new-image55.png)
 
-13. Click on **Apply**.
+1. Click on **Apply**.
 
-14. When prompted that Your app may restart if you are updating connection strings. Are you sure you want to continue?, select **Confirm**.
+1. When prompted that Your app may restart if you are updating connection strings. Are you sure you want to continue?, select **Confirm**.
 
      ![](media/new-image52.png)
 
-15. From the left menu, select **Overview** to return to the **Overview** blade of your **App Service**. Then, click on **Default Domain** in the Overview blade. still results in an error being returned. The error occurs because the SQL Managed Instance has a private IP address in its VNet. To connect an application, you need to configure access to the VNet where the Managed Instance is deployed, which you handle in the next exercise.
+1. From the left menu, select **Overview** to return to the **Overview** blade of your **App Service**. Then, click on **Default Domain** in the Overview blade. still results in an error being returned. The error occurs because the SQL Managed Instance has a private IP address in its VNet. To connect an application, you need to configure access to the VNet where the Managed Instance is deployed, which you handle in the next exercise.
 
     ![](media/new-image62.png)
     
-    ![An error screen is displayed because the application cannot connect to SQL MI within its private virtual network.](media/web-app-error-screen.png "Web App error")
+    ![](media/gs-g-et-50.png)
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 - If you receive a success message, you can proceed to the next task.
