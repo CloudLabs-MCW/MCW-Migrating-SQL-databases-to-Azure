@@ -32,6 +32,7 @@ In this task, you perform some configuration for the `WideWorldImporters` databa
 
 1. On the **sql2022-<inject key="Suffix" enableCopy="false"/>** virtual machine **Overview** page, click **Connect (1)** and then select **Connect (2)** from the drop-down menu.
 
+
     ![](media/gs-g-et-6.png)
 
 1. On the **sql2022-<inject key="Suffix" enableCopy="false"/> | Connect** page, click on **Download RDP file (2)**. 
