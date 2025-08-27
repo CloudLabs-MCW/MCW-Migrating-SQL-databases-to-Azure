@@ -100,27 +100,23 @@ In this task, you update the WWI gamer info web application to connect to and ut
 
    ![](media/new-image51.png)
 
-1. Replace the **value** of the connection string of `wwiContext` with the below and replace **`your-sqlmi-host-fqdn-value`** with the fully qualified domain name for your SQL MI that you copied to a text editor earlier from the Azure Cloud Shell and replace the suffix with value: <inject key="suffix" />.
+1. Replace the **value** of the connection string of `wwiContext` with the below and replace **`your-sqlmi-host-fqdn-value`** with the fully qualified domain name for your SQL MI that you copied to a text editor earlier from the Azure Cloud Shell and replace the suffix with value: <inject key="suffix" /> and select **OK**..
     
     ``
     Server=tcp:your-sqlmi-host-fqdn-value,1433;Database=WideWorldImportersSuffix;User ID=contosoadmin;Password=IAE5fAijit0w^rDM;Trusted_Connection=False;Encrypt=True;TrustServerCertificate=True;
     ``
 
-   >**Note**: Copy the name and value of **`wwiContext`** and paste them into a text editor they will be used in a later step.
+    ![](media/gs-g-et-52.png)
 
-1. Repeat **steps 5**, this time for the **`wwiReadOnlyContext`** connection string.
+    ![](media/gs-g-et-53.png)
 
-    ![The save button on the Configuration blade is highlighted.](media/WwiReadOnlyContext1.png "Save")
-
-    >**Note**: Copy the name and value of **`WwiReadOnlyContext`** and paste them into a text editor they will be used in a later step.
+    >**Note**: Copy the name and value of both **`wwiContext`** and **`WwiReadOnlyContext`** and paste them into a text editor they will be used in a later step.
    
-1. Select **OK**.
-
 1. Click on **Apply** and then select **confirm**. 
 
-    ![The save button on the Configuration blade is highlighted.](media/WwiReadOnlyContextapplay.png "Save")
+   ![](media/gs-g-et-54.png)
 
-   ![](media/new-image52.png)
+   ![](media/gs-g-et-55.png)
      
 1. Back on **wwi-web-<inject key="Suffix" enableCopy="false"/> | Environment variables**, Click on **Add** from the **App settings**.
      
