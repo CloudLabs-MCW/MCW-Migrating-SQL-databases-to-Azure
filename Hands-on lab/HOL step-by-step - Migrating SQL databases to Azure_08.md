@@ -15,40 +15,32 @@ In this lab, you will complete the following tasks:
 
 In this task, you add the networking configuration to your App Service to enable communication with resources in the VNet.
 
-1. In the Azure portal `https://portal.azure.com`, select **Resource groups** from the left-hand menu, select the **<inject key="Resource Group Name" enableCopy="false"/>** resource group and then select the **wwi-web-<inject key="Suffix" />** App Service from the list of resources.
+1. In the Azure portal, search and select **Resource groups** from the list select the **<inject key="Resource Group Name" enableCopy="false"/>** and then click on **wwi-web-<inject key="Suffix" enableCopy="false"/>** App Service from the list of resources.
 
-   ![The wwi-web-UNIQUEID App Service is highlighted in the list of resource group resources.](media/datamod9.png "Resource group")
+   ![](media/new-image57.png)
 
-2. On the App Service blade, select **Networking** from the left-hand menu.
+2. On the **App Service** blade, select **Networking** from the left-hand menu under the **Settings** section.
 
-   ![On the App Service blade, Networking is selected in the left-hand menu, and Click here to configure is highlighted under VNet Integration.](media/networking.png "App Service")
+   ![On the App Service blade, Networking is selected in the left-hand menu, and Click here to configure is highlighted under VNet Integration.](media/web-app-network.png "App Service")
 
-3. On the **Networking** page, click on the **VNet integration** under **Outbound Traffic**.
+3. On the **Networking (1)** page, under **Outbound Traffic Configuration**, click **Not Configured (2)** under **Virtual Network Integration**.
 
-   ![Add VNet is highlighted on the VNet Configuration blade.](media/Vnet-integration.png "App Service")
+   ![](media/sql40.png)
 
-3. Now click on **Add virtual network integration** under **Virtual Network Integration**.
+4. Now click on **Add virtual network integration** under **Virtual Network Integration**.
 
-   ![Add VNet is highlighted on the VNet Configuration blade.](media/datamod10.png "App Service")
+   ![](media/new-image59.png)
 
-1. On the Network Feature Status dialog, enter the following and click **Connect**.
+5. On the Network Feature Status dialog, enter the following and click **Connect**.
 
-   - **Virtual Network**: Select the `vnet-sqlmi--cus`.
+   - **Virtual Network**: Select the `sqlmi-vnet`.
    - **Subnet**: Select any existing subnet from the drop-down menu.
 
-      ![image](https://user-images.githubusercontent.com/45102602/171028272-b63fce6e-06fd-4f74-ba45-8bac755cb9d6.png)
+      ![](media/new-image60.png)
 
-  > **Note**: If you see **Failed to add delegation to existing subnet** please select any other available subnet from the list of dropdowns.
+6. Within a few minutes, the VNet is added, and your App Service is restarted to apply the changes. Select Refresh to confirm whether the Vnet is connected or not.
 
-  > **Note**: If you are not able to select any existing subnet, Select the create new subnet option and enter the name as Webappsubnet<inject key="Suffix" />. Select the Virtual Network address block i.e., 10.0.0.0/16 from the drop-down list. In the subnet address block enter new address block 10.0.xx.0/24 for the subnet, make sure it is not overlapping other subnet's address.
-
-  > **Note**: If the address space is overlapping with other subnets, change the virtual network address block by selecting a different virtual network address block i.e., 10.1.0.0/16 or 10.2.0.0/16 from the drop-down. In the subnet address block, enter 10.1.xx.0/24 or 10.2.xx.0/24 according to the virtual network address block you have selected and make sure it is not overlapping the other subnet's address.
-
-   ![The values specified above are entered into the Network Feature Status dialog.](media/updated18.png "App Service")
-
-5. Within a few minutes, the VNet is added, and your App Service is restarted to apply the changes. Select Refresh to confirm whether the Vnet is connected or not.
-
-   ![The details of the VNet Configuration are displayed. The Certificate Status, Certificates in sync, is highlighted.](media/datamod11.png "App Service")
+   ![](media/new-image61(2).png)
 
    > **Note**: If you receive a message adding the Virtual Network to the Web App fails, select **Disconnect** on the VNet Configuration blade, and repeat steps 3 - 5 above.
 
@@ -58,18 +50,27 @@ In this task, you verify your web application now loads, and you can see the hom
 
 1. Select **Overview** in the left-hand menu of your App Service and select the **URL** of your App service to launch the website. This link opens the URL in a browser window.
 
-   ![The App service URL is highlighted.](media/app-service-url.png "App service URL")
+   ![](media/new-image62.png)
 
 2. Verify that the website and data are loaded correctly. The page should look similar to the following:
 
-   ![Screenshot of the WideWorldImporters Operations Web App.](media/wwi-web-app.png "WideWorldImporters Web")
+   ![](media/gs-g-et-60.png)
 
    > **Note**: It can often take several minutes for the network configuration to be reflected in the web app. If you get an error screen, try selecting Refresh a few times in the browser window. If that does not work, try selecting **Restart** on the Azure Web App's toolbar.
 
 3. Congratulations, you successfully connected your application to the new SQL MI database.
 
+4. Please note down the Managed database name **WideWorldImporters<inject key="Suffix" enableCopy="false"/>** and fully qualified domain name of your SQL-managed instance, which you copied from the Azure Cloud Shell as you need this database name for upcoming lab.
+
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+- If you receive a success message, you can proceed to the next task.
+- If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+- If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
+
+<validation step="9cb677b1-ac46-4dcd-8bcb-dd0e9b141ea5" />
+
 ## Summary
 
-In this hands-on lab, you will configure VNet integration with Azure App Services and open the web application.
+In this lab, you have configured VNet integration with App Services and opened the web application.
 
-
+### You have successfully completed the lab!
