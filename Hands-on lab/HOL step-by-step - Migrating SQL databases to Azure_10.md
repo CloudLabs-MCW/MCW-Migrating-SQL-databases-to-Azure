@@ -12,15 +12,19 @@ When inspecting the data in the `WideWorldImporters` database using the ADS Data
 
 1. On your SQL2008-<inject key="Suffix" enableCopy="false"/> VM, return to the SQL Server Management Studio (SSMS) window you opened previously.
 
-2. Expand **Database**, expand the Database which you used in the previous Exercise name starting like **WideWorldImporters{suffix}**. Expand **Tables** under the **WideWorldImporters{suffix}** database and locate the `Sales.CreditCard` table. Expand the table columns and observe that there is a column named `CardNumber`. Right-click the table, and choose **Select Top 1000 Rows** from the context menu.
+1. Expand **Database (1)**, expand the Database which you used in the previous Exercise name starting like **WideWorldImporters{suffix} (2)**. Expand **Tables (3)** under the database and locate the `Sales.CreditCard` table. 
+
+   ![](media/gt-sql-l2-25.png)
+
+1.Expand the table columns and observe that there is a column named `CardNumber`. Right-click the table, and choose **Select Top 1000 Rows** from the context menu.
 
    ![The Select Top 1000 Rows item is highlighted in the context menu for the Sales.CreditCard table.](media/ssms-sql-mi-credit-card-table-select.png "Select Top 1000 Rows")
 
-3. In the query window that opens review the Results, including the `CardNumber` field. Notice it is displayed in plain text, making the data available to anyone with access to query the database.
+1. In the query window that opens review the Results, including the `CardNumber` field. Notice it is displayed in plain text, making the data available to anyone with access to query the database.
 
    ![Plain text credit card numbers are highlighted in the query results.](media/ssms-sql-mi-credit-card-table-select-results.png "Results")
 
-4. To be able to test the mask being applied to the `CardNumber` field, you first create a user in the database to use for testing the masked field. In SSMS, In the same **Query** window replace the script with the following script:
+1. To be able to test the mask being applied to the `CardNumber` field, you first create a user in the database to use for testing the masked field. In SSMS, In the same **Query** window replace the script with the following script:
 
    ```SQL
    CREATE USER DDMUser WITHOUT LOGIN;
@@ -29,9 +33,9 @@ When inspecting the data in the `WideWorldImporters` database using the ADS Data
 
    > The SQL script above creates a new user in the database named `DDMUser` and grants that user `SELECT` rights on the `Sales.CreditCard` table.
 
-5. Select **Execute** from the SSMS toolbar to run the query. You will get a message that the commands completed successfully in the Messages pane.
+1. Select **Execute** from the SSMS toolbar to run the query. You will get a message that the commands completed successfully in the Messages pane.
 
-6. With the new user created, run a quick query to observe the results. In the same **Query** window replace the script with the following script:
+1. With the new user created, run a quick query to observe the results. In the same **Query** window replace the script with the following script:
 
    ```SQL
    EXECUTE AS USER = 'DDMUser';
@@ -39,18 +43,18 @@ When inspecting the data in the `WideWorldImporters` database using the ADS Data
    REVERT;
    ```
 
-7. Select **Execute** from the toolbar and examine the Results pane. Notice the credit card number, as above, is visible in plain text.
+1. Select **Execute** from the toolbar and examine the Results pane. Notice the credit card number, as above, is visible in plain text.
 
    ![The credit card number is unmasked in the query results.](media/ssms-sql-mi-ddm-results-unmasked.png "Query results")
 
-8. You now apply DDM on the `CardNumber` field to prevent it from being viewed in query results. In the same **Query** window replace the script with the following script to apply a mask to the `CardNumber` field and then select **Execute**.
+1. You now apply DDM on the `CardNumber` field to prevent it from being viewed in query results. In the same **Query** window replace the script with the following script to apply a mask to the `CardNumber` field and then select **Execute**.
 
    ```SQL
    ALTER TABLE [Sales].[CreditCard]
    ALTER COLUMN [CardNumber] NVARCHAR(25) MASKED WITH (FUNCTION = 'partial(0,"xxx-xxx-xxx-",4)')
    ```
 
-9. Run the `SELECT` in the same **Query** window again replace the query with the below query, and observe the results. Specifically, inspect the output in the `CardNumber` field. For reference, the query is below.
+1. Run the `SELECT` in the same **Query** window again replace the query with the below query, and observe the results. Specifically, inspect the output in the `CardNumber` field. For reference, the query is below.
 
    ```SQL
    EXECUTE AS USER = 'DDMUser';
@@ -74,13 +78,13 @@ From the findings of the Data Discovery & Classification report in ADS, you saw 
 
    ![In the query results, full email addresses are visible.](media/ddm-select-gamer-results.png "Query results")
 
-2. Now, as you did above, grant the `DDMUser` `SELECT` rights on the [dbo].[Gamer]. In the same **Query** window replace the script with the following script, and then select **Execute**:
+1. Now, as you did above, grant the `DDMUser` `SELECT` rights on the [dbo].[Gamer]. In the same **Query** window replace the script with the following script, and then select **Execute**:
 
    ```SQL
    GRANT SELECT ON [dbo].[Gamer] to DDMUser;
    ```
 
-3. Next, apply DDM on the `LoginEmail` field to prevent it from being viewed in full in query results. In the same **Query** window replace the script with the following script to apply a mask to the `LoginEmail` field, and then select **Execute**.
+1. Next, apply DDM on the `LoginEmail` field to prevent it from being viewed in full in query results. In the same **Query** window replace the script with the following script to apply a mask to the `LoginEmail` field, and then select **Execute**.
 
    ```SQL
    ALTER TABLE [dbo].[Gamer]
@@ -89,7 +93,7 @@ From the findings of the Data Discovery & Classification report in ADS, you saw 
 
    > **Note**: Observe the use of the built-in `Email()` masking function above. This masking function is one of several pre-defined masks available in SQL Server databases.
 
-4. Run the `SELECT` query below, and observe the results. Specifically, inspect the output in the `LoginEmail` field. For reference, the query is below.
+1. Run the `SELECT` query below, and observe the results. Specifically, inspect the output in the `LoginEmail` field. For reference, the query is below.
 
    ```SQL
    EXECUTE AS USER = 'DDMUser';
