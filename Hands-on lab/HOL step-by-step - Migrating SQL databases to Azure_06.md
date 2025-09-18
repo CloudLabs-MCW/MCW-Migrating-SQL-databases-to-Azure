@@ -1,24 +1,22 @@
 # Exercise 2: Migrate the database to SQL MI
 
-### Estimated Duration: 90 minutes
+### Estimated Duration: 90 Minutes
 
-In this lab, you will migrate the WideWorldImporters database from a SQL Server 2008 VM to Azure SQL Managed Instance. You’ll start by setting up an SMB network share and configuring the MSSQLSERVER service to run under the sqlmiuser account. Then, you’ll back up the database, gather connection information, and create an online data migration project. Finally, you’ll perform the migration cutover and verify the database and transaction log migration. These steps ensure a smooth transition to Azure’s cloud services.
+In this exercise, you will migrate the WideWorldImporters database from a SQL Server 2022 VM to Azure SQL Managed Instance. You’ll start by setting up an SMB network share and configuring the MSSQLSERVER service to run under the sqlmiuser account. Then, you’ll back up the database, gather connection information, and create an online data migration project. Finally, you’ll perform the migration cutover and verify the database and transaction log migration. These steps ensure a smooth transition to Azure’s cloud services.
 
-## Lab Objectives
+## Objectives
 
-Lab Objectives
+In this exercise, you will complete the following tasks:
 
-In this lab, you will complete the following tasks:
-
-- Task 1: Create an SMB network share on the VM
+- Task 1: Create an SMB network share on the SQL VM
 - Task 2: Change MSSQLSERVER service to run under sqlmiuser account
 - Task 3: Create a backup of the WideWorldImporters database
-- Task 4: Retrieve SQL MI and SQL Server 2008 VM connection information
+- Task 4: Retrieve SQL MI and SQL Server 2022 VM connection information
 - Task 5: Create and run an online data migration project
 - Task 6: Perform migration cutover
 - Task 7: Verify database and transaction log migration
 
-### Task 1: Create an SMB network share on the **sql2022-<inject key="Suffix" enableCopy="false"/>** VM
+### Task 1: Create an SMB network share on the SQL VM
 
 In this task, you create a new SMB network share on the **sql2022-<inject key="Suffix" enableCopy="false"/>** VM. DMS uses this shared folder for retrieving backups of the `WideWorldImporters` database during the database migration process.
 
@@ -28,9 +26,9 @@ In this task, you create a new SMB network share on the **sql2022-<inject key="S
 
 1. In the Windows Explorer window, expand **This PC** in the tree view, select **Windows (C:) (1)**, and then select **dms-backups (2)**. Right-click on the folder and select **Give access to (3)** and **Specific people... (4)** in the context menu.
 
-   > **Note:** If the folder doesn't exist, please create a new folder with the name **dms-backups**.
+   ![](media/sql9.png)
 
-      ![](media/sql9.png)
+   > **Note:** If the folder doesn't exist, please create a new folder with the name **dms-backups**.
 
 1. In the File Sharing dialog, ensure the **sqlmiuser** is listed with a **Read/Write** permission level, and then select **Share**.
 
@@ -126,9 +124,9 @@ To perform online data migrations, DMS looks for database and transaction log ba
 - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
 - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
     
-<validation step="413d413d-17c5-4298-ada0-dc777f97d7ec" />
+<validation step="4ed94186-c596-4679-9454-3df0065f9ca3" />
 
-### Task 4: Retrieve SQL MI and SQL Server 2008 VM connection information
+### Task 4: Retrieve SQL MI and SQL Server 2022 VM connection information
 
 In this task, you use the Azure Cloud shell to retrieve the information necessary to connect to your sql2022-<inject key="Suffix" enableCopy="false"/> VM from DMS.
 
@@ -443,7 +441,10 @@ In this task, you connect to the SQL MI database using SSMS and quickly verify t
 
 <validation step="413d413d-17c5-4298-ada0-dc777f97d7ec" />
 
-## Review
+## Summary
 
-In this lab, you have created a SMB network share on the VM, changed MSSQLSERVER service to run under sqlmiuser account, created a backup of the WideWorldImporters database, retrieved SQL MI and SQL Server 2022 VM connection information, created and ran an online data migration project, performed migration cutover and verified database and transaction log migration.
+In this exercise, you have created a SMB network share on the VM, changed MSSQLSERVER service to run under sqlmiuser account, created a backup of the WideWorldImporters database, retrieved SQL MI and SQL Server 2022 VM connection information, created and ran an online data migration project, performed migration cutover and verified database and transaction log migration.
 
+### You have successfully completed the exercise. Please click on **Next >>** to continue to the next exercise.
+
+![](./media/next-pg.png)
