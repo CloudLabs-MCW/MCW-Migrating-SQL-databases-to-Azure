@@ -119,12 +119,6 @@ To perform online data migrations, DMS looks for database and transaction log ba
 
    ![](media/sql25.png)
 
-> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-- If you receive a success message, you can proceed to the next task.
-- If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-- If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
-    
-<validation step="4ed94186-c596-4679-9454-3df0065f9ca3" />
 
 ### Task 4: Retrieve SQL MI and SQL Server 2022 VM connection information
 
@@ -176,7 +170,7 @@ In this task, you use the Azure Cloud shell to retrieve the information necessar
 
 In this task, you create a new online data migration project in DMS for the `WideWorldImporters` database.
 
-1. In Azure Data Studio click on >  **SQLVM2022** **Azure SQL migration (1)** and select **+ New migration (2)**.
+1. Navigate back to Azure Data Studio in the SQL VM. Click on >  **SQLVM2022** **Azure SQL migration (1)** and select **+ New migration (2)**.
 
    ![](media/sql6.png)
 
@@ -217,47 +211,30 @@ In this task, you create a new online data migration project in DMS for the `Wid
 
       > **Note**: If you encounter an error indicating that the **Azure SQL Managed Instance** is in a stopped state, please navigate to the Azure Portal, search for **Azure SQL Managed Instance**, and start the instance.
 
-1. In **Step 5: Azure Database Migration Service** blade, select the following details and click on **ConfigurelntegrationRuntime**
+1. In **Step 5: Azure Database Migration Service** blade, select the following details:
    
    - **Online migration** **(1)**, 
    - Select the location of the database backups to use during migration: **My database backups are on a network share** **(2)**.
    - **Subscription**: Select the available Subscription **(3)**.
-   - **Resource group**: From the drop-down search and select **hands-on-lab-<inject key="Suffix"  enableCopy="false"/>** **(4)**.
-   - **Azure Database Migration Service**: Select **wwi-dms** **(5)**. 
+   - Click on **Create new (4)** under Azure Database Migration Service.
 
-      ![](media/Ex2-Task5-S7.png) 
+      ![](media/E2T5S10-1809.png) 
    
-1. In the **Configure integration Runtime** select **I want to set up self-hosted integration runtime on another Windows machine that is not my local machine** **(1)** scroll down till Configure manually expand **Configure manually** **(2)** Copy any of the **Authentication keys** **(3)** to the notepad as it will be used later in the task, and minimize the **Azure Data Studio**.  
+1. On the **Create Azure Database Migration Service** window, enter the following details and click on **Create (3)**:
 
-   ![](media/data-migration-05.png)
+   - **Resource Group:** Select **hands-on-lab-<inject key="Suffix" enableCopy="false"/>** **(1)**
+   - **Name:** Enter **wwi-dms-<inject key="Suffix" enableCopy="false"/>** **(2)**
+
+      ![](media/E2T5S11-1809.png)
+
+
+1. On the **Create Azure Database Migration Service** widnow, scroll down to **Configure integration Runtime** select **I want to set up self-hosted integration runtime on another Windows machine that is not my local machine** **(1)** scroll down till Configure manually expand **Configure manually** **(2)** Copy any of the **Authentication keys** **(3)** to the notepad as it will be used later in the task, and minimize the **Azure Data Studio**.  
+
+   ![](media/E2T5S12-1809.png)
    
    > **Note**: Don't close/cancel Azure Data Studio.
 
-1. On the **JumpBox-<inject key="Suffix" enableCopy="false"/>** Virtual machine, open **File Explorer** and navigate to the **C:\ drive (1)**. Then, locate and double-click the **IntegrationRuntime installer (2)** to start the installation.
-   
-   ![](media/gs-g-et-7-1.png)
-
-1. In **Welcome to the Microsoft Integration Runtime Setup Wizard**, click on **Next**.
-
-   ![](media/Ex1-install-s2.png "Windows start menu search")
-
-1. In **End-User License Agreement**, select the checkbox **I accept the terms in the License Agreement**, and click on **Next**.
-
-   ![](media/Ex1-install-s3.png "Windows start menu search")
-
-1. In **Destination Folder**, click on **Next**.
-
-   ![](media/Ex1-install-s4.png "Windows start menu search")
-
-1. In **Ready to install Microsoft Integration Runtime**, click on **Install**.
-
-   ![](media/Ex1-install-s5.png "Windows start menu search")
-
-1. Once the deployment is completed click on **Finish** and minimize the application.
-
-   ![](media/Ex1-install-s6.png "Windows start menu search")
-
-1. On the **JumpBox-<inject key="Suffix"  enableCopy="false"/>** VM , in the search bar next to start search for `Microsoft Integration Runtime`
+1. Navigate to the **Lab VM**, in the search bar next to start search for `Microsoft Integration Runtime`
    
    ![](media/irt.png)
 
@@ -273,14 +250,16 @@ In this task, you create a new online data migration project in DMS for the `Wid
 
    ![](media/gs-g-et-35.png)
 
-1. Navigate back to the **Azure Data Studio**, close **Configure integration Runtime**, in the **Step 5: Azure Database Migration Service** click on **Refresh** **(1)** button you can view the **connected nodes** **(2)** and click on **Next** **(3)**. 
+1. Navigate back to the **Azure Data Studio** in SQL VM, click on **Done** on the **Create Azure Database Migration Service** window. 
 
-   ![](media/azure-sql-1.png)
+   ![](media/E2T5S17-1809.png)
+
+1. In the **Step 5: Azure Database Migration Service** notice the **Resource group (1)** name and the **Azure Database Migration Service (2)** name will be selected.Click on **Refresh** **(3)** button you can view the **connected nodes** **(4)** and click on **Next** **(5)**. 
+
+   ![](media/E2T5S18-1809.png)
           
 1. In **Step 6: Data source configuration** blade, enter the following details and click on **Run Validation** **(8)**:
 
-      > **Note**: Make sure to replace the SUFFIX value with <inject key="Suffix" />   
- 
       - **Password**: Enter **Password.1234567890** **(1)**
       - **Windows user account with read access to the network share location**: Enter **SQL2022-<inject key="Suffix"  enableCopy="false"/>\sqlmiuser** **(2)** 
       - **Password**: Enter **Password.1234567890** **(3)**
@@ -309,19 +288,19 @@ In this task, you create a new online data migration project in DMS for the `Wid
     
     ![](media/data-migration-06-1.png)
 
->**Note**: It may take a few minutes , please be patient.
+   >**Note**: It may take 5 to 10 minutes , please wait till the migration status is **Ready for cutover**.
 
 ### Task 6: Perform migration cutover
 
 Since you performed an "online data migration," the migration wizard continuously monitors the SMB network share for newly added log backup files. Online migrations enable any updates on the source database to be captured until you initiate the cutover to the SQL MI database. In this task, you add a record to one of the database tables, backup the logs, and complete the migration of the `WideWorldImporters` database by cutting over to the SQL MI database.
 
-1. From the **Azure portal**, navigate to **hands-on-lab-<inject key="Suffix" enableCopy="false"/>** resource group and search for **wwi-dms** Database Migration Services and select.
+1. From the **Azure portal**, navigate to **hands-on-lab-<inject key="Suffix" enableCopy="false"/>** resource group and search for **wwi-dms-<inject key="Suffix" enableCopy="false"/>** Database Migration Services and select.
 
-   ![](media/dms1.png)
+   ![](media/E2T6S1-1809.png)
 
-1. In **wwi-dms** balde, click on **Migrations**, and selct **sql2022-<inject key="Suffix" enableCopy="false"/>** under **Source name**.
+1. In **wwi-dms-<inject key="Suffix" enableCopy="false"/>** Overview page, click on **Migrations (1)**, and selct **SQLVM2022 (2)** under **Source name**.
   
-   ![](media/dms2-1.png)
+   ![](media/E2T6S2-1809.png)
 
 1. On the WideWorldImporters screen, note the status of **Restored** for the `WideWorldImporters.bak` file.
 
@@ -363,7 +342,7 @@ Since you performed an "online data migration," the migration wizard continuousl
 
    ![](media/EX2-task6-s10-1.png)
 
-   > **Note**: If you don't see it in the transaction logs entry, continue selecting refresh every 10-15 seconds until it appears.
+   > **Note**: It can take a few minutes to show the transaction logs entry. Try selecting refresh every 10-15 seconds until it appears.
 
 1. Continue selecting **Refresh**, and you should see the **WideWorldImportersLog.trn** status change to **Uploaded**.
 
@@ -377,13 +356,15 @@ Since you performed an "online data migration," the migration wizard continuousl
 
    ![](media/E3T6S12-1902.png)
 
-1. After verifying the transaction log status of **Restored**, select **Complete cutover**.
+1. After verifying the transaction log status of **Restored (1)**, select **Complete cutover (2)**.
 
-   ![](media/EX2-task6-s(14)-1.png)
+   ![](media/E2T6S13-1809.png)
 
 1. On the Complete cutover dialog box, verify that log backups pending restore is `0`, check **I confirm there are no additional log backups to provide and want to complete cutover**, and then select **Complete cutover**.
 
    ![](media/EX2-task6-s(15).png)
+
+   > **Note:** It may take about 5 minutes to complete the cutover process.
 
 1. Move back to the Migration blade, and verify that the migration status of WideWorldImporters has to change to **Succeeded**. You should refresh a couple of times to see the status as Succeeded.
 
@@ -395,11 +376,20 @@ Since you performed an "online data migration," the migration wizard continuousl
 
 1. You have successfully migrated the `WideWorldImporters` database to Azure SQL Managed Instance.
 
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+- If you receive a success message, you can proceed to the next task.
+- If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+- If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
+    
+<validation step="4ed94186-c596-4679-9454-3df0065f9ca3" />
+
 ### Task 7: Verify database and transaction log migration
 
 In this task, you connect to the SQL MI database using SSMS and quickly verify the migration.
 
-1. Return to SSMS on your **sql2022-<inject key="Suffix" enableCopy="false"/>** VM, and then select **Connect** and **Database Engine...** from the Object Explorer menu.
+1. Return to SSMS on your **sql2022-<inject key="Suffix" enableCopy="false"/>** VM, and then select **Connect (1)** and **Database Engine... (2)** from the Object Explorer menu.
+
+   ![](media/E2T7S1-1809.png)
 
 1. In the Connect to Server dialog, enter the following and click on **Connect** **(6)**:
 
@@ -411,13 +401,9 @@ In this task, you connect to the SQL MI database using SSMS and quickly verify t
 
       ![](media/sql31.png)
  
-1. The SQL MI connection appears below the sql2022-<inject key="Suffix" enableCopy="false"/> connection. Expand Databases the SQL MI connection and select the <inject key="Database Name" /> database.
+1. The SQL MI connection appears below the sql2022-<inject key="Suffix" enableCopy="false"/> connection. Expand Databases the SQL MI connection and select the **<inject key="Database Name" /> (1)** database.
 
-   ![In the SSMS Object Explorer, the SQL MI connection is expanded, and the WideWorldImporters database is highlighted and selected.](https://raw.githubusercontent.com/CloudLabs-MCW/MCW-Migrating-SQL-databases-to-Azure/fix/Hands-on%20lab/media/dm23.png "SSMS Object Explorer")
-
-1. With the **<inject key="Database Name" enableCopy="false"/>** database selected, select **New Query** on the SSMS toolbar to open a new query window.
-
-1. In the new query window, enter the following SQL script:
+1. With the **<inject key="Database Name" enableCopy="false"/>** database selected, select **New Query (2)** on the SSMS toolbar to open a new query window. and enter the following SQL script **(3)**:
 
    > **Note**: Make sure to replace the SUFFIX value with **<inject key="Suffix" />**
 
@@ -428,6 +414,8 @@ In this task, you connect to the SQL MI database using SSMS and quickly verify t
          SELECT * FROM Game
       ```  
 
+   ![](media/E2T7S3-1809.png)
+
 1. Select **Execute** on the SSMS toolbar to run the query. Observe the records contained within the `Game` table, including the new `Space Adventure` game you added after initiating the migration process.
 
    ![In the new query window, the query above has been entered, and in the results pane, the new Space Adventure game is highlighted.](media/datamod8.png "SSMS Query")
@@ -437,9 +425,7 @@ In this task, you connect to the SQL MI database using SSMS and quickly verify t
 - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
 - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-<validation step="19094c70-fbca-4d58-87dd-3ff7d5a20eae" />
-
-<validation step="413d413d-17c5-4298-ada0-dc777f97d7ec" />
+<validation step="55806acb-164b-484c-a078-c15995984e0a" />
 
 ## Summary
 
