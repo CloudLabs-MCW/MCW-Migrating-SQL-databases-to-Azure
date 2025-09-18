@@ -34,9 +34,9 @@ In this exercise, you will complete the following tasks:
 
      ![](media/new-image40.png)
 
-1. On the **Automatically sign in to all desktop apps and websites on this device?** pop-up, click on **Yes, all apps**. Then on **Account added to this device** page, select **Done**. 
+1. On the **Automatically sign in to all desktop apps and websites on this device?** pop-up, click on **Yes, all apps**. Then, on the **Account added to this device** page, select **Done**. 
 
-1. Once you signed in, Click on **Start Visual Studio**.
+1. Once you sign in, click on **Start Visual Studio**.
 
     ![](media/new-image45.png)
 
@@ -82,7 +82,7 @@ In this exercise, you will complete the following tasks:
 
 In this task, you update the WWI gamer info web application to connect to and utilize the SQL MI database.
 
-1. Navigate back to Azure portal, search and select **Resource groups** from the Azure services list.
+1. Navigate back to the Azure portal, search and select **Resource groups** from the Azure services list.
 
    ![](media/gs-g-et-49.png)
 
@@ -98,18 +98,18 @@ In this task, you update the WWI gamer info web application to connect to and ut
 
    ![](media/E3T2S4-1809.png)
 
-1. Replace the **value** of the connection string of `wwiContext` and `WwiReadOnlyContext` with the below mentioned value: 
+1. Replace the **value** of the connection string of `wwiContext` and `WwiReadOnlyContext` with the below-mentioned value: 
 
     ``
     Server=tcp:your-sqlmi-host-fqdn-value,1433;Database=WideWorldImportersSuffix;User ID=contosoadmin;Password=IAE5fAijit0w^rDM;Trusted_Connection=False;Encrypt=True;TrustServerCertificate=True;
     ``
-1. Replace `your-sqlmi-host-fqdn-value` with the fully qualified domain name for your SQL MI that you copied to a text editor earlier from the Azure Cloud Shell and replace the suffix with value: **<inject key="suffix" />** and select **OK**.
+1. Replace `your-sqlmi-host-fqdn-value` with the fully qualified domain name for your SQL MI that you copied to a text editor earlier from the Azure Cloud Shell, and replace the suffix with value: **<inject key="suffix" />** and select **OK**.
 
     ![](media/gs-g-et-52.png)
 
     ![](media/E3T2S5-1809.png)
 
-    >**Note**: Copy the name and value of both **`wwiContext`** and **`WwiReadOnlyContext`** and paste them into a text editor they will be used in a later step.
+    >**Note**: Copy the name and value of both **`wwiContext`** and **`WwiReadOnlyContext`** and paste them into a text editor; they will be used in a later step.
    
 1. Click on **Apply** and then select **confirm**. 
 
@@ -121,7 +121,7 @@ In this task, you update the WWI gamer info web application to connect to and ut
      
       ![](media/new-image53.png)
     
-1. Add the **Name** and **Value** of `wwiContext` which you recorded in notepad and click on **Apply**.
+1. Add the **Name** and **Value** of `wwiContext` which you recorded in Notepad and click on **Apply**.
 
     ![](media/gs-g-et-56.png)
 
@@ -131,7 +131,7 @@ In this task, you update the WWI gamer info web application to connect to and ut
 
 1. Click on **Apply**.
 
-1. When prompted that Your app may restart if you are updating connection strings. Are you sure you want to continue?, select **Confirm**.
+1. When prompted that your app may restart if you are updating connection strings. Are you sure you want to continue?, Select **Confirm**.
 
      ![](media/new-image52.png)
 
