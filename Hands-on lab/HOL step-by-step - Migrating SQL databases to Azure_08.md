@@ -1,12 +1,12 @@
 # Exercise 4: Integrate App Service with the virtual network
 
-### Estimated Duration: 30 minutes
+### Estimated Duration: 30 Minutes
 
-In this lab, you will configure VNet integration with Azure App Services and open the web application. This setup allows your web app to securely communicate with resources in your virtual network. By the end of this lab, your web application will be integrated with the VNet and accessible for use.
+In this exercise, you will configure VNet integration with Azure App Services and open the web application. This setup allows your web app to securely communicate with resources in your virtual network. By the end of this lab, your web application will be integrated with the VNet and accessible for use.
 
-## Lab objectives
+## Objectives
 
-In this lab, you will complete the following tasks:
+In this exercise, you will complete the following tasks:
 
 - Task 1: Configure VNet integration with App Services
 - Task 2: Open the web application
@@ -17,7 +17,7 @@ In this task, you add the networking configuration to your App Service to enable
 
 1. In the Azure portal, search and select **Resource groups** from the list select the **<inject key="Resource Group Name" enableCopy="false"/>** and then click on **wwi-web-<inject key="Suffix" enableCopy="false"/>** App Service from the list of resources.
 
-   ![](media/new-image57.png)
+   ![](media/E3T2S3-1809.png)
 
 2. On the **App Service** blade, select **Networking** from the left-hand menu under the **Settings** section.
 
@@ -25,7 +25,7 @@ In this task, you add the networking configuration to your App Service to enable
 
 3. On the **Networking (1)** page, under **Outbound Traffic Configuration**, click **Not Configured (2)** under **Virtual Network Integration**.
 
-   ![](media/sql40.png)
+   ![](media/E4T1S3-1809.png)
 
 4. Now click on **Add virtual network integration** under **Virtual Network Integration**.
 
@@ -71,6 +71,9 @@ In this task, you verify your web application now loads, and you can see the hom
 
 ## Summary
 
-In this lab, you have configured VNet integration with App Services and opened the web application.
+In this exercise, you have configured VNet integration with Azure App Services and accessed the web application.
 
 ### You have successfully completed the lab!
+
+
+By completing this **Data Modernization** hands-on lab, you have gained the skills and experience needed to perform a full end-to-end database migration to Azure SQL Managed Instance (SQL MI). You started by running detailed database assessments to uncover and address compatibility issues, ensuring a smooth migration process. You then successfully migrated an on-premises SQL Server 2022 database to SQL MI using Azure Database Migration Service, maintaining data integrity and minimizing downtime. Following the migration, you updated a web application to connect seamlessly with the new SQL MI environment, demonstrating how applications can be modernized alongside database workloads. Finally, you integrated Azure App Service with a virtual network, improving both security and connectivity. Together, these exercises provided practical insights into leveraging Azure’s managed services to modernize data platforms, enhance application performance, and build secure, scalable cloud-based solutions.
