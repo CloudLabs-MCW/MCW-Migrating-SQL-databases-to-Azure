@@ -42,13 +42,13 @@ In this task, you add the networking configuration to your App Service to enable
 
    ![](media/new-image61(2).png)
 
-   > **Note**: If you receive a message adding the Virtual Network to the Web App fails, select **Disconnect** on the VNet Configuration blade, and repeat steps 3 - 5 above.
+   > **Note**: If you receive a message that adding the Virtual Network to the Web App fails, select **Disconnect** on the VNet Configuration blade, and repeat steps 3 - 5 above.
 
 ### Task 2: Open the web application
 
-In this task, you verify your web application now loads, and you can see the home page of the web app.
+In this task, you verify that your web application now loads, and you can see the home page of the web app.
 
-1. Select **Overview** in the left-hand menu of your App Service and select the **URL** of your App service to launch the website. This link opens the URL in a browser window.
+1. Select **Overview** in the left-hand menu of your App Service and select the **URL** of your App Service to launch the website. This link opens the URL in a browser window.
 
    ![](media/new-image62.png)
 
@@ -59,8 +59,6 @@ In this task, you verify your web application now loads, and you can see the hom
    > **Note**: It can often take several minutes for the network configuration to be reflected in the web app. If you get an error screen, try selecting Refresh a few times in the browser window. If that does not work, try selecting **Restart** on the Azure Web App's toolbar.
 
 3. Congratulations, you successfully connected your application to the new SQL MI database.
-
-4. Please note down the Managed database name **WideWorldImporters<inject key="Suffix" enableCopy="false"/>** and fully qualified domain name of your SQL-managed instance, which you copied from the Azure Cloud Shell as you need this database name for upcoming lab.
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 - If you receive a success message, you can proceed to the next task.
@@ -74,6 +72,5 @@ In this task, you verify your web application now loads, and you can see the hom
 In this exercise, you have configured VNet integration with Azure App Services and accessed the web application.
 
 ### You have successfully completed the lab!
-
 
 By completing this **Data Modernization** hands-on lab, you have gained the skills and experience needed to perform a full end-to-end database migration to Azure SQL Managed Instance (SQL MI). You started by running detailed database assessments to uncover and address compatibility issues, ensuring a smooth migration process. You then successfully migrated an on-premises SQL Server 2022 database to SQL MI using Azure Database Migration Service, maintaining data integrity and minimizing downtime. Following the migration, you updated a web application to connect seamlessly with the new SQL MI environment, demonstrating how applications can be modernized alongside database workloads. Finally, you integrated Azure App Service with a virtual network, improving both security and connectivity. Together, these exercises provided practical insights into leveraging Azure’s managed services to modernize data platforms, enhance application performance, and build secure, scalable cloud-based solutions.
