@@ -1,20 +1,20 @@
 # Exercise 1: Perform database assessments
 
-### Estimated Duration: 90 minutes
+### Estimated Duration: 90 Minutes
 
-In this lab, you will connect to the WideWorldImporters database on the SqlServer2008 VM and perform assessments for migration to Azure SQL Database and Azure SQL Managed Instance. These assessments will help you understand the compatibility and readiness of your database for migration to Azure. You will evaluate the database schema, data, and performance to identify any potential issues and determine the best migration strategy. This process ensures a smooth transition to Azure’s cloud services, leveraging their scalability, security, and advanced features.
+In this exercise, you will connect to the WideWorldImporters database on the SqlServer2022 VM and perform assessments for migration to Azure SQL Database and Azure SQL Managed Instance. These assessments will help you understand the compatibility and readiness of your database for migration to Azure. You will evaluate the database schema, data, and performance to identify any potential issues and determine the best migration strategy. This process ensures a smooth transition to Azure’s cloud services, leveraging their scalability, security, and advanced features.
 
-## Lab Objective
+## Objective
 
-In this lab, you will complete the following tasks:
+In this exercise, you will complete the following tasks:
 
-- Task 1: Connect to the WideWorldImporters database on the SqlServer2008 VM
+- Task 1: Connect to the WideWorldImporters database on the SqlServer2022 VM
 - Task 2: Perform assessment for migration to Azure SQL Database
 - Task 3: Perform assessment for migration to Azure SQL Managed Instance
 
-### Task 1: Connect to the WideWorldImporters database on the SqlServer2008 VM
+### Task 1: Connect to the WideWorldImporters database on the SqlServer2022 VM
 
-In this task, you perform some configuration for the `WideWorldImporters` database on the SQL Server 2008 R2 instance to prepare it for migration.
+In this task, you perform some configuration for the `WideWorldImporters` database on the SQL Server 2022 instance to prepare it for migration.
 
 1. Navigate to the Azure portal: [https://portal.azure.com](https://portal.azure.com)
 
@@ -34,9 +34,9 @@ In this task, you perform some configuration for the `WideWorldImporters` databa
 
     ![](media/gs-g-et-6.png)
 
-1. On the **sql2022-<inject key="Suffix" enableCopy="false"/> | Connect** page, click on **Download RDP file (2)**. 
+1. On the **sql2022-<inject key="Suffix" enableCopy="false"/> | Connect** page, click on **Download RDP file (2)** under **Native RDP**. 
   
-    ![](media/sql52.png)
+    ![](media/E1T1S6-1809.png)
 
 1. Click on **Keep**, on the Downloads pop-up. 
 
@@ -55,7 +55,7 @@ In this task, you perform some configuration for the `WideWorldImporters` databa
    - **Username**: `sqlmiuser`
    - **Password**: `Password.1234567890`
 
-      ![The credentials specified above are entered into the Enter your credentials dialog.](media/rdc-credentials-sql-2008.png "Enter your credentials")
+      ![The credentials specified above are entered into the Enter your credentials dialog.](media/E1T1S10-1809.png "Enter your credentials")
 
 1. Select **Yes** to connect if prompted that the remote computer's identity cannot be verified.
 
@@ -75,21 +75,21 @@ In this task, you perform some configuration for the `WideWorldImporters` databa
   
     ![The SQL Server Connect to Search dialog is displayed, with SQL2008-entered into the Server name and Windows Authentication selected.](media/Ex1-Task1-S10-1.png "Connect to Server")
 
-1. Enter **SQLVM2022(1)** into the Server name box, ensure **Windows Authentication (2)** is selected, and then click on **Connect (3)**.
+1. Enter **SQLVM2022 (1)** into the Server name box, ensure **Windows Authentication (2)** is selected, and then click on **Connect (3)**.
 
      ![](media/sql2.png)
 
      > **Note**: If you see **Connection error** pop-up click on **Enable Trust server certificate**.
 
-      ![](media/new-image15.png)
+     ![](media/new-image15.png)
 
 1. Once connected, verify you see the **WideWorldImporters** database listed under databases.
 
     ![](media/sql3.png)
 
-1. Right click on **SQLVM2022**, click on **Manage**, and select **New Query** from the Azure Data Studio toolbar.
+1. Right click on **SQLVM2022**, click on **Manage (1)**, and select **New Query (2)** from the Azure Data Studio toolbar.
 
-    ![](media/sql4.png)
+    ![](media/E1T1S17-1809.png)
 
 1. Next, copy and paste the SQL script below into the new query window. This script enables the Service broker and changes the database recovery model to FULL.
 
@@ -124,7 +124,7 @@ In this task, you use the Microsoft Data Migration Assistant (DMA) to assess the
 
     ![](media/gs-g-et-14.png)
 
-1. In **Step 3: Target Platform and Assessment Results**, Select **Azure SQL DataBase(1)** from the drop down. Then select **WideWorldImporters(2)** under the database, review the migration assessment to determine the possibility of migrating to Azure SQL DB, and Click on the **Cancel (3)** button.
+1. In **Step 3: Target Platform and Assessment Results**, Select **Azure SQL Database (1)** from the drop down. Then select **WideWorldImporters (2)** under the database, review the migration assessment to determine the possibility of migrating to Azure SQL DB, and Click on the **Cancel (3)** button.
 
    ![The new project settings for doing a SQL Server to Azure SQL Database migration assessment are entered into the dialog.](media/E1T2S4.png "New project settings")
 
@@ -160,6 +160,8 @@ With one PaaS offering ruled out due to feature parity, perform a second DMA ass
 
 ## Summary
 
-In this exercise, you connected to the WideWorldImporters database on the SqlServer2008 VM, performed an assessment for migration to Azure SQL Database, and conducted an assessment for migration to Azure SQL Managed Instance. This process involved evaluating the current database setup, identifying potential compatibility issues, and determining the best migration strategy to ensure a smooth transition to Azure's cloud services.
+In this exercise, you connected to the WideWorldImporters database on the SqlServer2022 VM, performed an assessment for migration to Azure SQL Database, and conducted an assessment for migration to Azure SQL Managed Instance. This process involved evaluating the current database setup, identifying potential compatibility issues, and determining the best migration strategy to ensure a smooth transition to Azure's cloud services.
 
-## You have successfully completed the lab.
+### You have successfully completed the exercise. Please click on **Next >>** to continue to the next exercise.
+
+![](./media/next-pg.png)

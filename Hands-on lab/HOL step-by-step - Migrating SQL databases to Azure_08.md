@@ -67,7 +67,7 @@ In this task, you verify your web application now loads, and you can see the hom
 - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
 - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-<validation step="9cb677b1-ac46-4dcd-8bcb-dd0e9b141ea5" />
+<validation step="cdcba397-3f4f-4efe-8a59-632a5651f93b" />
 
 ## Summary
 

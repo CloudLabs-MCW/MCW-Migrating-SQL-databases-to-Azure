@@ -147,8 +147,12 @@ In this task, you update the WWI gamer info web application to connect to and ut
 - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
 - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
     
-<validation step="aee6215e-2948-4239-a9f7-12907b6d0e08" />
+<validation step="f23ada59-1fcd-4778-a213-dd10679a3f43" />
 
 ## Summary
 
 In this hands-on lab, you will deploy a web app to Azure and update its App Service configuration.
+
+### You have successfully completed the exercise. Please click on **Next >>** to continue to the next exercise.
+
+![](./media/next-pg.png)
