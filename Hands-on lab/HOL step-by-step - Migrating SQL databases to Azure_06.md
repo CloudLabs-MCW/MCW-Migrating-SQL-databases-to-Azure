@@ -194,7 +194,7 @@ In this task, you create a new online data migration project in DMS for the `Wid
 
    ![](media/gs-g-et-24.png)
    
-1. You'll be redirect to a web page, log in using your below **Azure credentials**. Once your account has been added successfully. go back to the Azure Data Studio, and click on **close**. 
+1. You'll be redirected to a web page, log in using your below **Azure credentials**. Once your account has been added successfully. go back to the Azure Data Studio, and click on **close**. 
 
    - **Email/Username**: <inject key="AzureAdUserEmail"></inject>
    - **Password**: <inject key="AzureAdUserPassword"></inject>
@@ -205,7 +205,7 @@ In this task, you create a new online data migration project in DMS for the `Wid
 
    ![](media/gs-g-et-25.png)
 
-1. The field will be populated with the details and click on **Next**. 
+1. The field will be populated with the details, and click on **Next**. 
 
    ![](media/data-migration-04-1.png)
 
@@ -227,14 +227,13 @@ In this task, you create a new online data migration project in DMS for the `Wid
 
       ![](media/E2T5S11-1809.png)
 
-
 1. On the **Create Azure Database Migration Service** widnow, scroll down to **Configure integration Runtime** select **I want to set up self-hosted integration runtime on another Windows machine that is not my local machine** **(1)** scroll down till Configure manually expand **Configure manually** **(2)** Copy any of the **Authentication keys** **(3)** to the notepad as it will be used later in the task, and minimize the **Azure Data Studio**.  
 
    ![](media/E2T5S12-1809.png)
    
-   > **Note**: Don't close/cancel Azure Data Studio.
+    >**Note**: Don't close/cancel Azure Data Studio.
 
-1. Navigate to the **Lab VM**, in the search bar next to start search for `Microsoft Integration Runtime`
+1. Navigate to the **Lab VM**, in the search bar, and next to start searching for `Microsoft Integration Runtime`
    
    ![](media/irt.png)
 
@@ -242,11 +241,11 @@ In this task, you create a new online data migration project in DMS for the `Wid
 
    ![](media/gs-g-et-33.png)
 
-1. In the New Integration Runtime (Self-hosted) Node leave default and click on **Finish**.
+1. In the New Integration Runtime (Self-hosted) Node, leave the default and click on **Finish**.
 
    ![](media/gs-g-et-34.png)
 
-1. Wait for the Integration Runtime to be successful to continue further.
+1. Wait for the Integration Runtime to be successful before continuing further.
 
    ![](media/gs-g-et-35.png)
 
