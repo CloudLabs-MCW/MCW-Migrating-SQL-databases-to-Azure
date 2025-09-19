@@ -4,7 +4,7 @@
 
 ## Overview
 
-In this hands-on lab, you will learn how to perform a comprehensive database migration to Azure SQL Managed Instance (SQL MI). You will start by conducting detailed database assessments to identify any compatibility issues and ensure a smooth transition. Next, you will migrate the database to SQL MI, followed by updating the associated web application to utilize the new SQL MI database. Finally, you will integrate the Azure App Service with the virtual network to enhance connectivity and security. By the end of this lab, you will have the skills to effectively migrate and modernize databases and applications using Azure’s robust cloud services.
+In this hands-on lab, you will learn how to perform a comprehensive database migration to Azure SQL Managed Instance (SQL MI). You will begin by conducting detailed database assessments to identify any potential compatibility issues and make sure you're able to transition smoothly. Next, you will be able to migrate the database to SQL MI, followed by updating the associated web application to use the new SQL MI database. Finally, you will integrate the Azure App Service with the virtual network to enhance connectivity and security. By the end of this lab, you will have the skills to effectively migrate and modernize databases and applications using Azure’s robust cloud services.
 
 ## Objectives
 
@@ -31,13 +31,13 @@ This architectural diagram illustrates the integration of various Azure services
 
 ## Explanation of components
 
-- **SQL Server 2022** : This is the latest version of SQL Server, offering advanced features such as built-in query intelligence, enhanced security, and improved performance. It serves as the on-premises database platform for modern applications and can be seamlessly integrated with Azure for hybrid cloud scenarios.
-- **Azure Database Migration Service (DMS)** : This service facilitates the migration of data from the on-premises SQL Server to the managed instance in the cloud. It ensures data is transferred securely and efficiently.
-- **Azure SQL Managed Instance** : This is the primary destination for the migrated data. It is a fully managed SQL Server instance in the cloud that provides high availability and scalability.
-- **JumpBox** : A virtual machine used to manage and access the resources within the virtual network securely. It acts as a gateway for administrators.
-- **Gateway Subnet** : This subnet contains the VPN gateway that facilitates the secure connection between the on-premises environment and the virtual network.
-- **Visual Studio 2019** : This development environment is used for publishing web applications that may interact with the migrated data.
-- **Web App** : This component represents the web applications that are integrated with the virtual network and can access the migrated data for various operations.
+- **SQL Server 2022**: This is the latest version of SQL Server, offering advanced features such as built-in query intelligence, enhanced security, and improved performance. It serves as the on-premises database platform for modern applications and can be seamlessly integrated with Azure for hybrid cloud scenarios.
+- **Azure Database Migration Service (DMS)**: This service facilitates the migration of data from the on-premises SQL Server to the managed instance in the cloud. It ensures data is transferred securely and efficiently.
+- **Azure SQL Managed Instance**: This is the primary destination for the migrated data. It is a fully managed SQL Server instance in the cloud that provides high availability and scalability.
+- **JumpBox**: A virtual machine used to manage and access the resources within the virtual network securely. It acts as a gateway for administrators.
+- **Gateway Subnet**: This subnet contains the VPN gateway that facilitates the secure connection between the on-premises environment and the virtual network.
+- **Visual Studio 2019**: This development environment is used for publishing web applications that may interact with the migrated data.
+- **Web App**: This component represents the web applications that are integrated with the virtual network and can access the migrated data for various operations.
 
 ## Getting Started with the Lab
  

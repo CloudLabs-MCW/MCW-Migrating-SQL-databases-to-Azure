@@ -1,23 +1,21 @@
 # Exercise 3: Update the web application to use the new SQL MI database
 
-### Estimated Duration: 30 minutes
+### Estimated Duration: 30 Minutes
 
-In this lab, you will deploy a web app to Azure and update its App Service configuration. This process involves setting up the web app in the Azure environment and configuring the necessary settings to ensure it runs smoothly. By the end of this lab, you will have a fully deployed and configured web app on Azure, ready for use.
+In this exercise, you will deploy a web app to Azure and update its App Service configuration. This process involves setting up the web app in the Azure environment and configuring the necessary settings to ensure it runs smoothly. By the end of this lab, you will have a fully deployed and configured web app on Azure, ready for use.
 
-## Lab Objectives
+## Objectives
 
-Lab Objectives
-
-In this lab, you will complete the following tasks:
+In this exercise, you will complete the following tasks:
 
 - Task 1: Deploy the web app to Azure
 - Task 2: Update App Service configuration
 
-> **Note**: Azure SQL Managed Instance has a private IP address in a dedicated VNet, so to connect an application, you must configure access to the VNet where the Managed Instance is deployed. To learn more, read Connect your application to Azure SQL Managed Instance `https://docs.microsoft.com/azure/azure-sql/managed-instance/connect-application-instance`.
+    > **Note**: Azure SQL Managed Instance has a private IP address in a dedicated VNet, so to connect an application, you must configure access to the VNet where the Managed Instance is deployed. To learn more, read Connect your application to Azure SQL Managed Instance `https://docs.microsoft.com/azure/azure-sql/managed-instance/connect-application-instance`.
 
 ### Task 1: Deploy the web app to Azure
 
-1. You have already logged in to JumpBox VM, use this VM to continue with the lab. 
+1. Navigate to your **Lab VM** desktop.
 
 1. In the File Explorer dialog, navigate to the `C:\hands-on-lab\MCW-Migrating-SQL-databases-to-Azure-master\Hands-on lab\lab-files`. In the `lab-files` folder, double-click `WideWorldImporters.sln` to open the solution in Visual Studio.
 
@@ -27,20 +25,18 @@ In this lab, you will complete the following tasks:
 
     ![](media/new-image38.png)
 
-1. Select **Sign in** and choose **Work or school account** > **Continue** and enter the following **Azure account** credentials if prompted:
+1. Select **Sign in with Microsoft** and choose **Work or school account** > **Continue** and enter the following **Azure account** credentials if prompted:
    
    * Email/Username: <inject key="AzureAdUserEmail"></inject>
    * Password: <inject key="AzureAdUserPassword"></inject>
 
-     ![](media/new-image39.png)
+     ![](media/E3T1S4.1-1809.png)
 
      ![](media/new-image40.png)
 
-1. On the **Stay signed in to all your apps** pop-up, click on **OK**. Then on **You're all set** page, select **Done**. 
+1. On the **Automatically sign in to all desktop apps and websites on this device?** pop-up, click on **Yes, all apps**. Then, on the **Account added to this device** page, select **Done**. 
 
-    ![](media/gs-g-et-45.png)
-
-1. Once you signed in, Click on **Start Visual Studio**.
+1. Once you sign in, click on **Start Visual Studio**.
 
     ![](media/new-image45.png)
 
@@ -51,6 +47,8 @@ In this lab, you will complete the following tasks:
 1. Once logged into **Visual Studio**, right-click the **`WideWorldImporters.Web`** project in the **Solution Explorer**, and then select **Publish**.
 
     ![In the Solution Explorer, the context menu for the WideWorldImporters.Web project is displayed, and Publish is highlighted.](media/visual-studio-project-publish.png "Visual Studio")
+
+    >**Note:** If you see the WideWorldImporters.Web (unloaded) project, right-click on it and select **Reload Project**.
 
 1. On the **Publish** dialog, select **Azure** in the **Target** box, and click **Next**.
 
@@ -84,7 +82,7 @@ In this lab, you will complete the following tasks:
 
 In this task, you update the WWI gamer info web application to connect to and utilize the SQL MI database.
 
-1. Navigate back to Azure portal, search and select **Resource groups** from the Azure services list.
+1. Navigate back to the Azure portal, search and select **Resource groups** from the Azure services list.
 
    ![](media/gs-g-et-49.png)
 
@@ -94,23 +92,24 @@ In this task, you update the WWI gamer info web application to connect to and ut
  
 1. Select the **wwi-web-<inject key="Suffix" enableCopy="false"/>** App Service from the list of resources.
 
-   ![](media/new-image57.png)
+   ![](media/E3T2S3-1809.png)
 
 1. On the App Service blade, select **Environment variables** **(1)** under Settings from the left-hand pane, select **Connection strings** **(2)** and click on **Advanced edit** **(3)**.
 
-   ![](media/new-image51.png)
+   ![](media/E3T2S4-1809.png)
 
-1. Replace the **value** of the connection string of `wwiContext` with the below and replace **`your-sqlmi-host-fqdn-value`** with the fully qualified domain name for your SQL MI that you copied to a text editor earlier from the Azure Cloud Shell and replace the suffix with value: <inject key="suffix" /> and select **OK**..
-    
+1. Replace the **value** of the connection string of `wwiContext` and `WwiReadOnlyContext` with the below-mentioned value: 
+
     ``
     Server=tcp:your-sqlmi-host-fqdn-value,1433;Database=WideWorldImportersSuffix;User ID=contosoadmin;Password=IAE5fAijit0w^rDM;Trusted_Connection=False;Encrypt=True;TrustServerCertificate=True;
     ``
+1. Replace `your-sqlmi-host-fqdn-value` with the fully qualified domain name for your SQL MI that you copied to a text editor earlier from the Azure Cloud Shell, and replace the suffix with value: **<inject key="suffix" />** and select **OK**.
 
     ![](media/gs-g-et-52.png)
 
-    ![](media/gs-g-et-53.png)
+    ![](media/E3T2S5-1809.png)
 
-    >**Note**: Copy the name and value of both **`wwiContext`** and **`WwiReadOnlyContext`** and paste them into a text editor they will be used in a later step.
+    >**Note**: Copy the name and value of both **`wwiContext`** and **`WwiReadOnlyContext`** and paste them into a text editor; they will be used in a later step.
    
 1. Click on **Apply** and then select **confirm**. 
 
@@ -122,7 +121,7 @@ In this task, you update the WWI gamer info web application to connect to and ut
      
       ![](media/new-image53.png)
     
-1. Add the **Name** and **Value** of `wwiContext` which you recorded in notepad and click on **Apply**.
+1. Add the **Name** and **Value** of `wwiContext` which you recorded in Notepad and click on **Apply**.
 
     ![](media/gs-g-et-56.png)
 
@@ -132,7 +131,7 @@ In this task, you update the WWI gamer info web application to connect to and ut
 
 1. Click on **Apply**.
 
-1. When prompted that Your app may restart if you are updating connection strings. Are you sure you want to continue?, select **Confirm**.
+1. When prompted that your app may restart if you are updating connection strings. Are you sure you want to continue?, Select **Confirm**.
 
      ![](media/new-image52.png)
 
@@ -151,7 +150,7 @@ In this task, you update the WWI gamer info web application to connect to and ut
 
 ## Summary
 
-In this hands-on lab, you will deploy a web app to Azure and update its App Service configuration.
+In this exercise, you have deployed a web app to Azure and updated its App Service configuration.
 
 ### You have successfully completed the exercise. Please click on **Next >>** to continue to the next exercise.
 

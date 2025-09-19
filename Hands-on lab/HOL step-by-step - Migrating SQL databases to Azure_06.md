@@ -68,7 +68,7 @@ In this task, you use the SQL Server Configuration Manager to update the service
 
    ![](media/sql15.png)
 
-    >**Note**: If the change doesn't occur immediately, wait 1 to 2 minutes for the Log On As value for the SQL Server (MSSQLSERVER) service changed to `./sqlmiuser`.
+    >**Note**: If the change doesn't occur immediately, wait 1 to 2 minutes for the Log On As value for the SQL Server (MSSQLSERVER) service to change to `./sqlmiuser`.
     
 1. Close the SQL Server Configuration Manager.
 
@@ -76,7 +76,7 @@ In this task, you use the SQL Server Configuration Manager to update the service
 
 To perform online data migrations, DMS looks for database and transaction log backups in the shared SMB backup folder on the source database server. In this task, you create a backup of the `WideWorldImporters` database using SSMS and write it to the ```\\SQL2022\dms-backups``` SMB network share you made in a previous task. The backup file needs to include a checksum, so you add that during the backup steps.
 
-1. On the **sql2022-<inject key="Suffix" enableCopy="false"/>** VM, open **SQL Server Management Studio 20** by entering "sql server management" into the search bar in the Windows Start menu.
+1. On the **sql2022-<inject key="Suffix" enableCopy="false"/>** VM, open **SQL Server Management Studio 20** by entering "SQL Server Management" into the search bar in the Windows Start menu.
 
    ![](media/sql17-1.png)
 
@@ -140,7 +140,7 @@ In this task, you use the Azure Cloud shell to retrieve the information necessar
 
    ![](media/new-image28.png)
 
-1. Specify the following values and click on **Create (6)** to create storage account: 
+1. Specify the following values and click on **Create (6)** to create a storage account: 
       - Subscription: Accept the **default (1)**
       - Resource Group: Select **<inject key="Resource Group Name" enableCopy="false"/>** **(2)**
       - Region: **Central US (3)**
@@ -162,7 +162,7 @@ In this task, you use the Azure Cloud shell to retrieve the information necessar
 
    ![](media/gs-g-et-21.png)
 
-1. Within the above command's output, locate and copy the value of the **`fullyQualifiedDomainName`** property. Paste the value into a text editor such as Notepad.exe which will be used in later steps, for reference below.
+1. Within the above command's output, locate and copy the value of the **`fullyQualifiedDomainName`** property. Paste the value into a text editor such as Notepad.exe, which will be used in later steps, for reference below.
 
    ![](media/gs-g-et-22.png)
 
@@ -194,7 +194,7 @@ In this task, you create a new online data migration project in DMS for the `Wid
 
    ![](media/gs-g-et-24.png)
    
-1. You'll be redirect to a web page, log in using your below **Azure credentials**. Once your account has been added successfully. go back to the Azure Data Studio, and click on **close**. 
+1. You'll be redirected to a web page, log in using your below **Azure credentials**. Once your account has been added successfully. go back to the Azure Data Studio, and click on **close**. 
 
    - **Email/Username**: <inject key="AzureAdUserEmail"></inject>
    - **Password**: <inject key="AzureAdUserPassword"></inject>
@@ -205,7 +205,7 @@ In this task, you create a new online data migration project in DMS for the `Wid
 
    ![](media/gs-g-et-25.png)
 
-1. The field will be populated with the details and click on **Next**. 
+1. The field will be populated with the details, and click on **Next**. 
 
    ![](media/data-migration-04-1.png)
 
@@ -227,14 +227,13 @@ In this task, you create a new online data migration project in DMS for the `Wid
 
       ![](media/E2T5S11-1809.png)
 
-
 1. On the **Create Azure Database Migration Service** widnow, scroll down to **Configure integration Runtime** select **I want to set up self-hosted integration runtime on another Windows machine that is not my local machine** **(1)** scroll down till Configure manually expand **Configure manually** **(2)** Copy any of the **Authentication keys** **(3)** to the notepad as it will be used later in the task, and minimize the **Azure Data Studio**.  
 
    ![](media/E2T5S12-1809.png)
    
-   > **Note**: Don't close/cancel Azure Data Studio.
+    >**Note**: Don't close/cancel Azure Data Studio.
 
-1. Navigate to the **Lab VM**, in the search bar next to start search for `Microsoft Integration Runtime`
+1. Navigate to the **Lab VM**, in the search bar, and next to start searching for `Microsoft Integration Runtime`
    
    ![](media/irt.png)
 
@@ -242,11 +241,11 @@ In this task, you create a new online data migration project in DMS for the `Wid
 
    ![](media/gs-g-et-33.png)
 
-1. In the New Integration Runtime (Self-hosted) Node leave default and click on **Finish**.
+1. In the New Integration Runtime (Self-hosted) Node, leave the default and click on **Finish**.
 
    ![](media/gs-g-et-34.png)
 
-1. Wait for the Integration Runtime to be successful to continue further.
+1. Wait for the Integration Runtime to be successful before continuing further.
 
    ![](media/gs-g-et-35.png)
 
@@ -272,7 +271,7 @@ In this task, you create a new online data migration project in DMS for the `Wid
 
          ![](media/gs-g-et-37.png)
 
-1. In the Run Validate page wait till all the validation steps are successful then click on **Done**.
+1. In the Run Validate page, wait till all the validation steps are successful, then click on **Done**.
 
    ![](media/gs-g-et-38.png)
 
@@ -366,7 +365,7 @@ Since you performed an "online data migration," the migration wizard continuousl
 
    > **Note:** It may take about 5 minutes to complete the cutover process.
 
-1. Move back to the Migration blade, and verify that the migration status of WideWorldImporters has to change to **Succeeded**. You should refresh a couple of times to see the status as Succeeded.
+1. Move back to the Migration blade, and verify that the migration status of WideWorldImporters has changed to **Succeeded**. You should refresh a couple of times to see the status as Succeeded.
 
    ![](media/gs-g-et-42.png)
 
@@ -429,7 +428,7 @@ In this task, you connect to the SQL MI database using SSMS and quickly verify t
 
 ## Summary
 
-In this exercise, you have created a SMB network share on the VM, changed MSSQLSERVER service to run under sqlmiuser account, created a backup of the WideWorldImporters database, retrieved SQL MI and SQL Server 2022 VM connection information, created and ran an online data migration project, performed migration cutover and verified database and transaction log migration.
+In this exercise, you have created an SMB network share on the VM, changed the MSSQLSERVER service to run under the sqlmiuser account, created a backup of the WideWorldImporters database, retrieved SQL MI and SQL Server 2022 VM connection information, created and ran an online data migration project, performed migration cutover, and verified database and transaction log migration.
 
 ### You have successfully completed the exercise. Please click on **Next >>** to continue to the next exercise.
 
