@@ -2,7 +2,7 @@
 
 ### Estimated Duration: 60 Minutes
 
-In this hands-on lab, you use the Azure Data Studio to perform assessments on the `WideWorldImporters` database. You create two assessments: one for SQL DB and a second for SQL MI. These assessments provide reports about any feature parity and compatibility issues between the on-premises database and the Azure managed SQL database service options.
+In this lab, you use the Azure Data Studio to perform assessments on the `WideWorldImporters` database. You create two assessments: one for SQL DB and a second for SQL MI. These assessments provide reports about any feature parity and compatibility issues between the on-premises database and the Azure-managed SQL database service options.
 
 ## Lab Objectives
 
@@ -19,26 +19,26 @@ In this task, you will create `WideWorldImporters` database on the SQL 2019 VM i
 
 1. Select the **SQLMigrationRG** resource group from the list.
 
-   ![](./media/select-sqlmigrationrg.png)
+   ![](./media/L3T1S2-2009.png)
 
 1. In the list of resources for your resource group, select the **sql2019-<inject key="DeploymentID" enableCopy="false"/>** VM.
 
-   ![](./media/select-sql2019-vm.png)
+   ![](./media/L3T1S3-2009.png)
 
-1. On the **sql2019-<inject key="DeploymentID" enableCopy="false"/>** VM blade in the Azure portal, select **Overview** from the left-hand menu, and then select **Connect**.
+1. On the **sql2019-<inject key="DeploymentID" enableCopy="false"/>** VM blade in the Azure portal, in the **Overview** page, click on **Connect (1)** dropdown and select **Connect (2)**.
 
-   ![](./media/sql2019-vm-connect.png) 
+   ![](./media/L3T1S4-2009.png) 
 
-1. On the Connect with RDP blade, select **Download RDP File**, then open the downloaded RDP file.
+1. On the Connect blade, select **Download RDP File** under **Native RDP**, then open the downloaded RDP file.
 
-   ![](./media/download-rdp-file.png)
+   ![](./media/L3T1S5-2009.png)
 
-1. Open the downloaded RDP file, click on **More choices (1) > Use a different account (2)** and enter the following credentials when prompted, and then select **OK:**
+1. Open the downloaded RDP file, click on **More choices (1) > Use a different account (2)**, and enter the following credentials when prompted, and then select **OK:**
 
    - **Username:** `.\sqlmiuser` **(3)**
    - **Password:** `Password.1234567890` **(4)**
 
-   ![](./media/enter-creds.png) 
+      ![](./media/enter-creds.png) 
 
 1. Select **Yes** to connect if prompted that the remote computer's identity cannot be verified.
 
@@ -64,11 +64,11 @@ In this task, you will create `WideWorldImporters` database on the SQL 2019 VM i
 
    ![](media/Ex1-install-s5.png "Windows start menu search")
 
-1. Once the deployment is completed click on **Finish** and minimize the application.
+1. Once the deployment is completed, click on **Finish** and minimize the application.
 
    ![](media/Ex1-install-s6.png "Windows start menu search")
 
-1. Open Windows PowerShell and run the below command to create a database named 'WideWorldImporters'.
+1. In the **sql2019-<inject key="DeploymentID" enableCopy="false"/>** virtual machine, open Windows PowerShell and run the command below to create a database named 'WideWorldImporters'.
 
    ```
    Invoke-Sqlcmd -Query "CREATE DATABASE WideWorldImporters;" -ServerInstance <YOUR SQL VM NAME>
@@ -84,13 +84,13 @@ In this task, you will create `WideWorldImporters` database on the SQL 2019 VM i
 
    ![](media/Ex1-Task1-S9b.png)
 
-1. In the Azure Data Studio select **Connections (1)** from the Activity Bar, click on **New Connection (2)** dialog, enter **sql2019-<inject key="DeploymentID" enableCopy="false"/>(3)** into the Server name box, ensure **Windows Authentication** is selected, and then select **Connect (4)**.
+1. In the Azure Data Studio select **Connections (1)** from the Activity Bar, click on **New Connection (2)** dialog, enter **sql2019-<inject key="DeploymentID" enableCopy="false"/>(3)** into the Server name box, ensure **Windows Authentication (4)** is selected, and then select **Connect (5)**.
   
    ![The SQL Server Connect to Search dialog is displayed, with SQL2008-entered into the Server name and Windows Authentication selected.](media/Ex1-Task1-S10.png "Connect to Server")
     
    > **Note:** If you see **Connection error** pop-up click on **Enable Trust server certificate**.
 
-   ![](media/ex1-note.png "Connect issue")
+   ![](media/L3T1S17-2009.png "Connect issue")
 
 1. Once connected, verify that you see the `WideWorldImporters`(1) database listed under databases. On the **sql2019-<inject key="DeploymentID" enableCopy="false"/>(1)** connection, navigate to **Home (2)**, and select **New Query (3)** from the Azure Data Studio toolbar.
 
@@ -133,7 +133,7 @@ In this task, you use the Microsoft Data Migration Assistant (DMA) to assess the
 
    ![](./media/azure-sql-db.png) 
 
-   > The DMA assessment for migrating the `WideWorldImporters` database to a target platform of Azure SQL DB reveals features in use that are not supported. These features, including Service broker, prevent WWI from migrating to the Azure SQL DB PaaS offering without making changes to their database.
+   > The DMA assessment for migrating the `WideWorldImporters` database to a target platform of Azure SQL DB reveals features in use that are not supported. These features, including Service Broker, prevent WWI from migrating to the Azure SQL DB PaaS offering without making changes to their database.
 
 1. Now select **Azure SQL Managed Instance** from the dropdowm for **Select target type**. Notice that with one PaaS offering ruled out due to feature parity, the assessment against Azure SQL Managed Instance (SQL MI) provides a report about any feature parity and compatibility issues between the on-premises database and the SQL MI service.
 
@@ -147,13 +147,8 @@ In this task, you use the Microsoft Data Migration Assistant (DMA) to assess the
 
 ## Summary
 
-In this hands-on lab, you connected to your SQL 2019 VM and used the Azure Data Studio to perform assessments on the `WideWorldImporters` database. You reviewed assessments: one for SQL DB and a second for SQL MI.
-
-## Review
-
-In this lab, you have:
-
-- Connected to the WideWorldImporters database on the SQL 2019 VM
-- Performed assessments for migration
+In this lab, you connected to your SQL 2019 VM and used the Azure Data Studio to perform assessments on the `WideWorldImporters` database. You reviewed assessments: one for SQL DB and a second for SQL MI.
 
 ### You have successfully completed the lab.
+
+By completing the **Discover And Assess On-prem Windows & SQL Servers** hands-on lab, you learned how to discover and assess on-premises Windows Servers and SQL databases using Azure Migrate and Azure Data Studio. You configured the Azure Migrate Appliance, created migration assessments, and used dependency visualization to understand server relationships. You also assessed database readiness using the SQL Migration extension and explored security features, such as Defender for SQL and Data Discovery. These steps help you plan and prepare for a smooth migration of servers and databases to Azure.
