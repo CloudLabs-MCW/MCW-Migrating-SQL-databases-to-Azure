@@ -219,6 +219,8 @@ In this task, you create a new online data migration project in DMS for the `Wid
    - Click on **Create new (4)** under Azure Database Migration Service.
 
       ![](media/E2T5S10-1809.png) 
+
+      > **Note:** Continue creating a new Azure Database Migration Service even if a pre-existing one is already populated. The pre-existing service will not include the Deployment ID.
    
 1. On the **Create Azure Database Migration Service** window, enter the following details and click on **Create (3)**:
 
