@@ -50,6 +50,8 @@ In this exercise, you will complete the following tasks:
 
     >**Note:** If you see the WideWorldImporters.Web (unloaded) project, right-click on it and select **Reload Project**.
 
+    > **Note:** If the project does not load even after clicking **Reload Project**, click **Install** under the prompt to install the required extra components and .NET framework (this process may take about 5 minutes). After installation, retry loading the project by right-clicking it and selecting **Reload Project**.
+
 1. On the **Publish** dialog, select **Azure** in the **Target** box, and click **Next**.
 
     ![](media/new-image46.png)
