@@ -74,6 +74,8 @@ In this task, you use the SQL Server Configuration Manager to update the service
 
 ### Task 3: Create a backup of the WideWorldImporters database
 
+In this task, you create a full backup of the `WideWorldImporters` database using SQL Server Management Studio (SSMS) and write it to the SMB network share you created in Task 1.
+
 To perform online data migrations, DMS looks for database and transaction log backups in the shared SMB backup folder on the source database server. In this task, you create a backup of the `WideWorldImporters` database using SSMS and write it to the ```\\SQL2022\dms-backups``` SMB network share you made in a previous task. The backup file needs to include a checksum, so you add that during the backup steps.
 
 1. On the **sql2022-<inject key="Suffix" enableCopy="false"/>** VM, open **SQL Server Management Studio 20** by entering "SQL Server Management" into the search bar in the Windows Start menu.
@@ -170,7 +172,43 @@ In this task, you use the Azure Cloud shell to retrieve the information necessar
 
 In this task, you create a new online data migration project in DMS for the `WideWorldImporters` database.
 
-1. Navigate back to Azure Data Studio in the SQL VM. Click on >  **SQLVM2022** **Azure SQL migration (1)** and select **+ New migration (2)**.
+To run the migration, you must first enable a system-assigned managed identity on the machine hosting the Integration Runtime, and then assign the Storage Blob Data Contributor role to that managed identity on the storage account. 
+
+1. Navigate to the Azure Portal: [https://portal.azure.com](https://portal.azure.com). Search for **Virtual machines (1)** in te search bar and select **Virtual machines (2)** from the search results.
+
+   ![](media/E2T5S1-0701.png)
+
+1. In the list of Virtual Machines, select the **JumpBox-<inject key="Suffix" enableCopy="false"/>** VM.
+
+   ![](media/E2T5S2-0701.png)
+
+1. Go to **Identity (1)** under the **Settings** section in the left pane. Then, under the **System assigned** tab, select **On (2)** and click on **Save (3)** to enable the system-assigned managed identity.
+
+   ![](media/E2T5S3-0701.png)
+
+1. In the search bar, search for **Storage accounts (1)** and select **Storage accounts (2)** from the search results.
+
+   ![](media/E2T5S4-0701.png)
+
+1. From the list of storage account, select **sqlmistore<inject key="Suffix" enableCopy="false"/>**.
+
+   ![](media/E2T5S5-0701.png)
+
+1. Select **Access control (IAM) (1)** from the left pane, and then select the **+ Add (2)** button and choose **Add role assignment (3)** from the drop-down menu.
+
+   ![](media/E2T5S6-0701.png)
+
+1. In the **Add role assignment** pane, set the following:
+
+   - **Role**: Search **(1)** and select the **Storage Blob Data Contributor (2)** and click on **Next (3).**
+   - **Members**: Select **Managed identity (4)** and click on **Select members (5)**. Select **Virtual Machine (6)** and click on **JumBox-<inject key="Suffix" enableCopy="false"/> (7)** VM and click on **Select (8)**.
+   - Click on **Review + assign (9)** and then click on **Review + assign** again to complete the role assignment.
+
+      ![](media/E2T5S7-0701.png)
+
+      ![](media/E2T5S8-0701.png)      
+
+1. Navigate back to **Azure Data Studio** in the **SQL VM**. Click on >  **SQLVM2022** **Azure SQL migration (1)** and select **+ New migration (2)**.
 
    ![](media/sql6.png)
 
@@ -247,7 +285,7 @@ In this task, you create a new online data migration project in DMS for the `Wid
 
    ![](media/gs-g-et-34.png)
 
-1. Wait for the Integration Runtime to be successful before continuing further.
+1. Wait for the **Register Integration Runtime** to be successful before continuing further.
 
    ![](media/gs-g-et-35.png)
 
@@ -273,7 +311,7 @@ In this task, you create a new online data migration project in DMS for the `Wid
 
          ![](media/gs-g-et-37.png)
 
-1. In the Run Validate page, wait till all the validation steps are successful, then click on **Done**.
+1. On the **Running Validation** window, wait till all the validation steps are successful, then click on **Done**.
 
    ![](media/gs-g-et-38.png)
 
@@ -341,7 +379,7 @@ Since you performed an "online data migration," the migration wizard continuousl
 
 1. Return to the migration status page in the Azure portal. On the WideWorldImporters screen, select **Refresh**, and you should see the **WideWorldImportersLog.trn** file appear with a status of **Queued**.
 
-   ![](media/EX2-task6-s10-1.png)
+   ![](media/E2T6S9-0701.png)
 
    > **Note**: It can take a few minutes to show the transaction logs entry. Try selecting refresh every 10-15 seconds until it appears.
 
@@ -373,7 +411,7 @@ Since you performed an "online data migration," the migration wizard continuousl
 
 1. You can also view the migration status in the Azure portal. Return to the wwi-sqldms blade of Azure Database Migration Service, click on **Migrations** ensure that Migration status is **Succeeded**. You might have to refresh to view the status.
 
-   ![](media/sql30.png)
+   ![](media/E2T6S917-0701.png)
 
 1. You have successfully migrated the `WideWorldImporters` database to Azure SQL Managed Instance.
 
@@ -430,7 +468,7 @@ In this task, you connect to the SQL MI database using SSMS and quickly verify t
 
 ## Summary
 
-In this exercise, you have created an SMB network share on the VM, changed the MSSQLSERVER service to run under the sqlmiuser account, created a backup of the WideWorldImporters database, retrieved SQL MI and SQL Server 2022 VM connection information, created and ran an online data migration project, performed migration cutover, and verified database and transaction log migration.
+In this exercise, you migrated the `WideWorldImporters` database from a SQL Server 2022 VM to Azure SQL Managed Instance using Azure Database Migration Service (DMS). You created an SMB network share, configured the SQL Server service to run under a specific user account, backed up the database, and set up an online data migration project. After performing the migration cutover, you verified that the database and transaction logs were successfully migrated to SQL MI.
 
 ### You have successfully completed the exercise. Please click on **Next >>** to continue to the next exercise.
 
