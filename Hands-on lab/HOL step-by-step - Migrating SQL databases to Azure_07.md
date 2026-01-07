@@ -25,7 +25,7 @@ In this exercise, you will complete the following tasks:
 
     ![](media/new-image38.png)
 
-1. Select **Sign in with Microsoft** and choose **Work or school account** > **Continue** and enter the following **Azure account** credentials if prompted:
+1. Select **Sign in with Microsoft** and choose **Work or school account (1)** > **Continue (2)** and enter the following **Azure account** credentials if prompted:
    
    * Email/Username: <inject key="AzureAdUserEmail"></inject>
    * Password: <inject key="AzureAdUserPassword"></inject>
@@ -34,21 +34,23 @@ In this exercise, you will complete the following tasks:
 
      ![](media/new-image40.png)
 
-1. On the **Automatically sign in to all desktop apps and websites on this device?** pop-up, click on **Yes, all apps**. Then, on the **Account added to this device** page, select **Done**. 
+1. On the **Sign in to app apps, websites, and services on this device?** pop-up, click on **No**. Then, on the **Account added to this device** page, select **Done**. 
 
 1. Once you sign in, click on **Start Visual Studio**.
 
     ![](media/new-image45.png)
 
+    >**Note:** If you are prompted with ASP.Net and Web development installer, select **Install**. This process may take a few minutes and open Visual Studio once the installation is complete.
+
 1. If you are prompted with a security warning, uncheck **Ask me for every project in this solution**, and then select **OK**.
 
     ![A Visual Studio security warning is displayed, and the Ask me for every project in this solution checkbox is unchecked and highlighted.](media/visual-studio-security-warning.png "Visual Studio")
 
-1. Once logged into **Visual Studio**, right-click the **`WideWorldImporters.Web`** project in the **Solution Explorer**, and then select **Publish**.
+1. Once logged into **Visual Studio** on the right side, right-click the **`WideWorldImporters.Web`** project in the **Solution Explorer**, and then select **Publish**.
 
     ![In the Solution Explorer, the context menu for the WideWorldImporters.Web project is displayed, and Publish is highlighted.](media/visual-studio-project-publish.png "Visual Studio")
 
-    >**Note:** If you see the WideWorldImporters.Web (unloaded) project, right-click on it and select **Reload Project**.
+    >**Note:** If you see the **WideWorldImporters.Web (unloaded)** project, right-click on it and select **Reload Project**.
 
     > **Note:** If the project does not load even after clicking **Reload Project**, click **Install** under the prompt to install the required extra components and .NET framework (this process may take about 5 minutes). After installation, retry loading the project by right-clicking it and selecting **Reload Project**.
 
@@ -121,7 +123,7 @@ In this task, you update the WWI gamer info web application to connect to and ut
      
 1. Back on **wwi-web-<inject key="Suffix" enableCopy="false"/> | Environment variables**, Click on **Add** from the **App settings**.
      
-      ![](media/new-image53.png)
+      ![](media/E3T2S8-0701.png)
     
 1. Add the **Name** and **Value** of `wwiContext` which you recorded in Notepad and click on **Apply**.
 
@@ -135,7 +137,7 @@ In this task, you update the WWI gamer info web application to connect to and ut
 
 1. When prompted that your app may restart if you are updating connection strings. Are you sure you want to continue?, Select **Confirm**.
 
-     ![](media/new-image52.png)
+     ![](media/E3T2S12-0701.png)
 
 1. From the left menu, select **Overview** to return to the **Overview** blade of your **App Service**. Then, click on **Default Domain** in the Overview blade. still results in an error being returned. The error occurs because the SQL Managed Instance has a private IP address in its VNet. To connect an application, you need to configure access to the VNet where the Managed Instance is deployed, which you handle in the next exercise.
 

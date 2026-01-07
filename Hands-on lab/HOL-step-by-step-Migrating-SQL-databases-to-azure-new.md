@@ -1,6 +1,6 @@
 # Data Modernization
 
-## Estimated Duration: 4 Hours
+## Overall Estimated Duration: 4 Hours
 
 ## Overview
 
@@ -41,7 +41,7 @@ This architectural diagram illustrates the integration of various Azure services
 
 ## Getting Started with the Lab
  
-Welcome to your Data Modernization Workshop! We've prepared a seamless environment for you to explore and learn about Azure services. Let's begin by making the most of this experience:
+We've prepared a seamless environment for you to explore and learn about Azure services. Let's begin by making the most of this experience:
 
 ## Accessing Your Lab Environment
  
@@ -49,7 +49,7 @@ Once you're ready to dive in, your virtual machine and **Lab Guide** will be rig
 
    ![](./media/environment-1509.png)
 
-### Virtual Machine & Lab Guide
+## Virtual Machine & Lab Guide
  
 Your virtual machine is your workhorse throughout the workshop. The lab guide is your roadmap to success.
  
@@ -94,20 +94,18 @@ To adjust the zoom level for the environment page, click the **A↕ : 100%** ico
    - **Password:** <inject key="AzureAdUserPassword"></inject>
  
       ![](./media/GS3.png "Enter Password")
-
-4. On **Action Required** pop-up, click on **Ask later**.
-
-   ![](./media/asklater.png "Ask Later")
    
-5. If you see the pop-up **Stay Signed in?**, click **No**.
+4. If you see the pop-up **Stay Signed in?**, click **Yes**.
 
-   ![](./media/GS9.png)
+   ![](./media/stay-signin0701.png)
 
-6. If you see the pop-up **You have free Azure Advisor recommendations!**, close the window to continue the lab.
+5. On the **Let's keep you account secure** window, click on **Next** and follow **Steps to Proceed with MFA Setup**.   
 
-7. If a **Welcome to Microsoft Azure** popup window appears, click **Maybe Later** to skip the tour.
+   ![](./media/mfa-0701.png)
 
-## Steps to Proceed with MFA Setup if "Ask Later" Option is Not Visible
+6. If a **Welcome to Microsoft Azure** popup window appears, click **Maybe Later** to skip the tour.
+
+## Steps to Proceed with MFA Setup 
 
 1. At the **"More information required"** prompt, select **Next**.
 

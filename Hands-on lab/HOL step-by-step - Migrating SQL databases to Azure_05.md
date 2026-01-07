@@ -40,11 +40,11 @@ In this task, you perform some configuration for the `WideWorldImporters` databa
 
 1. Click on **Keep**, on the Downloads pop-up. 
 
-    ![](media/sql53.png)
+    ![](media/E1T1S7-0701.png)
 
 1. Click on **Open file**.
 
-    ![](media/sql55.png)
+    ![](media/E1T1S8-0701.png)
 
 1. Next, on the RDP tab, click on **Connect**.
 
@@ -81,7 +81,7 @@ In this task, you perform some configuration for the `WideWorldImporters` databa
 
      > **Note**: If you see **Connection error** pop-up click on **Enable Trust server certificate**.
 
-     ![](media/new-image15.png)
+     ![](media/E1T1S15.1-0701.png)
 
 1. Once connected, verify you see the **WideWorldImporters** database listed under databases.
 
@@ -133,6 +133,8 @@ In this task, you use the Microsoft Data Migration Assistant (DMA) to assess the
     ![](media/gs-g-et-17.png)
 
 ### Task 3: Perform assessment for migration to Azure SQL Managed Instance
+
+In this task, you use the Microsoft Data Migration Assistant (DMA) to assess the `WideWorldImporters` database against the Azure SQL Managed Instance (SQL MI).
 
 With one PaaS offering ruled out due to feature parity, perform a second DMA assessment against Azure SQL Managed Instance (SQL MI). The assessment provides a report about any feature parity and compatibility issues between the on-premises database and the SQL MI service.
 
