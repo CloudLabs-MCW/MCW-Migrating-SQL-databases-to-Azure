@@ -16,7 +16,7 @@ In this exercise, you will complete the following tasks:
 - Task 6: Perform migration cutover
 - Task 7: Verify database and transaction log migration
 
-### Task 1: Create an SMB network share on the SQL VM
+## Task 1: Create an SMB network share on the SQL VM
 
 In this task, you create a new SMB network share on the **sql2022-<inject key="Suffix" enableCopy="false"/>** VM. DMS uses this shared folder for retrieving backups of the `WideWorldImporters` database during the database migration process.
 
@@ -38,7 +38,7 @@ In this task, you create a new SMB network share on the **sql2022-<inject key="S
 
    ![](media/sql11.png)
 
-### Task 2: Change MSSQLSERVER service to run under sqlmiuser account
+## Task 2: Change MSSQLSERVER service to run under sqlmiuser account
 
 In this task, you use the SQL Server Configuration Manager to update the service account used by the SQL Server (MSSQLSERVER) service to the `sqlmiuser` account. Changing the account used for this service ensures it has the appropriate permissions to write backups to the shared folder.
 
@@ -72,7 +72,7 @@ In this task, you use the SQL Server Configuration Manager to update the service
     
 1. Close the SQL Server Configuration Manager.
 
-### Task 3: Create a backup of the WideWorldImporters database
+## Task 3: Create a backup of the WideWorldImporters database
 
 In this task, you create a full backup of the `WideWorldImporters` database using SQL Server Management Studio (SSMS) and write it to the SMB network share you created in Task 1.
 
@@ -121,8 +121,7 @@ To perform online data migrations, DMS looks for database and transaction log ba
 
    ![](media/sql25.png)
 
-
-### Task 4: Retrieve SQL MI and SQL Server 2022 VM connection information
+## Task 4: Retrieve SQL MI and SQL Server 2022 VM connection information
 
 In this task, you use the Azure Cloud shell to retrieve the information necessary to connect to your sql2022-<inject key="Suffix" enableCopy="false"/> VM from DMS.
 
@@ -168,7 +167,7 @@ In this task, you use the Azure Cloud shell to retrieve the information necessar
 
    ![](media/gs-g-et-22.png)
 
-### Task 5: Create and run an online data migration project
+## Task 5: Create and run an online data migration project
 
 In this task, you create a new online data migration project in DMS for the `WideWorldImporters` database.
 
@@ -185,6 +184,10 @@ To run the migration, you must first enable a system-assigned managed identity o
 1. Go to **Identity (1)** under the **Settings** section in the left pane. Then, under the **System assigned** tab, select **On (2)** and click on **Save (3)** to enable the system-assigned managed identity.
 
    ![](media/E2T5S3-0701.png)
+
+1. In the **Enable system assigned managed identity** pop up, click on **Yes**.
+
+   ![](media/new/1.png)
 
 1. In the search bar, search for **Storage accounts (1)** and select **Storage accounts (2)** from the search results.
 
@@ -206,7 +209,7 @@ To run the migration, you must first enable a system-assigned managed identity o
 
       ![](media/E2T5S7-0701.png)
 
-      ![](media/E2T5S8-0701.png)      
+      ![](media/new/2.png)      
 
 1. Navigate back to **Azure Data Studio** in the **SQL VM**. Click on >  **SQLVM2022** **Azure SQL migration (1)** and select **+ New migration (2)**.
 
@@ -273,7 +276,7 @@ To run the migration, you must first enable a system-assigned managed identity o
    
     >**Note**: Don't close/cancel Azure Data Studio.
 
-1. Navigate to the **Lab VM**, in the search bar, and next to start searching for `Microsoft Integration Runtime`
+1. Navigate to the **Lab VM**, in the search bar, search for **Microsoft Integration Runtime (1)** and select **Microsoft Integration Runtime (2)**.
    
    ![](media/irt.png)
 
@@ -295,8 +298,8 @@ To run the migration, you must first enable a system-assigned managed identity o
 
 1. In the **Step 5: Azure Database Migration Service** notice the **Resource group (1)** name and the **Azure Database Migration Service (2)** name will be selected.Click on **Refresh** **(3)** button you can view the **connected nodes** **(4)** and click on **Next** **(5)**. 
 
-   ![](media/E2T5S18-1809.png)
-          
+   ![](media/new/3.png)
+
 1. In **Step 6: Data source configuration** blade, enter the following details and click on **Run Validation** **(8)**:
 
       - **Password**: Enter **Password.1234567890** **(1)**
@@ -315,6 +318,8 @@ To run the migration, you must first enable a system-assigned managed identity o
 
    ![](media/gs-g-et-38.png)
 
+   >**Note**: If any of the validations fails, recheck all the provided configurations and rerun the validation again.
+
 1. Once you back to **Step 6: Data source configuration** blade, click on **Next**.
 
    ![](media/Ex2-Task5-S15-1-1.png)
@@ -327,9 +332,9 @@ To run the migration, you must first enable a system-assigned managed identity o
     
     ![](media/data-migration-06-1.png)
 
-   >**Note**: It may take 5 to 10 minutes , please wait till the migration status is **Ready for cutover**.
+   >**Note**: It may take 10 to 15 minutes , please wait till the migration status is **Ready for cutover**.
 
-### Task 6: Perform migration cutover
+## Task 6: Perform migration cutover
 
 Since you performed an "online data migration," the migration wizard continuously monitors the SMB network share for newly added log backup files. Online migrations enable any updates on the source database to be captured until you initiate the cutover to the SQL MI database. In this task, you add a record to one of the database tables, backup the logs, and complete the migration of the `WideWorldImporters` database by cutting over to the SQL MI database.
 
@@ -361,7 +366,7 @@ Since you performed an "online data migration," the migration wizard continuousl
 
 1. To run the script, select **Run** from the Azure Data Studio toolbar.
 
-1. Click on **SQLVM2022**, select **New Query (2)** again in the toolbar, and paste the following script into the new query window. It creates a backup of the 
+1. Click on **SQLVM2022**, select **New Query** again in the toolbar, and paste the following script into the new query window. It creates a backup of the 
    transaction logs for the WideWorldImporters database, verifies data integrity with a checksum, and stores the backup file at the specified location, while also allowing the Data 
    Migration Service (DMS) to detect the new backup for potential transfer and migration.
 
@@ -422,7 +427,7 @@ Since you performed an "online data migration," the migration wizard continuousl
     
 <validation step="4ed94186-c596-4679-9454-3df0065f9ca3" />
 
-### Task 7: Verify database and transaction log migration
+## Task 7: Verify database and transaction log migration
 
 In this task, you connect to the SQL MI database using SSMS and quickly verify the migration.
 

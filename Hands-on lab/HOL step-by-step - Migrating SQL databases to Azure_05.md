@@ -12,7 +12,7 @@ In this exercise, you will complete the following tasks:
 - Task 2: Perform assessment for migration to Azure SQL Database
 - Task 3: Perform assessment for migration to Azure SQL Managed Instance
 
-### Task 1: Connect to the WideWorldImporters database on the SQL Server 2022 VM
+## Task 1: Connect to the WideWorldImporters database on the SQL Server 2022 VM
 
 In this task, you perform some configuration for the `WideWorldImporters` database on the SQL Server 2022 instance to prepare it for migration.
 
@@ -22,7 +22,7 @@ In this task, you perform some configuration for the `WideWorldImporters` databa
 
    ![](media/gs-g-et-4.png)
 
-1. On the **Resource groups** page, select the resource group **hands-on-lab-<inject key="Resource Group Name" enableCopy="false"/>** from the list.
+1. On the **Resource groups** page, select the resource group **<inject key="Resource Group Name" enableCopy="false"/>** from the list.
 
    ![](media/gs-g-et-5.png)
 
@@ -108,7 +108,7 @@ In this task, you perform some configuration for the `WideWorldImporters` databa
 
     ![](media/sql5.png)
 
-### Task 2: Perform assessment for migration to Azure SQL Database
+## Task 2: Perform assessment for migration to Azure SQL Database
 
 In this task, you use the Microsoft Data Migration Assistant (DMA) to assess the `WideWorldImporters` database against the Azure SQL Database (Azure SQL DB). The assessment provides a report about any feature parity and compatibility issues between the on-premises database and the Azure SQL DB service.
 
@@ -132,7 +132,7 @@ In this task, you use the Microsoft Data Migration Assistant (DMA) to assess the
 
     ![](media/gs-g-et-17.png)
 
-### Task 3: Perform assessment for migration to Azure SQL Managed Instance
+## Task 3: Perform assessment for migration to Azure SQL Managed Instance
 
 In this task, you use the Microsoft Data Migration Assistant (DMA) to assess the `WideWorldImporters` database against the Azure SQL Managed Instance (SQL MI).
 
