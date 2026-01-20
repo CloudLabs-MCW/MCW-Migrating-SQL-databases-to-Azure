@@ -2,9 +2,11 @@
 
 ### Estimated Duration: 30 Minutes
 
+## Lab Scenario
+
 In this exercise, you will deploy a web app to Azure and update its App Service configuration. This process involves setting up the web app in the Azure environment and configuring the necessary settings to ensure it runs smoothly. By the end of this lab, you will have a fully deployed and configured web app on Azure, ready for use.
 
-## Objectives
+## Lab Objectives
 
 In this exercise, you will complete the following tasks:
 
@@ -160,6 +162,6 @@ In this task, you update the WWI gamer info web application to connect to and ut
 
 In this exercise, you have deployed a web app to Azure and updated its App Service configuration.
 
-### You have successfully completed the exercise. Please click on **Next >>** to continue to the next exercise.
+### You have successfully completed the exercise. Now click on **Next >>** from the lower right corner to move on to the next exercise.
 
 ![](./media/next-pg.png)

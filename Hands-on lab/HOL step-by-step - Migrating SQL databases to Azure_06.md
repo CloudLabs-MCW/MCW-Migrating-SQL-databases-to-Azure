@@ -2,9 +2,11 @@
 
 ### Estimated Duration: 90 Minutes
 
+## Lab Scenario
+
 In this exercise, you will migrate the WideWorldImporters database from a SQL Server 2022 VM to Azure SQL Managed Instance. You’ll start by setting up an SMB network share and configuring the MSSQLSERVER service to run under the sqlmiuser account. Then, you’ll back up the database, gather connection information, and create an online data migration project. Finally, you’ll perform the migration cutover and verify the database and transaction log migration. These steps ensure a smooth transition to Azure’s cloud services.
 
-## Objectives
+## Lab Objectives
 
 In this exercise, you will complete the following tasks:
 
@@ -475,6 +477,6 @@ In this task, you connect to the SQL MI database using SSMS and quickly verify t
 
 In this exercise, you migrated the `WideWorldImporters` database from a SQL Server 2022 VM to Azure SQL Managed Instance using Azure Database Migration Service (DMS). You created an SMB network share, configured the SQL Server service to run under a specific user account, backed up the database, and set up an online data migration project. After performing the migration cutover, you verified that the database and transaction logs were successfully migrated to SQL MI.
 
-### You have successfully completed the exercise. Please click on **Next >>** to continue to the next exercise.
+### You have successfully completed the exercise. Now click on **Next >>** from the lower right corner to move on to the next exercise.
 
 ![](./media/next-pg.png)

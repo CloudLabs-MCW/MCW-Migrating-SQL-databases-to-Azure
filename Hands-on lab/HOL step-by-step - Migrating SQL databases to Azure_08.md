@@ -2,9 +2,11 @@
 
 ### Estimated Duration: 30 Minutes
 
+## Lab Scenario
+
 In this exercise, you will configure VNet integration with Azure App Services and open the web application. This setup allows your web app to securely communicate with resources in your virtual network. By the end of this lab, your web application will be integrated with the VNet and accessible for use.
 
-## Objectives
+## Lab Objectives
 
 In this exercise, you will complete the following tasks:
 

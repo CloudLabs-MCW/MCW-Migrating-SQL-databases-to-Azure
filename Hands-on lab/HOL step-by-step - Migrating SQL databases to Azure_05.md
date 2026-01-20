@@ -2,9 +2,11 @@
 
 ### Estimated Duration: 90 Minutes
 
+## Lab Scenario
+
 In this exercise, you will connect to the WideWorldImporters database on the SQL Server 2022 VM and perform assessments for migration to Azure SQL Database and Azure SQL Managed Instance. These assessments will help you understand the compatibility and readiness of your database for migration to Azure. You will evaluate the database schema, data, and performance to identify any potential issues and determine the best migration strategy. This process ensures a smooth transition to Azure’s cloud services, leveraging their scalability, security, and advanced features.
 
-## Objective
+## Lab Objectives
 
 In this exercise, you will complete the following tasks:
 
@@ -164,6 +166,6 @@ With one PaaS offering ruled out due to feature parity, perform a second DMA ass
 
 In this exercise, you connected to the WideWorldImporters database on the SQL Server 2022 VM, performed an assessment for migration to Azure SQL Database, and conducted an assessment for migration to Azure SQL Managed Instance. This process involved evaluating the current database setup, identifying potential compatibility issues, and determining the best migration strategy to ensure a smooth transition to Azure's cloud services.
 
-### You have successfully completed the exercise. Please click on **Next >>** to continue to the next exercise.
+### You have successfully completed the exercise. Now click on **Next >>** from the lower right corner to move on to the next exercise.
 
 ![](./media/next-pg.png)
