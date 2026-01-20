@@ -13,7 +13,7 @@ In this exercise, you will complete the following tasks:
 
     > **Note**: Azure SQL Managed Instance has a private IP address in a dedicated VNet, so to connect an application, you must configure access to the VNet where the Managed Instance is deployed. To learn more, read Connect your application to Azure SQL Managed Instance `https://docs.microsoft.com/azure/azure-sql/managed-instance/connect-application-instance`.
 
-### Task 1: Deploy the web app to Azure
+## Task 1: Deploy the web app to Azure
 
 1. Navigate to your **Lab VM** desktop.
 
@@ -21,9 +21,9 @@ In this exercise, you will complete the following tasks:
 
    ![The folder at the path specified above is displayed, and WideWorldImporters.sln is highlighted.](media/windows-explorer-lab-files-web-solution.png "Windows Explorer")
 
-1. If prompted about **How you want to open the file?**, select **Visual Studio 2022**, and then select **OK**.
+1. If prompted about **How you want to open the file?**, select **Visual Studio 2022 (1)**, and then select **OK (2)**.
 
-    ![](media/new-image38.png)
+    ![](media/new/4.png)
 
 1. Select **Sign in with Microsoft** and choose **Work or school account (1)** > **Continue (2)** and enter the following **Azure account** credentials if prompted:
    
@@ -36,11 +36,15 @@ In this exercise, you will complete the following tasks:
 
 1. On the **Sign in to app apps, websites, and services on this device?** pop-up, click on **No**. Then, on the **Account added to this device** page, select **Done**. 
 
+    ![](media/new/5.png)
+
 1. Once you sign in, click on **Start Visual Studio**.
 
     ![](media/new-image45.png)
 
-    >**Note:** If you are prompted with ASP.Net and Web development installer, select **Install**. This process may take a few minutes and open Visual Studio once the installation is complete.
+    >**Note:** If you are prompted with **ASP.Net and Web development** installer, select **Install**. This process may take a few minutes and open Visual Studio once the installation is complete.
+
+    ![](media/new/6.png)
 
 1. If you are prompted with a security warning, uncheck **Ask me for every project in this solution**, and then select **OK**.
 
@@ -82,7 +86,7 @@ In this exercise, you will complete the following tasks:
 
     ![An error screen is displayed because the database connection string has not been updated to point to SQL MI in the web app's configuration.](media/web-app-error-screen.png "Web App error")
 
-### Task 2: Update App Service configuration
+## Task 2: Update App Service configuration
 
 In this task, you update the WWI gamer info web application to connect to and utilize the SQL MI database.
 
@@ -129,7 +133,7 @@ In this task, you update the WWI gamer info web application to connect to and ut
 
     ![](media/gs-g-et-56.png)
 
-1. Repeat above step for **`wwiReadOnlyContext`** and paste the **Name** and **Value** which you recorded in notepad and click on **Apply**
+1. Repeat above step for **`wwiReadOnlyContext`** and paste the **Name** and **Value** which you recorded in notepad and click on **Apply**.
 
       ![](media/new-image55.png)
 

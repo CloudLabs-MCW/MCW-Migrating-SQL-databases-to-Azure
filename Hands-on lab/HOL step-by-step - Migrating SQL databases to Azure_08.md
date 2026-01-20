@@ -11,7 +11,7 @@ In this exercise, you will complete the following tasks:
 - Task 1: Configure VNet integration with App Services
 - Task 2: Open the web application
 
-### Task 1: Configure VNet integration with App Services
+## Task 1: Configure VNet integration with App Services
 
 In this task, you add the networking configuration to your App Service to enable communication with resources in the VNet.
 
@@ -19,32 +19,28 @@ In this task, you add the networking configuration to your App Service to enable
 
    ![](media/E3T2S3-1809.png)
 
-2. On the **App Service** blade, select **Networking** from the left-hand menu under the **Settings** section.
-
-   ![On the App Service blade, Networking is selected in the left-hand menu, and Click here to configure is highlighted under VNet Integration.](media/web-app-network.png "App Service")
-
-3. On the **Networking (1)** page, under **Outbound Traffic Configuration**, click **Not Configured (2)** under **Virtual Network Integration**.
+1. From the left navigation pane, select **Networking (1)** under **Settings**, then under **Outbound Traffic Configuration**, click **Not Configured (2)** under **Virtual Network Integration**.
 
    ![](media/E4T1S3-1809.png)
 
-4. Now click on **Add virtual network integration** under **Virtual Network Integration**.
+1. Now click on **Add virtual network integration** under **Virtual Network Integration**.
 
    ![](media/new-image59.png)
 
-5. On the Network Feature Status dialog, enter the following and click **Connect**.
+1. On the Network Feature Status dialog, enter the following and click **Connect**.
 
    - **Virtual Network**: Select the `sqlmi-vnet`.
    - **Subnet**: Select any existing subnet from the drop-down menu.
 
       ![](media/new-image60.png)
 
-6. Within a few minutes, the VNet is added, and your App Service is restarted to apply the changes. Select Refresh to confirm whether the Vnet is connected or not.
+1. Within a few minutes, the VNet is added, and your App Service is restarted to apply the changes. Select Refresh to confirm whether the Vnet is connected or not.
 
-   ![](media/new-image61(2).png)
+   ![](media/new/7.png)
 
    > **Note**: If you receive a message that adding the Virtual Network to the Web App fails, select **Disconnect** on the VNet Configuration blade, and repeat steps 3 - 5 above.
 
-### Task 2: Open the web application
+## Task 2: Open the web application
 
 In this task, you verify that your web application now loads, and you can see the home page of the web app.
 
@@ -71,6 +67,6 @@ In this task, you verify that your web application now loads, and you can see th
 
 In this exercise, you have configured VNet integration with Azure App Services and accessed the web application.
 
-### You have successfully completed the lab!
+## You have successfully completed the lab!
 
 By completing this **Data Modernization** hands-on lab, you have gained the skills and experience needed to perform a full end-to-end database migration to Azure SQL Managed Instance (SQL MI). You started by running detailed database assessments to uncover and address compatibility issues, ensuring a smooth migration process. You then successfully migrated an on-premises SQL Server 2022 database to SQL MI using Azure Database Migration Service, maintaining data integrity and minimizing downtime. Following the migration, you updated a web application to connect seamlessly with the new SQL MI environment, demonstrating how applications can be modernized alongside database workloads. Finally, you integrated Azure App Service with a virtual network, improving both security and connectivity. Together, these exercises provided practical insights into leveraging Azure’s managed services to modernize data platforms, enhance application performance, and build secure, scalable cloud-based solutions.
