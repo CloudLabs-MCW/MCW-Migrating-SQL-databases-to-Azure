@@ -17,22 +17,30 @@ In this exercise, you will complete the following tasks:
 
 In this task, you add the networking configuration to your App Service to enable communication with resources in the VNet.
 
-1. In the Azure portal, search and select **Resource groups** from the list select the **<inject key="Resource Group Name" enableCopy="false"/>** and then click on **wwi-web-<inject key="Suffix" enableCopy="false"/>** App Service from the list of resources.
+1. Navigate back to the Azure portal, search for **Resource groups (1)** and select **Resource groups (2)** from the results.
+
+   ![](media/gs-g-et-49.png)
+
+1. Select the **<inject key="Resource Group Name" enableCopy="false"/>** resource group from the list.
+
+     ![](media/new-image(3).png)
+ 
+1. Select the **wwi-web-<inject key="Suffix" enableCopy="false"/>** App Service from the list of resources.
 
    ![](media/E3T2S3-1809.png)
 
-1. From the left navigation pane, select **Networking (1)** under **Settings**, then under **Outbound Traffic Configuration**, click **Not Configured (2)** under **Virtual Network Integration**.
+1. From the left navigation pane, select **Networking (1)** under **Settings**, then under **Outbound traffic configuration**, click on **Not configured (2)** next to **Virtual network integration**.
 
    ![](media/E4T1S3-1809.png)
 
-1. Now click on **Add virtual network integration** under **Virtual Network Integration**.
+1. In the **Virtual Network Integration** page, click on **Add virtual network integration**.
 
    ![](media/new-image59.png)
 
-1. On the Network Feature Status dialog, enter the following and click **Connect**.
+1. On the **Add virtual network integration** dialog, enter the following and click **Connect (3)**.
 
-   - **Virtual Network**: Select the `sqlmi-vnet`.
-   - **Subnet**: Select any existing subnet from the drop-down menu.
+   - **Virtual Network**: Select the `sqlmi-vnet` **(1)**.
+   - **Subnet**: Select any existing **subnet (2)** from the drop-down menu.
 
       ![](media/new-image60.png)
 
@@ -46,7 +54,7 @@ In this task, you add the networking configuration to your App Service to enable
 
 In this task, you verify that your web application now loads, and you can see the home page of the web app.
 
-1. Select **Overview** in the left-hand menu of your App Service and select the **URL** of your App Service to launch the website. This link opens the URL in a browser window.
+1. From the **Overview** page of your App Service, select the **URL** of your App Service to launch the website. This link opens the URL in a browser window.
 
    ![](media/new-image62.png)
 
@@ -56,7 +64,7 @@ In this task, you verify that your web application now loads, and you can see th
 
    > **Note**: It can often take several minutes for the network configuration to be reflected in the web app. If you get an error screen, try selecting Refresh a few times in the browser window. If that does not work, try selecting **Restart** on the Azure Web App's toolbar.
 
-3. Congratulations, you successfully connected your application to the new SQL MI database.
+3. Congratulations, you successfully connected your application to the new **SQL MI** database.
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 - If you receive a success message, you can proceed to the next task.
@@ -71,4 +79,4 @@ In this exercise, you have configured VNet integration with Azure App Services a
 
 ## You have successfully completed the lab!
 
-By completing this **Data Modernization** hands-on lab, you have gained the skills and experience needed to perform a full end-to-end database migration to Azure SQL Managed Instance (SQL MI). You started by running detailed database assessments to uncover and address compatibility issues, ensuring a smooth migration process. You then successfully migrated an on-premises SQL Server 2022 database to SQL MI using Azure Database Migration Service, maintaining data integrity and minimizing downtime. Following the migration, you updated a web application to connect seamlessly with the new SQL MI environment, demonstrating how applications can be modernized alongside database workloads. Finally, you integrated Azure App Service with a virtual network, improving both security and connectivity. Together, these exercises provided practical insights into leveraging Azure’s managed services to modernize data platforms, enhance application performance, and build secure, scalable cloud-based solutions.
+By completing this **Data Modernization** Hands-on Lab, you have gained the skills and experience needed to perform a full end-to-end database migration to Azure SQL Managed Instance (SQL MI). You started by running detailed database assessments to uncover and address compatibility issues, ensuring a smooth migration process. You then successfully migrated an on-premises SQL Server 2022 database to SQL MI using Azure Database Migration Service, maintaining data integrity and minimizing downtime. Following the migration, you updated a web application to connect seamlessly with the new SQL MI environment, demonstrating how applications can be modernized alongside database workloads. Finally, you integrated Azure App Service with a virtual network, improving both security and connectivity. Together, these exercises provided practical insights into leveraging Azure’s managed services to modernize data platforms, enhance application performance, and build secure, scalable cloud-based solutions.
