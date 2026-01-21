@@ -150,7 +150,7 @@ In this task, you use the Azure Cloud shell to retrieve the information necessar
       - Storage account: **storage<inject key="Suffix" enableCopy="false"/>** **(4)**
       - File Share: **blob (5)**
       
-         ![](media/new-image27.png)
+        ![](media/new-image27.png)
 
 1. After a moment, a message is displayed that you have successfully requested a Cloud Shell, and you are presented with a PS Azure prompt.
 
