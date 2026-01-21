@@ -17,6 +17,8 @@ In this exercise, you will complete the following tasks:
 
 ## Task 1: Deploy the web app to Azure
 
+In this task, you will publish the **WideWorldImporters** web application from Visual Studio to an existing Azure App Service.
+
 1. Navigate to your **Lab VM** desktop.
 
 1. In the File Explorer dialog, navigate to the `C:\hands-on-lab\MCW-Migrating-SQL-databases-to-Azure-master\Hands-on lab\lab-files`. In the **lab-files** folder, double-click **WideWorldImporters.sln** to open the solution in **Visual Studio**.
