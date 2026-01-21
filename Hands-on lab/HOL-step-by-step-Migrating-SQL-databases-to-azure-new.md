@@ -45,9 +45,9 @@ We've prepared a seamless environment for you to explore and learn about Azure s
 
 ## Accessing Your Lab Environment
  
-Once you're ready to dive in, your virtual machine and **Lab Guide** will be right at your fingertips within your web browser.
+Once you're ready to dive in, your virtual machine and **Guide** will be right at your fingertips within your web browser.
 
-   ![](./media/environment-1509.png)
+   ![](./media/new/vm.png)
 
 ## Virtual Machine & Lab Guide
  
@@ -79,31 +79,31 @@ To adjust the zoom level for the environment page, click the **A↕ : 100%** ico
 
 ## Let's Get Started with Azure Portal
  
-1. On your virtual machine, click on the Azure Portal icon as shown below:
+1. On your **Lab VM**, click on the **Azure Portal** icon as shown below:
  
     ![](./media/GS1.png)
  
-2. You'll see the **Sign into Microsoft Azure** tab. Here, enter your credentials:
+1. You'll see the **Sign into Microsoft Azure** tab. Here, enter your credentials and click on **Next**:
  
    - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
  
       ![](./media/GS2.png "Enter Email")
  
-3. Next, provide your password:
+1. Next, provide your password and click on **Sign in**:
  
    - **Password:** <inject key="AzureAdUserPassword"></inject>
  
       ![](./media/GS3.png "Enter Password")
    
-4. If you see the pop-up **Stay Signed in?**, click **Yes**.
+1. If you see the pop-up **Stay Signed in?**, click **Yes**.
 
    ![](./media/stay-signin0701.png)
 
-5. On the **Let's keep you account secure** window, click on **Next** and follow **Steps to Proceed with MFA Setup**.   
+1. If a **Welcome to Microsoft Azure** popup window appears, click **Maybe Later** to skip the tour.
+
+1. On the **Let's keep you account secure** window, click on **Next** and follow **Steps to Proceed with MFA Setup**.   
 
    ![](./media/mfa-0701.png)
-
-6. If a **Welcome to Microsoft Azure** popup window appears, click **Maybe Later** to skip the tour.
 
 ## Steps to Proceed with MFA Setup 
 
@@ -138,7 +138,7 @@ Learner Support Contacts:
 - Email Support: cloudlabs-support@spektrasystems.com
 - Live Chat Support: https://cloudlabs.ai/labs-support
 
-Now, click on **Next** from the lower right corner to move on to the next page.
+Now, click on **Next >>** from the lower right corner to move on to the next page.
 
    ![](./media/next-pg.png)
 
