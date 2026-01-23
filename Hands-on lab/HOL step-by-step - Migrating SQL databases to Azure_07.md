@@ -166,4 +166,4 @@ In this exercise, you have deployed a web app to Azure and updated its App Servi
 
 ### You have successfully completed the exercise. Now click on **Next >>** from the lower right corner to move on to the next exercise.
 
-![](./media/next-pg.png)
+![](./media/new/next4.png)

@@ -36,7 +36,7 @@ In this task, you create a new SMB network share on the **sql2022-<inject key="S
 
    ![](media/sql10.png)
 
-1. Back on the File Sharing dialog, note the shared folder's path, ```\\SQLVM2022\dms-backups```, and select **Done** to complete the sharing process.
+1. Back on the File Sharing dialog, note the shared folder's path, ```\\SQLVM2022\dms-backups``` and select **Done** to complete the sharing process.
 
    ![](media/sql11.png)
 
@@ -84,7 +84,7 @@ To perform online data migrations, DMS looks for database and transaction log ba
 
    ![](media/new/11.png)
 
-1. In the SSMS **Connect to Server** dialog, enter **SQLVM2022 (1)** into the Server name box, ensure **Windows Authentication (2)** is selected, check the box for **Trust server certificate (3)** and then select **Connect (4)**.
+1. In the SSMS **Connect to Server** dialog, enter `SQLVM2022` **(1)** into the Server name box, ensure **Windows Authentication (2)** is selected, check the box for **Trust server certificate (3)** and then select **Connect (4)**.
 
    ![](media/sql18.png)
 
@@ -150,7 +150,7 @@ In this task, you use the Azure Cloud shell to retrieve the information necessar
       - Storage account: **storage<inject key="Suffix" enableCopy="false"/>** **(4)**
       - File Share: **blob (5)**
       
-         ![](media/new-image27.png)
+        ![](media/new-image27.png)
 
 1. After a moment, a message is displayed that you have successfully requested a Cloud Shell, and you are presented with a PS Azure prompt.
 
@@ -304,9 +304,9 @@ To run the migration, you must first enable a system-assigned managed identity o
 
 1. In **Step 6: Data source configuration** blade, enter the following details and click on **Run Validation** **(8)**:
 
-      - **Password**: Enter **Password.1234567890** **(1)**
+      - **Password**: Enter `Password.1234567890` **(1)**
       - **Windows user account with read access to the network share location**: Enter **SQL2022-<inject key="Suffix"  enableCopy="false"/>\sqlmiuser** **(2)** 
-      - **Password**: Enter **Password.1234567890** **(3)**
+      - **Password**: Enter `Password.1234567890` **(3)**
       - **Resource Group**: Select **hands-on-lab-<inject key="Suffix"  enableCopy="false"/>** **(4)**
       - **Storage account**: Select the **sqlmistore<inject key="Suffix"  enableCopy="false"/>** **(5)** storage account. 
       - **Target database name**: Enter **WideWorldImporters<inject key="Suffix"  enableCopy="false"/>** **(6)**.
@@ -334,7 +334,7 @@ To run the migration, you must first enable a system-assigned managed identity o
     
     ![](media/data-migration-06-1.png)
 
-   >**Note**: It may take 10 to 15 minutes , please wait till the migration status is **Ready for cutover**.
+   >**Note**: It may take **10 - 15** minutes , please wait till the migration status is **Ready for cutover**.
 
 ## Task 6: Perform migration cutover
 
@@ -479,4 +479,4 @@ In this exercise, you migrated the `WideWorldImporters` database from a SQL Serv
 
 ### You have successfully completed the exercise. Now click on **Next >>** from the lower right corner to move on to the next exercise.
 
-![](./media/next-pg.png)
+![](./media/new/next3.png)
