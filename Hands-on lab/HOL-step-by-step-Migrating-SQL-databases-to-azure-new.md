@@ -15,7 +15,7 @@ Understand how to perform comprehensive database assessments, migrate databases 
 - **Update the Web Application:** Modify the web application to connect and interact with the newly migrated SQL MI database.
 - **Integrate App Service with Virtual Network:** Configure Azure App Service to integrate with a virtual network, enhancing security and connectivity.
 
-## Pre requisites
+## Pre-requisites
 
 - **Basic Knowledge of Azure Services:** Familiarity with Azure SQL Managed Instance, Azure App Service, and virtual networks.
 - **SQL Server Experience:** Basic understanding of SQL Server management and database migration concepts

@@ -168,4 +168,4 @@ In this exercise, you connected to the WideWorldImporters database on the SQL Se
 
 ### You have successfully completed the exercise. Now click on **Next >>** from the lower right corner to move on to the next exercise.
 
-![](./media/next-pg.png)
+![](./media/new/next2.png)
