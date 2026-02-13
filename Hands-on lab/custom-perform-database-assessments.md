@@ -15,7 +15,7 @@ In this lab, you will perform the following tasks:
 
 In this task, you will create `WideWorldImporters` database on the SQL 2019 VM instance, assess it for Azure SQL Database and Azure SQL Managed Instance using the Azure SQL Migration extension inside Azure Data Studio for migration.
 
-1. Navigate to the [Azure portal](https://portal.azure.com) and select **Resource groups** from the Azure services list.
+1. Navigate to the **Azure portal** and select **Resource groups** from the Azure services list.
 
    ![](./media/new/q1.png)
 
@@ -40,7 +40,7 @@ In this task, you will create `WideWorldImporters` database on the SQL 2019 VM i
    - **Username:** `.\sqlmiuser` **(3)**
    - **Password:** `Password.1234567890` **(4)**
 
-      ![](./media/enter-creds.png) 
+      ![](./media/enter-creds.png)
 
 1. Select **Yes** to connect if prompted that the remote computer's identity cannot be verified.
 
@@ -169,6 +169,6 @@ In this lab, you have completed the following:
 
 - Performed migration assessments to evaluate readiness for Azure migration.
 
-## You have successfully completed the Hands-on lab.
+### You have successfully completed the lab. Click on **Next >>** to proceed with the next lab.
 
-By completing the **Discover And Assess On-prem Windows & SQL Servers** hands-on lab, you learned how to discover and assess on-premises Windows Servers and SQL databases using Azure Migrate and Azure Data Studio. You configured the Azure Migrate Appliance, created migration assessments, and used dependency visualization to understand server relationships. You also assessed database readiness using the SQL Migration extension and explored security features, such as Defender for SQL and Data Discovery. These steps help you plan and prepare for a smooth migration of servers and databases to Azure.
+![](./media/4nct.png)
