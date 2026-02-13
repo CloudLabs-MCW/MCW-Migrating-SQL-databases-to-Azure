@@ -74,17 +74,23 @@ In this task, you will create `WideWorldImporters` database on the SQL 2019 VM i
 
    ![](media/new/q3.png)
 
-1. In the **sql2019-<inject key="DeploymentID" enableCopy="false"/>** virtual machine, open Windows PowerShell and run the command below to create a database named 'WideWorldImporters'.
+1. In the **sql2019-<inject key="DeploymentID" enableCopy="false"/>** virtual machine, search for **PowerShell (1)** in the search bar, then select **Windows PowerShell (2)** from the search results to open a new PowerShell window.
+
+   ![](media/new/w1.png)
+
+1. Run the command below to create a database named **WideWorldImporters**.
 
    ```
    Invoke-Sqlcmd -Query "CREATE DATABASE WideWorldImporters;" -ServerInstance <YOUR SQL VM NAME>
    ```
 
+   ![](media/new/w2.png)
+
    > **Note:** Replace "YOUR SQL VM NAME" with your actual SQL 2019 VM name **sql2019-<inject key="DeploymentID" enableCopy="false"/>**,
 
-1. Next, open **Azure Data Studio** by entering "Azure Data Studio" into the search bar in the Windows Start menu and selecting **Azure Data Studio** from the search results.
+1. In the Windows search bar, type **Azure Data Studio (1)**, then select **Azure Data Studio (2)** from the search results to open a new PowerShell window.
 
-   ![](./media/azure-data-studio-select.png)
+   ![](media/new/w3.png)
    
 1. In the Azure Data Studio select **Extensions (1)** from the Activity Bar, enter **SQL Migration (2)** into the search bar, select **Azure SQL Migration (3)**, and click on **Install (4)**.  
 
@@ -96,9 +102,13 @@ In this task, you will create `WideWorldImporters` database on the SQL 2019 VM i
     
    > **Note:** If you see **Connection error** pop-up click on **Enable Trust server certificate**.
 
-   ![](media/L3T1S17-2009.png "Connect issue")
+   ![](media/new/w4.png)
 
-1. Once connected, verify that you see the `WideWorldImporters`(1) database listed under databases. On the **sql2019-<inject key="DeploymentID" enableCopy="false"/>(1)** connection, navigate to **Home (2)**, and select **New Query (3)** from the Azure Data Studio toolbar.
+1. Once connected, under **sql2019-<inject key="DeploymentID" enableCopy="false"/> (1)** connection, expand **Databases (1)** and verify that you see the `WideWorldImporters`**(2)** database listed.
+
+   ![](media/new/w5.png)
+
+1. Select the **WideWorldImporters (1)**, navigate to **Home (2)**, and select **New Query (3)** from the **Azure Data Studio** toolbar.
 
    ![](./media/wwi-new-query.png)
 
@@ -123,19 +133,19 @@ In this task, you will create `WideWorldImporters` database on the SQL 2019 VM i
 
 In this task, you use the Microsoft Data Migration Assistant (DMA) to assess the `WideWorldImporters` database against Azure SQL Database (Azure SQL DB). The assessment provides a report about any feature parity and compatibility issues between the on-premises database and the Azure SQL DB service.
 
-1. In Azure Data Studio click on **Azure SQL migration (1)** and click on **+ New migration (2)**
+1. In Azure Data Studio, select **sql2019-<inject key="DeploymentID" enableCopy="false"/> (1)** tab from the top, click on **Azure SQL migration (2)** and click on **+ New migration (3)**
 
-   ![](./media/new-sql-migration.png) 
+   ![](./media/new/w6.png) 
 
-1. In **Step 1: Database for assessment**, choose **No** in "Do you want to track the migration process in Azure Portal?" and then select **WideWordImporters** and click **Next** to proceed. 
+1. In **Step 1: Database for assessment**, choose **No (1)** in "Do you want to track the migration process in Azure Portal?" and then select **WideWordImporters (2)** and click **Next (3)** to proceed. 
 
-   ![](./media/step1-select-wwi(1).png)  
+   ![](./media/new/w7.png)  
 
 1. In **Step 2: Assessment summary and SKU recommendations**, review the assessment summary and SKU recommendations and Azure SQL targets and click on **Next**. 
 
    ![](./media/step2-review.png) 
 
-1. In **Step 3: Target platform & assessment results**, select **Azure SQL Database** from the dropdowm for **Select target type**.
+1. In **Step 3: Target platform & assessment results**, select **Azure SQL Database** from the dropdown for **Select target type**.
 
    ![](./media/azure-sql-db.png) 
 
@@ -147,14 +157,18 @@ In this task, you use the Microsoft Data Migration Assistant (DMA) to assess the
 
 1. The database, including the Service Broker feature, can be migrated as is, providing an opportunity for WWI to have a fully managed PaaS database running in Azure. Previously, their only option for migrating a database using features incompatible with Azure SQL Database, such as Service Broker, was to deploy the database to a virtual machine running in Azure (IaaS) or modify the database and associated applications to remove the use of the unsupported features. The introduction of Azure SQL MI, however, provides the ability to migrate databases into a managed Azure SQL database service with _near 100% compatibility_, including the features that prevented them from using Azure SQL Database.
 
-1. Once you have reviewed the migration possibilities for both Azure SQL Database and Azure SQL Managed Instance, cancel the migration process.
+1. Once you have reviewed the migration possibilities for both Azure SQL Database and Azure SQL Managed Instance, **Cancel** the migration process.
 
    ![](./media/cancel-migration.png)
 
 ## Summary
 
-In this lab, you connected to your SQL 2019 VM and used the Azure Data Studio to perform assessments on the `WideWorldImporters` database. You reviewed assessments: one for SQL DB and a second for SQL MI.
+In this lab, you have completed the following:
 
-### You have successfully completed the lab.
+- Connected to the WideWorldImporters database on the SQL Server 2019 VM.
+
+- Performed migration assessments to evaluate readiness for Azure migration.
+
+## You have successfully completed the Hands-on lab.
 
 By completing the **Discover And Assess On-prem Windows & SQL Servers** hands-on lab, you learned how to discover and assess on-premises Windows Servers and SQL databases using Azure Migrate and Azure Data Studio. You configured the Azure Migrate Appliance, created migration assessments, and used dependency visualization to understand server relationships. You also assessed database readiness using the SQL Migration extension and explored security features, such as Defender for SQL and Data Discovery. These steps help you plan and prepare for a smooth migration of servers and databases to Azure.
