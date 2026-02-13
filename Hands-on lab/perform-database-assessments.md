@@ -17,6 +17,8 @@ In this task, you will create `WideWorldImporters` database on the SQL 2019 VM i
 
 1. Navigate to the [Azure portal](https://portal.azure.com) and select **Resource groups** from the Azure services list.
 
+   ![](./media/new/q1.png)
+
 1. Select the **SQLMigrationRG** resource group from the list.
 
    ![](./media/L3T1S2-2009.png)
@@ -62,11 +64,15 @@ In this task, you will create `WideWorldImporters` database on the SQL 2019 VM i
 
 1. In **Ready to install Microsoft Integration Runtime**, click on **Install**.
 
-   ![](media/Ex1-install-s5.png "Windows start menu search")
+   ![](media/new/q2.png)
 
 1. Once the deployment is completed, click on **Finish** and minimize the application.
 
    ![](media/Ex1-install-s6.png "Windows start menu search")
+
+1. In the **Register Integration Runtime (Self-hosted)** pop up, click on **Cancel**.
+
+   ![](media/new/q3.png)
 
 1. In the **sql2019-<inject key="DeploymentID" enableCopy="false"/>** virtual machine, open Windows PowerShell and run the command below to create a database named 'WideWorldImporters'.
 
