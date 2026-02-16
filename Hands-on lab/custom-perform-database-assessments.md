@@ -86,7 +86,7 @@ In this task, you will create `WideWorldImporters` database on the SQL 2019 VM i
 
    ![](media/new/w2.png)
 
-   > **Note:** Replace "YOUR SQL VM NAME" with your actual SQL 2019 VM name **sql2019-<inject key="DeploymentID" enableCopy="false"/>**,
+   > **Note:** Replace "YOUR SQL VM NAME" with your actual SQL 2019 VM name **sql2019-<inject key="DeploymentID" enableCopy="false"/>**
 
 1. In the Windows search bar, type **Azure Data Studio (1)**, then select **Azure Data Studio (2)** from the search results to open a new PowerShell window.
 
