@@ -161,6 +161,8 @@ In this task, you use the Microsoft Data Migration Assistant (DMA) to assess the
 
    ![](./media/cancel-migration.png)
 
+   >**Note:** In a real-world scenario, initiating the migration would start a job that may take time to complete depending on database size, network bandwidth, and target configuration. You can typically monitor migration progress from the Azure portal under Azure SQL migration resources. In this lab, we are cancelling the wizard after reviewing assessment results, as the focus is on compatibility analysis rather than executing the migration.
+
 ## Summary
 
 In this lab, you have completed the following:
