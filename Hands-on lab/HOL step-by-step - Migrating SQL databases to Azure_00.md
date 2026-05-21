@@ -2,6 +2,12 @@
 
 ### Estimated Duration: 10 minutes
 
+## Scenario
+
+Contoso wants to strengthen the security posture of its cloud environment before migrating critical SQL workloads to Azure SQL Managed Instance. As a cloud administrator, you will enable **Microsoft Defender for Cloud** to monitor and protect Azure resources against potential security threats and vulnerabilities. You will review the protected resources, configure Defender plans for the Log Analytics workspace, and verify that security monitoring settings are successfully applied to the environment.
+
+## Overview
+
 In this Exercise, you will enable Microsoft Defender for Cloud by upgrading your Azure subscription and reviewing protected resources. You then configure the Defender plan for your Log Analytics workspace, enabling all available security features. After confirming monitoring extensions and Defender settings, the protection is applied to your environment. 
 
 ## Lab Objective

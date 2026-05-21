@@ -2,6 +2,12 @@
 
 ### Estimated Duration: 30 minutes
 
+## Scenario
+
+Contoso has successfully migrated the **WideWorldImporters** database to **Azure SQL Managed Instance (SQL MI)** and now needs to update its gamer information web application to use the new cloud database environment. 
+
+As an application administrator, you will deploy the web application to **Azure App Service** and configure the application settings and connection strings to securely connect with the SQL Managed Instance database. This ensures the application is properly integrated with the migrated database and ready for cloud-based operations.
+
 ## Overview
 
 In this lab, you will deploy a web app to Azure and update its App Service configuration. This process involves setting up the web app in the Azure environment and configuring the necessary settings to ensure it runs smoothly. By the end of this lab, you will have a fully deployed and configured web app on Azure, ready for use.
@@ -50,15 +56,15 @@ In this task, you will use JumpBox VM and then, using Visual Studio on the JumpB
 
     ![In the Solution Explorer, the context menu for the WideWorldImporters.Web project is displayed, and Publish is highlighted.](media/visual-studio-project-publish.png "Visual Studio")
 
-1. On the **Publish** dialog, select **Azure** in the **Target** box, and click **Next**.
+1. On the **Publish** dialog, select **Azure (1)** in the **Target** box, and click **Next (2)**.
 
     ![](media/new-image46.png)
 
-1. Next, in the **Specific target** box, select **Azure App Service (Windows)** and click **Next**.
+1. Next, in the **Specific target** box, select **Azure App Service (Windows) (1)** and click **Next (2)**.
 
     ![](media/new-image47.png)
 
-1. Finally, in the **App Service** box, select your subscription, expand the **hands-on-lab-<inject key="Suffix" enableCopy="false"/>** resource group, and select the **wwi-web-<inject key="Suffix" enableCopy="false"/>** Web App then click on **Finish**
+1. Finally, in the **App Service (1)** box, select your subscription, expand the **hands-on-lab-<inject key="Suffix" enableCopy="false"/>** resource group, and select the **wwi-web-<inject key="Suffix" enableCopy="false"/> (2)** Web App then click on **Finish (3).**
 
     ![](media/new-image48.png)
 
@@ -143,13 +149,6 @@ In this task, you update the WWI gamer info web application to connect to and ut
     ![](media/new-image62.png)
     
     ![An error screen is displayed because the application cannot connect to SQL MI within its private virtual network.](media/web-app-error-screen.png "Web App error")
-
-    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-    - If you receive a success message, you can proceed to the next task.
-    - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-    - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
-    
-         <validation step="aee6215e-2948-4239-a9f7-12907b6d0e08" />
 
 ## Review
 

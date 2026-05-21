@@ -2,6 +2,12 @@
 
 ### Estimated Duration: 25 minutes
 
+## Scenario
+
+Contoso wants to further protect sensitive customer information stored in the **WideWorldImporters** database by limiting the exposure of confidential data to non-privileged users.
+
+As a database administrator, you will implement **Dynamic Data Masking (DDM)** to hide sensitive fields such as credit card numbers and email addresses without modifying the actual data stored in the database. You will then validate that authorized users can view the original data while standard users only see masked values, improving the overall security posture of the SQL Managed Instance environment.
+
 ## Overview
 
 In this lab, you'll work on enabling Dynamic Data Masking (DDM) to enhance the security of sensitive data in the WideWorldImporters database. You'll begin by applying DDM to mask credit card numbers in the Sales.CreditCard table, ensuring that only the last four digits of the card numbers are visible to non-privileged users. Then, you'll extend this approach to protect email addresses in the LoginEmail field of the dbo.Gamer table by partially masking them. This exercise demonstrates how DDM helps limit sensitive data exposure without altering the underlying data in the database.

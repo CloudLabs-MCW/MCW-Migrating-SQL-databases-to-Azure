@@ -2,6 +2,12 @@
 
 ### Estimated Duration: 30 minutes
 
+## Scenario
+
+Contoso wants to strengthen the security and compliance posture of its newly migrated **Azure SQL Managed Instance** environment by identifying sensitive data and addressing potential database vulnerabilities. 
+
+As a security administrator, you will use **Data Discovery & Classification** to classify confidential information such as credit card details and personal data, while leveraging **Microsoft Defender for SQL** to perform vulnerability assessments and remediate security risks. You will also enable advanced protection features like **Transparent Data Encryption (TDE)** to help secure data at rest and improve overall database security.
+
 ## Overview
 
 In this lab, you'll set up some of the advanced security features of SQL MI and explore some of the security benefits that come with running your database in Azure. [Microsoft Defender for SQL](https://docs.microsoft.com/azure/azure-sql/database/azure-defender-for-sql) provides advanced SQL security capabilities, including functionality for surfacing and mitigating potential database vulnerabilities and detecting anomalous activities that could indicate a threat to your database. Also, [Data Discovery and Classification](https://docs.microsoft.com/azure/azure-sql/database/data-discovery-and-classification-overview) allows you to discover and classify sensitive data within the database.
