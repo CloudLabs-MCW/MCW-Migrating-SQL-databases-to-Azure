@@ -160,7 +160,6 @@ In this task, you use the Microsoft Data Migration Assistant (DMA) to assess the
 
     ![The new project icon is highlighted in DMA.](media/s8.png "New DMA project")
 
-
 3. In **Step 2: Assessment summary and SKU recommendation (1)**, you will view the summary and SKU recommendations for your SQL server. Click on **Next (2)**. 
 
    ![The new project settings for doing a SQL Server to Azure SQL Database migration assessment are entered into the dialog.](media/E2T2S3-1902.png "New project settings")

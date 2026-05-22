@@ -127,13 +127,6 @@ To perform online data migrations, DMS looks for database and transaction log ba
 
     ![](media/sql25.png)
 
-    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-    - If you receive a success message, you can proceed to the next task.
-    - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-    - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
-    
-      <validation step="413d413d-17c5-4298-ada0-dc777f97d7ec" />
-
 ### Task 4: Retrieve SQL MI and SQL Server 2022 VM connection information
 
 In this task, you use the Azure Cloud shell to retrieve the information necessary to connect to your sql2022-<inject key="Suffix" enableCopy="false"/> VM from DMS.
@@ -202,7 +195,7 @@ In this task, you create a new online data migration project in DMS for the `Wid
 
 5. In **Step 4: Azure SQL target** blade, click on **Link account (1)**, and click on **Add an account (2)**.
 
-      ![](media/new-image81-1.png)
+   ![](media/new-image81-1.png)
    
 6. You'll be redirect to a web page, log in using your below **Azure credentials**. Once your account has been added successfully. go back to the Azure Data Studio, and click on **close**. 
 
@@ -288,6 +281,7 @@ In this task, you create a new online data migration project in DMS for the `Wid
       - **Network share path**: Enter **\\\SQLVM2022\dms-backups** **(7)**.
 
          ![](media/E3T5S15.1-1902.png)
+         
          ![](media/E3T5S15.2-1902.png)
 
 16. In the Run Validate page wait till all the validation steps are successful then click on **Done**.

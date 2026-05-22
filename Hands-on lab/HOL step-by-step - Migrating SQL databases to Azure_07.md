@@ -94,7 +94,7 @@ In this task, you update the WWI gamer info web application to connect to and ut
 
 2. Select the **<inject key="Resource Group Name" enableCopy="false"/>** resource group from the list.
 
-     ![](media/new-image(3).png)
+    ![](media/new-image(3).png)
  
 3. Select the **wwi-web-<inject key="Suffix" enableCopy="false"/>** App Service from the list of resources.
 

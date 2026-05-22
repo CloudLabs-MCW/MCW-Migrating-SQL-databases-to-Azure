@@ -56,27 +56,33 @@ In this hands-on lab, you will follow a structured architecture that begins with
 - **Azure Data Studio**: A cross-platform data management and development tool designed for working with SQL Server, Azure SQL Database, and other data sources. It offers a modern, lightweight interface tailored for both developers and database administrators.
 
 ## Getting Started with the Lab
+
 Once the environment is provisioned, a virtual machine (JumpVM) and lab guide will get loaded in your browser. Use this virtual machine throughout the workshop to perform the lab. You can see the number on the bottom of the Lab guide to switch to different exercises of the lab guide.
 
 ## Accessing Your Lab Environment
+
 Once you're ready to dive in, your virtual machine and lab guide will be right at your fingertips within your web browser.
 
  ![Access Your VM and Lab Guide](./media/labguide-1.png)
 
 ## Virtual Machine & Lab Guide
+
 Your virtual machine is your workhorse throughout the workshop. The lab guide is your roadmap to success.
 
 ## Exploring Your Lab Resources
+
 To get a better understanding of your lab resources and credentials, navigate to the **Environment Details** tab.
 
  ![Explore Lab Resources](./media/2026-05-20_15-49-02.png)
 
 ## Utilizing the Split Window Feature
+
 For convenience, you can open the lab guide in a separate window by selecting the **Split Window** button from the Top right corner.
 
  ![Use the Split Window Feature](./media/image4-1.png)
  
 ## Managing Your Virtual Machine
+
 Feel free to start, stop, or restart your virtual machine as needed from the Resources tab. Your experience is in your hands!
 
 ## Lab Guide Zoom In/Zoom Out
