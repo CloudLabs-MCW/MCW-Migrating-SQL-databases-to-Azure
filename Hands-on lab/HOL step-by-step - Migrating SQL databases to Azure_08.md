@@ -2,6 +2,12 @@
 
 ### Estimated Duration: 20 minutes
 
+## Scenario
+
+Contoso has deployed its gamer information web application to **Azure App Service**, but the application cannot yet communicate securely with the **Azure SQL Managed Instance** because the database resides inside a private virtual network. 
+
+As a cloud administrator, you will configure **Virtual Network (VNet) Integration** for the App Service to enable secure connectivity between the web application and the SQL MI environment. After completing the integration, you will verify that the web application loads successfully and retrieves data from the migrated database.
+
 ## Overview
 
 In this lab, you will configure VNet integration with Azure App Services and open the web application. This setup allows your web app to securely communicate with resources in your virtual network. By the end of this lab, your web application will be integrated with the VNet and accessible for use.

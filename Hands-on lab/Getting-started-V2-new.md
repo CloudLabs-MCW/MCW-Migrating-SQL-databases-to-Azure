@@ -2,11 +2,17 @@
 
 ### Overall Estimated Duration: 4 hours
 
-## Overview
+## Lab Scenario
+
+A leading gaming company, **Contoso**, plans to modernize its on-premises SQL Server 2022 environment by migrating its gamer information database and web application to **Azure SQL Managed Instance (SQL MI)**. The organization wants to achieve a secure and scalable cloud migration with minimal downtime while maintaining application availability. 
+
+As a cloud database administrator, you will assess database compatibility, perform an online migration using Azure Database Migration Service, integrate the application with Azure networking, and enhance database security using Microsoft Defender for SQL, Transparent Data Encryption (TDE), Data Discovery & Classification, and Dynamic Data Masking (DDM).
+
+## Lab Overview
 
 In this hands-on lab, you will implement a proof of concept (PoC) for migrating an on-premises SQL Server 2022 database to Azure SQL Managed Instance (SQL MI). You will conduct assessments to identify any feature parity or compatibility issues between the on-premises SQL Server 2022 database and Azure's managed database offerings. Next, you will migrate the customer's on-premises gamer information web application and database to Azure with minimal downtime. Finally, you will enable advanced SQL MI features to enhance the security and performance of the customer's application.
 
-## Objective
+## Objectives
 
 - **Perform database assessments** : Experienced on how to assess an on-premises SQL Server database for compatibility with Azure SQL Database and Azure SQL Managed Instance, identifying potential migration issues and selecting the most suitable migration path. This ensures a smooth transition to Azure while leveraging its scalability and advanced cloud features.
 
@@ -19,6 +25,15 @@ In this hands-on lab, you will implement a proof of concept (PoC) for migrating 
 - **Improve database security posture with Data Discovery and Classification and Azure Defender for SQL** : Experienced on how to enhance the security posture of a SQL Managed Instance using Data Discovery and Classification to identify sensitive data, and Azure Defender for SQL to assess and mitigate potential vulnerabilities. This will help in securing your database and ensuring compliance with security regulations like GDPR.
 
 - **Enable Dynamic Data Masking** : Experienced on how to implement Dynamic Data Masking (DDM) in SQL Server to protect sensitive data by masking fields like credit card numbers and email addresses. This ensures that non-privileged users can only access obfuscated data, enhancing data security without altering the underlying database.
+
+## Prerequisites
+
+* Ensure you have access to an active Azure subscription with permissions to create and manage resources such as Azure SQL Managed Instance, App Services, Virtual Networks, and Microsoft Defender for Cloud.
+* Verify that the JumpVM environment is available with the required tools pre-installed, including Azure Data Studio, SQL Server Management Studio (SSMS), Visual Studio 2022, and SQL Server Configuration Manager.
+* Make sure the on-premises SQL Server 2022 instance hosting the **WideWorldImporters** database is running and accessible for assessment, backup, and migration activities.
+*  Confirm that network connectivity is properly configured between the SQL Server VM, Azure SQL Managed Instance, Azure Database Migration Service (DMS), and Azure App Service.
+*  Ensure that the required Azure resources, including the SQL Managed Instance, storage account, virtual network, and Azure Database Migration Service, are provisioned before starting the migration tasks.
+* Basic knowledge of Azure Portal navigation, SQL Server administration, database backup/restore operations, and Azure networking concepts is recommended to successfully complete the lab exercises.
 
 ## Architecture
 
@@ -54,12 +69,12 @@ Your virtual machine is your workhorse throughout the workshop. The lab guide is
 ## Exploring Your Lab Resources
 To get a better understanding of your lab resources and credentials, navigate to the **Environment Details** tab.
 
- ![Explore Lab Resources](./media/env-1.png)
+ ![Explore Lab Resources](./media/2026-05-20_15-49-02.png)
 
 ## Utilizing the Split Window Feature
 For convenience, you can open the lab guide in a separate window by selecting the **Split Window** button from the Top right corner.
 
- ![Use the Split Window Feature](./media/spl.png)
+ ![Use the Split Window Feature](./media/image4-1.png)
  
 ## Managing Your Virtual Machine
 Feel free to start, stop, or restart your virtual machine as needed from the Resources tab. Your experience is in your hands!

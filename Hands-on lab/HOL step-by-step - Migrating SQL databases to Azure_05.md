@@ -2,11 +2,17 @@
 
 ### Estimated Duration: 30 minutes
 
+## Scenario
+
+Contoso plans to migrate its on-premises **WideWorldImporters** database to Azure and needs to evaluate its compatibility with Azure database services before migration. 
+
+As a database administrator, you will connect to the SQL Server 2022 environment and perform migration assessments for both **Azure SQL Database** and **Azure SQL Managed Instance** using Azure Data Studio. The assessment process will help identify compatibility issues, unsupported features, and the most suitable migration path for the organization’s cloud modernization strategy.
+
 ## Overview 
 
 In this lab, you will connect to the WideWorldImporters database on the SqlServer2022 VM and perform assessments for migration to Azure SQL Database and Azure SQL Managed Instance. These assessments will help you understand the compatibility and readiness of your database for migration to Azure. You will evaluate the database schema, data, and performance to identify any potential issues and determine the best migration strategy. This process ensures a smooth transition to Azure’s cloud services, leveraging their scalability, security, and advanced features.
 
-## Lab Objective
+## Lab Objectives
 
 In this lab, you will perform the following:
 
@@ -34,7 +40,7 @@ In this lab, you will perform the following:
 
 1. On the **sql2022-<inject key="Suffix" enableCopy="false"/> | Connect** page, click on **Download RDP file (2)**. 
   
-    ![](media/sql52.png)
+    ![](media/2026-05-20_17-49-35-1.png)
 
 1. Click on **Keep**, on the Downloads pop-up. 
 
@@ -114,9 +120,46 @@ In this task, you use the Microsoft Data Migration Assistant (DMA) to assess the
 
     ![](media/E2T2S1-1902.png)
 
-2. In **Step 1: Database for assessment**, select **widewordimplantation (1)**, click on **Next (2)**. 
+2. In **Step 1: Database for assessment**, select **Link account**. 
 
-   ![The new project icon is highlighted in DMA.](media/E2T2S2-1902.png "New DMA project")
+   ![The new project icon is highlighted in DMA.](media/s1.png "New DMA project")
+
+    * Click on **Add an account**.
+
+        ![The new project icon is highlighted in DMA.](media/s2.png "New DMA project")
+
+    * You will be redirected to the **Sign in** page, enter the Username and Password.
+
+    * **Email/Username:** <inject key="AzureAdUserEmail"></inject>
+
+        ![The new project icon is highlighted in DMA.](media/s3.png "New DMA project")
+
+    * **Password:** <inject key="AzureAdUserPassword"></inject>
+
+        ![The new project icon is highlighted in DMA.](media/s4.png "New DMA project")
+
+1. Here, under **Linked Accounts**, you can see that the Azure account has been added successfully, click on **Close** on the bottom.
+
+    ![The new project icon is highlighted in DMA.](media/s5.png "New DMA project")
+
+1. Now, click **Save and Close (1)**. Then, click **+ New Migration (2)** again to see the changes reflected.
+
+    ![The new project icon is highlighted in DMA.](media/s9-1.png "New DMA project")
+
+    ![The new project icon is highlighted in DMA.](media/s10.png "New DMA project")
+
+1. From the **Source Infrastructure Type** dropdown, select **Azure Virtual Machine**.
+
+    ![The new project icon is highlighted in DMA.](media/s6.png "New DMA project")
+
+1. For the **Location** dropdown, select **Central US**.
+
+    ![The new project icon is highlighted in DMA.](media/s7.png "New DMA project")
+
+1. Now, select the **WideWorldImporters (1)** database, and then click **Next (2)**.
+
+    ![The new project icon is highlighted in DMA.](media/s8.png "New DMA project")
+
 
 3. In **Step 2: Assessment summary and SKU recommendation (1)**, you will view the summary and SKU recommendations for your SQL server. Click on **Next (2)**. 
 

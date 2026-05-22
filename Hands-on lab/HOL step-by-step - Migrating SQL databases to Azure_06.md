@@ -2,6 +2,14 @@
 
 ### Estimated Duration: 90 minutes
 
+## Scenario
+
+Contoso is ready to migrate its **WideWorldImporters** database from an on-premises SQL Server 2022 environment to **Azure SQL Managed Instance (SQL MI)** with minimal downtime. 
+
+As a database administrator, you will configure backup storage, create database backups, and use **Azure Database Migration Service (DMS)** to perform an online migration. After completing the migration cutover, you will validate that the database, transaction logs, and application data have been successfully migrated to the Azure SQL Managed Instance environment.
+
+## Overview
+
 In this lab, you will migrate the WideWorldImporters database from a SQL Server 2022 VM to Azure SQL Managed Instance. You’ll start by setting up an SMB network share and configuring the MSSQLSERVER service to run under the sqlmiuser account. Then, you’ll back up the database, gather connection information, and create an online data migration project. Finally, you’ll perform the migration cutover and verify the database and transaction log migration. These steps ensure a smooth transition to Azure’s cloud services.
 
 ## Lab Objectives
@@ -178,15 +186,17 @@ In this task, you create a new online data migration project in DMS for the `Wid
 
     ![](media/sql6.png)
 
-2. In **Step 1: Database for assessment** blade, select **widewordimporters (1)**, click on **Next (2)**. 
+2. In **Step 1: Database for assessment** blade, select **WideWorldImporters (1)**, click on **Next (2)**. 
 
-     ![](media/new-image77-1.png)
+   >**Note**: If the Azure account is not logged in, repeat the steps from Exercise 2 > Task 2, starting from Step 2 through Step 7.
+
+     ![](media/s8.png)
 
 3. In **Step 2: Assessment summary and SKU recommendation (1)**, you will view the summary and SKU recommendations for your SQL server. Click on **Next (2)**. 
 
    ![The new project settings for doing a SQL Server to Azure SQL Database migration assessment are entered into the dialog.](media/data-migration-02-1.png "New project settings")
 
-4. In **Step 3: Target Platform and Assessment Results**, Select **Azure SQL Managed Instance (1)** from the drop down. Ensure the **WideWorldImporters (2)** is selected under the Database option and click on the **Next**.
+4. In **Step 3: Target Platform and Assessment Results**, Select **Azure SQL Managed Instance (1)** from the drop down. Ensure the **WideWorldImporters (2)** is selected under the Database option and click on the **Next (3) **.
 
    ![](media/Ex2-Task5-S4.png)
 
@@ -209,7 +219,7 @@ In this task, you create a new online data migration project in DMS for the `Wid
 
       > **Note**: If you encounter an error indicating that the **Azure SQL Managed Instance** is in a stopped state, please navigate to the Azure Portal, search for **Azure SQL Managed Instance**, and start the instance.
    
-8. In **Step 5: Azure Database Migration Service** blade, select the following details and click on **ConfigurelntegrationRuntime**
+8. In **Step 5: Azure Database Migration Service** blade, select the following details and click on **Configure Integration Runtime (6)**.
    
    - **Online migration** **(1)**, 
    - Select the location of the database backups to use during migration: **My database backups are on a network share** **(2)**.
@@ -224,6 +234,24 @@ In this task, you create a new online data migration project in DMS for the `Wid
    ![](media/data-migration-05.png)
    
    > **Note**: Don't close/cancel Azure Data Studio.
+
+   > **Note**: You can also retrieve the **Authentication keys** from the Azure portal in case you encounter any issues.
+   
+   * Go to the Azure portal. If prompted to sign in, use the same **Sign In** credentials provided in the **Environment** tab. Then, search for **Azure Database Migration Service (1)** and click on it **(2)**.
+
+      ![](media/dms1.png)
+   
+   * Then, click on **All Resources (1)** and select **wwi-dms (2)**.
+
+      ![](media/dms2.png)
+
+   * Then, click on **Integration Runtime (1)**, and then select **Configure Integration Runtime (2)**.
+   
+      ![](media/dms3.png)
+
+   * “Here, you can see the **Authentication Key**. Copy the key from here and paste it into the **Microsoft Integration Runtime Configuration Manager**.
+
+      ![](media/dms4-1.png)
 
 10. On the **JumpBox-<inject key="Suffix"  enableCopy="false"/>** VM , in the search bar next to start search for `Microsoft Integration Runtime`
    
@@ -402,15 +430,6 @@ In this task, you connect to the SQL MI database using SSMS and quickly verify t
 1. Select **Execute** on the SSMS toolbar to run the query. Observe the records contained within the `Game` table, including the new `Space Adventure` game you added after initiating the migration process.
 
     ![In the new query window, the query above has been entered, and in the results pane, the new Space Adventure game is highlighted.](media/datamod8.png "SSMS Query")
-
-    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-    - If you receive a success message, you can proceed to the next task.
-    - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-    - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
-    
-      <validation step="19094c70-fbca-4d58-87dd-3ff7d5a20eae" />
-
-      <validation step="413d413d-17c5-4298-ada0-dc777f97d7ec" />
 
 ## Review
 
