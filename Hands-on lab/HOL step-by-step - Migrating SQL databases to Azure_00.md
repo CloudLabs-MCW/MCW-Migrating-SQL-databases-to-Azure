@@ -44,8 +44,11 @@ In this lab, you will perform the following:
 
 1. Close the Defender plans page by selecting the 'X' on the upper right of the page to go back to the Environment settings.
 
-### Review
+### Summary
 
 In this lab, you have enabled Microsoft Defender for Cloud.
 
-### You have successfully completed the lab!
+You have successfully completed the exercise. Click **Next >>** to conitunue to the next exercise.
+
+   ![](media/ns2.png)
+
