@@ -95,7 +95,7 @@ To adjust the zoom level for the environment page, click the **A↕ : 100%** ico
  
 1.  In the JumpVM, click on Azure portal shortcut of Microsoft Edge browser which is created on desktop.
  
-     ![Resource groups is highlighted in the Azure services list.](media/new-image1.png)
+    ![Resource groups is highlighted in the Azure services list.](media/new-image1.png)
  
 2. You'll see the **Sign into Microsoft Azure** tab. Here, enter your credentials:
  

@@ -154,7 +154,7 @@ In this task, you use the Azure Cloud shell to retrieve the information necessar
       - Storage account: **storage<inject key="Suffix" enableCopy="false"/>** **(4)**
       - File Share: **blob (5)**
       
-         ![](media/new-image27.png)
+        ![](media/new-image27.png)
 
 6. After a moment, a message is displayed that you have successfully requested a Cloud Shell, and you are presented with a PS Azure prompt.
 
@@ -402,7 +402,7 @@ In this task, you connect to the SQL MI database using SSMS and quickly verify t
    -  **Password** **(4)**: Enter `IAE5fAijit0w^rDM`
    - Check the **Remember password** **(5)** box.
 
-    ![](media/sql31.png)
+     ![](media/sql31.png)
  
 1. The SQL MI connection appears below the sql2022-<inject key="Suffix" enableCopy="false"/> connection. Expand Databases the SQL MI connection and select the <inject key="Database Name" /> database.
 
@@ -424,7 +424,7 @@ In this task, you connect to the SQL MI database using SSMS and quickly verify t
 1. Select **Execute** on the SSMS toolbar to run the query. Observe the records contained within the `Game` table, including the new `Space Adventure` game you added after initiating the migration process.
 
     ![In the new query window, the query above has been entered, and in the results pane, the new Space Adventure game is highlighted.](media/datamod8.png "SSMS Query")
-
+-
 ## Summary
 
 In this lab, you have created a SMB network share on the VM, changed MSSQLSERVER service to run under sqlmiuser account, created a backup of the WideWorldImporters database, retrieved SQL MI and SQL Server 2022 VM connection information, created and ran an online data migration project, performed migration cutover and verified database and transaction log migration.
