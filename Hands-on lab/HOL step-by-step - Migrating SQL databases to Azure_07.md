@@ -150,8 +150,10 @@ In this task, you update the WWI gamer info web application to connect to and ut
     
     ![An error screen is displayed because the application cannot connect to SQL MI within its private virtual network.](media/web-app-error-screen.png "Web App error")
 
-## Review
+## Summary
 
 In this lab, you have deploy the web app to Azure and updated App Service configuration.
 
-### You have successfully completed the lab!
+You have successfully completed the exercise. Click **Next >>** to continue to the next exercise.
+
+![](media/ns5.png)

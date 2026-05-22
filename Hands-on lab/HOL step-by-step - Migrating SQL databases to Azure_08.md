@@ -77,8 +77,10 @@ In this task, you verify your web application now loads, and you can see the hom
     
 <validation step="9cb677b1-ac46-4dcd-8bcb-dd0e9b141ea5" />
 
-## Review
+## Summary
 
 In this lab, you have configured VNet integration with App Services and opened the web application.
 
-### You have successfully completed the lab!
+You have successfully completed the exercise. Click **Next >>** to continue to the next exercise.
+
+![](media/ns6.png)

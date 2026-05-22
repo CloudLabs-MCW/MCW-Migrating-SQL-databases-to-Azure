@@ -1,4 +1,4 @@
-# Secure SQL with Microsoft Defender
+# Data Modernization
 
 ### Overall Estimated Duration: 4 hours
 
@@ -79,7 +79,7 @@ To get a better understanding of your lab resources and credentials, navigate to
 
 For convenience, you can open the lab guide in a separate window by selecting the **Split Window** button from the Top right corner.
 
- ![Use the Split Window Feature](./media/image4-1.png)
+ ![Use the Split Window Feature](./media/swf.png)
  
 ## Managing Your Virtual Machine
 
@@ -89,7 +89,7 @@ Feel free to start, stop, or restart your virtual machine as needed from the Res
  
 To adjust the zoom level for the environment page, click the **A↕ : 100%** icon located next to the timer in the lab environment.
 
- ![Use the Split Window Feature](./media/image177.png)
+ ![Use the Split Window Feature](./media/zs.png)
 
 ## Let's Get Started with Azure Portal
  
@@ -122,4 +122,8 @@ Learner Support Contacts:
 - Email Support: cloudlabs-support@spektrasystems.com
 - Live Chat Support: https://cloudlabs.ai/labs-support
 
-### Happy learning !
+Click Next from the lower right corner to move on to the next page.
+
+![](./media/ns1.png)
+
+### Happy learning!
