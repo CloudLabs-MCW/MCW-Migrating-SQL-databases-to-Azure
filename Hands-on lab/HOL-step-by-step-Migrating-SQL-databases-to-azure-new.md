@@ -2,6 +2,12 @@
 
 ## Overall Estimated Duration: 4 Hours
 
+## Lab Scenario
+
+A leading gaming company, **Contoso**, plans to modernize its on-premises SQL Server 2022 environment by migrating its gamer information database and web application to **Azure SQL Managed Instance (SQL MI)**. The organization wants to achieve a secure and scalable cloud migration with minimal downtime while maintaining application availability. 
+
+As a cloud database administrator, you will assess database compatibility, perform an online migration using Azure Database Migration Service, integrate the application with Azure networking, and enhance database security using Microsoft Defender for SQL, Transparent Data Encryption (TDE), Data Discovery & Classification, and Dynamic Data Masking (DDM).
+
 ## Overview
 
 In this hands-on lab, you will learn how to perform a comprehensive database migration to Azure SQL Managed Instance (SQL MI). You will begin by conducting detailed database assessments to identify any potential compatibility issues and make sure you're able to transition smoothly. Next, you will be able to migrate the database to SQL MI, followed by updating the associated web application to use the new SQL MI database. Finally, you will integrate the Azure App Service with the virtual network to enhance connectivity and security. By the end of this lab, you will have the skills to effectively migrate and modernize databases and applications using Azure’s robust cloud services.
@@ -57,7 +63,7 @@ Your virtual machine is your workhorse throughout the workshop. The lab guide is
  
 To get a better understanding of your lab resources and credentials, navigate to the **Environment** tab.
 
-   ![](./media/environment1-1509.png)
+   ![](./media/2026-05-20_15-49-02.png)
  
 ## Utilizing the Split Window Feature
  
@@ -75,7 +81,7 @@ Feel free to **Start, Stop, or Restart (2)** your virtual machine as needed from
 
 To adjust the zoom level for the environment page, click the **A↕ : 100%** icon located next to the timer in the lab environment.
 
-   ![](./media/labzoom-1.png)
+   ![](./media/zs.png)
 
 ## Let's Get Started with Azure Portal
  
@@ -104,6 +110,8 @@ To adjust the zoom level for the environment page, click the **A↕ : 100%** ico
 1. On the **Let's keep you account secure** window, click on **Next** and follow **Steps to Proceed with MFA Setup**.   
 
    ![](./media/mfa-0701.png)
+
+   >**Note**: This step may or may not occur. If it does, proceed to the next step.
 
 ## Steps to Proceed with MFA Setup 
 
