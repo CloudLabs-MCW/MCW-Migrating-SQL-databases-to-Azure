@@ -246,6 +246,8 @@ In this task, you create a new online data migration project in DMS for the `Wid
    * “Here, you can see the **Authentication Key**. Copy the key from here and paste it into the **Microsoft Integration Runtime Configuration Manager**.
 
      ![](media/dms4-1.png)
+     >**Note**: Minimize the **SQLVM** to perform the next step in Jumpbox VM
+         ![](media/ETS5114.png)
 
 10. On the **JumpBox-<inject key="Suffix"  enableCopy="false"/>** VM , in the search bar next to start search for `Microsoft Integration Runtime`
    
