@@ -105,13 +105,14 @@ From the findings of the Data Discovery & Classification report in ADS, you saw 
    ```
 
    ![The email addresses are masked in the query results.](media/ddm-select-gamer-results-masked.png "Query results")
-
+<!--
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 - If you receive a success message, you can proceed to the next task.
 - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
 - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 <validation step="506c984d-5214-4405-949b-a7954abb1e21" />
+-->
 
 ## Summary
 You've successfully applied Dynamic Data Masking to both the **'CardNumber'** field in the **'Sales.CreditCard'** table and the **'LoginEmail'** field in the **'dbo.Gamer'** table. This ensures that sensitive information is not fully exposed to non-privileged users, improving the security posture of the WideWorldImporters database.
