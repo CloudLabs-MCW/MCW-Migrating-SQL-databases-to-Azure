@@ -183,7 +183,7 @@ To run the migration, you must first enable a system-assigned managed identity o
 
    ![](media/E2T5S2-0701.png)
 
-1. Go to **Identity (1)** under the **Settings** section in the left pane. Then, under the **System assigned** tab, select **On (2)** and click on **Save (3)** to enable the system-assigned managed identity.
+1. Go to **Identity (1)** under the **Security** section in the left pane. Then, under the **System assigned** tab, select **On (2)** and click on **Save (3)** to enable the system-assigned managed identity.
 
    ![](media/E2T5S3-0701.png)
 

@@ -48,7 +48,11 @@ In this task, you perform some configuration for the `WideWorldImporters` databa
 
     ![](media/E1T1S8-0701.png)
 
-1. Next, on the RDP tab, click on **Connect**.
+1. On the RDP pop-up, **check (1)** "I understand and want to allow RDP files to open on this device for my account" and then click **OK (2)**.
+
+    ![](media/E1T1S8-0701-1.png)
+
+1. Next, on RDP tab, ensure that the **Clipboard** option is enabled, and then select **Connect**.
 
    ![The Passed tab is highlighted, and VA1219 is entered into the search filter. VA1219 with a status of PASS is highlighted in the results.](media/datamod17.png "Passed")
 
