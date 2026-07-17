@@ -16,7 +16,7 @@ When inspecting the data in the `WideWorldImporters` database using the ADS Data
 
    ![](media/gt-sql-l2-25.png)
 
-1.Expand the table columns and observe that there is a column named `CardNumber`. Right-click the table, and choose **Select Top 1000 Rows** from the context menu.
+1. Expand the table columns and observe that there is a column named `CardNumber`. Right-click the table, and choose **Select Top 1000 Rows** from the context menu.
 
    ![The Select Top 1000 Rows item is highlighted in the context menu for the Sales.CreditCard table.](media/ssms-sql-mi-credit-card-table-select.png "Select Top 1000 Rows")
 
@@ -31,9 +31,12 @@ When inspecting the data in the `WideWorldImporters` database using the ADS Data
    GRANT SELECT ON [Sales].[CreditCard] TO DDMUser;
    ```
 
-   > The SQL script above creates a new user in the database named `DDMUser` and grants that user `SELECT` rights on the `Sales.CreditCard` table.
+   > **Note:** The SQL script above creates a new user in the database named `DDMUser` and grants that user `SELECT` rights on the `Sales.CreditCard` table.
 
-1. Select **Execute** from the SSMS toolbar to run the query. You will get a message that the commands completed successfully in the Messages pane.
+1. Select **Execute** from the SSMS toolbar to run the query. You will get a message that the **commands completed successfully** in the Messages pane.
+
+   ![](media/3.png)
+
 
 1. With the new user created, run a quick query to observe the results. In the same **Query** window replace the script with the following script:
 
@@ -64,7 +67,7 @@ When inspecting the data in the `WideWorldImporters` database using the ADS Data
 
    ![The credit card number is masked in the query results.](media/ssms-sql-mi-ddm-results-masked.png "Query results")
 
-   > The `CardNumber` is now displayed using the mask applied to it, so only the card number's last four digits are visible. Dynamic Data Masking is a powerful feature that enables you to prevent unauthorized users from viewing sensitive or restricted information. It's a policy-based security feature that hides the sensitive data in the result set of a query over designated database fields while the data in the database is not changed.
+   >**Note:** The `CardNumber` is now displayed using the mask applied to it, so only the card number's last four digits are visible. Dynamic Data Masking is a powerful feature that enables you to prevent unauthorized users from viewing sensitive or restricted information. It's a policy-based security feature that hides the sensitive data in the result set of a query over designated database fields while the data in the database is not changed.
 
 ### Task 2: Apply DDM to email addresses
 
@@ -103,13 +106,14 @@ From the findings of the Data Discovery & Classification report in ADS, you saw 
 
    ![The email addresses are masked in the query results.](media/ddm-select-gamer-results-masked.png "Query results")
 
-**Summary:**
-You've successfully applied Dynamic Data Masking to both the **'CardNumber'** field in the **'Sales.CreditCard'** table and the **'LoginEmail'** field in the **'dbo.Gamer'** table. This ensures that sensitive information is not fully exposed to non-privileged users, improving the security posture of the WideWorldImporters database.
+> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+- If you receive a success message, you can proceed to the next task.
+- If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+- If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
->**Congratulations** on completing the Task! Now, it's time to validate it. Here are the steps:
-> - Navigate to the Lab Validation tab, from the upper right corner in the lab guide section.
-> - Hit the Validate button for the corresponding task. If you receive a success message, you have successfully validated the lab. 
-> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-> - If you need any assistance, please contact us at labs-support@spektrasystems.com.
+<validation step="506c984d-5214-4405-949b-a7954abb1e21" />
+
+## Summary
+You've successfully applied Dynamic Data Masking to both the **'CardNumber'** field in the **'Sales.CreditCard'** table and the **'LoginEmail'** field in the **'dbo.Gamer'** table. This ensures that sensitive information is not fully exposed to non-privileged users, improving the security posture of the WideWorldImporters database.
 
 ## You have successfully completed the lab.
