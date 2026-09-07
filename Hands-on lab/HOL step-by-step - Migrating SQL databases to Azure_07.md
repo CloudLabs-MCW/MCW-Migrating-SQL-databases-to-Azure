@@ -38,6 +38,10 @@ In this task, you will publish the **WideWorldImporters** web application from V
 
      ![](media/new-image40.png)
 
+     ![](media/taskstep-1.png)
+
+     ![](media/taskstep-2.png)
+
 1. On the **Sign in to app apps, websites, and services on this device?** pop-up, click on **No**. Then, on the **Account added to this device** page, select **Done**. 
 
     ![](media/new/5.png)
