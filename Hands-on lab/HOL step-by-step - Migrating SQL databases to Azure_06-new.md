@@ -167,12 +167,16 @@ In this task, you use the Azure Cloud shell to retrieve the information necessar
 
 1. Specify the following values and click on **Create (6)** to create a storage account: 
       - Subscription: Accept the **default (1)**
+
       - Resource Group: Select **<inject key="Resource Group Name" enableCopy="false"/>** **(2)**
+
       - Region: **Central US (3)**
+
       - Storage account: **storage<inject key="Suffix" enableCopy="false"/>** **(4)**
+
       - File Share: **blob (5)**
       
-        ![](media/new-image27.png)
+         ![](media/new-image27.png)
 
 1. After a moment, a message is displayed that you have successfully requested a Cloud Shell, and you are presented with a PS Azure prompt.
 
@@ -260,7 +264,7 @@ On the **Select managed identities** pane, set the following values:
 
     - **Managed identity (2)**: select **SQL managed instance** from the drop-down list.
 
-    - Under **Selected members (3)**, confirm that **sqlmi-hol** is listed.
+    - Under **Selected members (3)**, confirm that **sqlmi--cus** is listed.
 
     - Click on the **Select (4)** button, and then click on the **Review + assign (5)** button.
 
@@ -268,7 +272,7 @@ On the **Select managed identities** pane, set the following values:
 
 5. On the **Review + assign** tab, review the details and click on the **Review + assign** button again to confirm the assignment.
 
-   ![](media/task5-step10.png)
+   ![](media/task5-step10-1.png)
 
    >You have now granted both your lab user account and the SQL Managed Instance read access to the storage account. In the next task, you will create and run the online data migration project using Azure Database Migration Service.
 
