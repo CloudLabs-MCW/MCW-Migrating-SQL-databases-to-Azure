@@ -1,6 +1,6 @@
 # Exercise 1: Perform database assessments
 
-### Estimated Duration: 90 Minutes
+### Estimated Duration: 30 Minutes
 
 ## Lab Scenario
 

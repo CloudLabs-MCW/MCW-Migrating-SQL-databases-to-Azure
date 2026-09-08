@@ -6,11 +6,11 @@
 
 A leading gaming company, **Contoso**, plans to modernize its on-premises SQL Server 2022 environment by migrating its gamer information database and web application to **Azure SQL Managed Instance (SQL MI)**. The organization wants to achieve a secure and scalable cloud migration with minimal downtime while maintaining application availability. 
 
-As a cloud database administrator, you will assess database compatibility, perform an online migration using Azure Database Migration Service, integrate the application with Azure networking, and enhance database security using Microsoft Defender for SQL, Transparent Data Encryption (TDE), Data Discovery & Classification, and Dynamic Data Masking (DDM).
+As a cloud database administrator, you will assess database compatibility, perform an online migration using Azure Database Migration Service, integrate the application with Azure networking.
 
 ## Overview
 
-In this hands-on lab, you will learn how to perform a comprehensive database migration to Azure SQL Managed Instance (SQL MI). You will begin by conducting detailed database assessments to identify any potential compatibility issues and make sure you're able to transition smoothly. Next, you will be able to migrate the database to SQL MI, followed by updating the associated web application to use the new SQL MI database. Finally, you will integrate the Azure App Service with the virtual network to enhance connectivity and security. By the end of this lab, you will have the skills to effectively migrate and modernize databases and applications using Azure’s robust cloud services.
+In this hands-on lab, you will learn how to perform a comprehensive database migration to Azure SQL Managed Instance (SQL MI). You will begin by conducting detailed database assessments to identify any potential compatibility issues and make sure you're able to transition smoothly. Next, you will be able to migrate the database to SQL MI, followed by updating the associated web application to use the new SQL MI database. By the end of this lab, you will have the skills to effectively migrate and modernize databases and applications using Azure’s robust cloud services.
 
 ## Objectives
 
@@ -29,21 +29,23 @@ Understand how to perform comprehensive database assessments, migrate databases 
 
 ## Architecture
 
-This architectural diagram illustrates the integration of various Azure services for efficient data migration and management. It starts with an on-premises SQL Server 2022, which connects to an online data migration service via a secure SMB network share. The data is then migrated to Azure SQL Managed Instances, including a primary instance and a read-only replica for analytics. A web application, developed using Visual Studio 2019, is integrated with the virtual network through a point-to-site VPN, connecting to a JumpBox for secure access. This setup demonstrates how modern systems can be effectively migrated to Azure, enhancing data handling, security, and connectivity.
+This architectural diagram illustrates a database migration and application integration scenario using Azure services. It begins with an on-premises SQL Server 2022 instance, which performs an online data migration through an SMB network share. This share feeds into a virtual network, where the Azure Database Migration Service, running in a dedicated migration subnet, transfers the data into an Azure SQL Managed Instance hosted in a separate MI subnet. In parallel, a web application built with Visual Studio 2022 is published to a VNet-integrated Web App, which connects back to the Azure SQL Managed Instance over regional VNet integration. This setup demonstrates a secure, network-isolated path for migrating an on-premises database to Azure while enabling a modern web application to access the migrated data privately within the same virtual network.
 
 ## Architectural Diagram
 
-![This solution diagram includes a virtual network containing SQL MI in an isolated subnet, along with a JumpBox VM and Database Migration Service in a management subnet. The MI Subnet displays both the primary managed instance and a read-only replica, which is accessed by reports from the web app. The web app connects to SQL MI via a subnet gateway and point-to-site VPN. The web app is published to App Services using Visual Studio 2019. Online data migration is conducted from the on-premises SQL Server to SQL MI using the Azure Database Migration Service, which reads backup files from an SMB network share.](./media/arc-diag-1809.png "Preferred Solution diagram")
+![](./media/arc-diag-1809.png)
 
 ## Explanation of components
 
-- **SQL Server 2022**: This is the latest version of SQL Server, offering advanced features such as built-in query intelligence, enhanced security, and improved performance. It serves as the on-premises database platform for modern applications and can be seamlessly integrated with Azure for hybrid cloud scenarios.
-- **Azure Database Migration Service (DMS)**: This service facilitates the migration of data from the on-premises SQL Server to the managed instance in the cloud. It ensures data is transferred securely and efficiently.
-- **Azure SQL Managed Instance**: This is the primary destination for the migrated data. It is a fully managed SQL Server instance in the cloud that provides high availability and scalability.
-- **JumpBox**: A virtual machine used to manage and access the resources within the virtual network securely. It acts as a gateway for administrators.
-- **Gateway Subnet**: This subnet contains the VPN gateway that facilitates the secure connection between the on-premises environment and the virtual network.
-- **Visual Studio 2019**: This development environment is used for publishing web applications that may interact with the migrated data.
-- **Web App**: This component represents the web applications that are integrated with the virtual network and can access the migrated data for various operations.
+- **On-premises SQL Server 2022**: The source database platform running in the customer's own datacenter. It holds the production data that needs to be moved to Azure as part of the migration project.
+- **SMB Network Share**: An intermediate file share used during online data migration. SQL Server backup files are staged here so the Azure Database Migration Service can read and apply them without requiring a direct connection to the on-premises server.
+- **Migration Subnet**: A dedicated subnet within the virtual network that hosts the Azure Database Migration Service, isolating migration traffic from other workloads for better security and network control.
+- **Azure Database Migration Service (DMS)**: This service performs the online migration, continuously replicating data from the SMB share into the target Azure SQL Managed Instance with minimal downtime.
+- **MI Subnet**: A dedicated, delegated subnet that hosts the Azure SQL Managed Instance, meeting the networking requirements Managed Instance needs to operate inside a virtual network.
+- **Azure SQL Managed Instance**: The migration target a fully managed SQL Server instance in Azure that provides near-100% compatibility with on-premises SQL Server, along with built-in high availability, automated patching, and backups.
+- **Visual Studio 2022**: The development environment used to build and publish the web application that will consume the migrated data.
+- **Web App (VNet Integrated)**: An Azure Web App configured with regional VNet integration, allowing it to securely reach the Azure SQL Managed Instance over the private virtual network rather than the public internet.
+- **Regional VNet Integration**: The connectivity mechanism (shown by the dashed line) that lets the Web App route its outbound traffic into the virtual network, enabling private access to the Managed Instance in the MI subnet.
 
 ## Getting Started with the Lab
  
