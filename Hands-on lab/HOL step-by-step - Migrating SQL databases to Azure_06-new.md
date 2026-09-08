@@ -1,6 +1,6 @@
 # Exercise 2: Migrate the database to SQL MI
 
-### Estimated Duration: 90 Minutes
+### Estimated Duration: 120 Minutes
 
 ## Lab Scenario
 
@@ -426,6 +426,8 @@ Since you performed an "online data migration," the migration wizard continuousl
 1. You can view the migration status in the Azure portal. Return to the **wwi-dms** Database Migration Services, click on **Migrations** ensure that Migration status is **Succeeded**. You might have to refresh to view the status.
 
    ![](media/task7-step13.png)
+
+   > **Note:** The migration may take approximately 5-10 minutes to complete. Please wait and periodically refresh the page until the status changes to **Succeeded**.
 
 1. You have successfully migrated the `WideWorldImporters` database to Azure SQL Managed Instance.
 
