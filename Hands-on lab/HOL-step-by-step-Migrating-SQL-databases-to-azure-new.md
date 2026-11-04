@@ -106,6 +106,8 @@ Use the **slider (three vertical dots)** located between the **Virtual Machine**
 1. Next, provide your Temporary Access Pass and click on **Sign in**:
  
    - **Temporary Access Pass:** <inject key="AzureAdUserPassword"></inject>
+
+        ![](./media/temp.png "Enter Email")
    
 1. If you see the pop-up **Stay Signed in?**, click **Yes**.
 
