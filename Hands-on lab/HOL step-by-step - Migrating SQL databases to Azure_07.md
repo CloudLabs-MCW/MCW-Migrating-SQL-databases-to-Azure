@@ -32,7 +32,7 @@ In this task, you will publish the **WideWorldImporters** web application from V
 1. Select **Sign in with Microsoft** and choose **Work or school account (1)**, click **Continue (2)** and enter the following **Azure account** credentials if prompted:
    
    * Email/Username: <inject key="AzureAdUserEmail"></inject>
-   * Password: <inject key="AzureAdUserPassword"></inject>
+   * Temporary Access Pass: <inject key="AzureAdUserPassword"></inject>
 
      ![](media/E3T1S4.1-1809.png)
 
