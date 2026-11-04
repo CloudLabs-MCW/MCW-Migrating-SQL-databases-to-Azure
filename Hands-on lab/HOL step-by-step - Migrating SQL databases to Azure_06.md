@@ -127,7 +127,7 @@ To perform online data migrations, DMS looks for database and transaction log ba
 
 In this task, you use the Azure Cloud shell to retrieve the information necessary to connect to your sql2022-<inject key="Suffix" enableCopy="false"/> VM from DMS.
 
-1. Navigate back to **Azure Portal**, select the **Azure Cloud Shell** icon from the top menu.
+1. Navigate back to your VM and in **Azure Portal**, select the **Azure Cloud Shell** icon from the top menu.
 
    ![](media/gs-g-et-20.png)
 
@@ -175,7 +175,7 @@ In this task, you create a new online data migration project in DMS for the `Wid
 
 To run the migration, you must first enable a system-assigned managed identity on the machine hosting the Integration Runtime, and then assign the Storage Blob Data Contributor role to that managed identity on the storage account. 
 
-1. Navigate to the Azure Portal: [https://portal.azure.com](https://portal.azure.com). Search for **Virtual machines (1)** in te search bar and select **Virtual machines (2)** from the search results.
+1. Search for **Virtual machines (1)** in te search bar and select **Virtual machines (2)** from the search results.
 
    ![](media/E2T5S1-0701.png)
 
@@ -213,7 +213,7 @@ To run the migration, you must first enable a system-assigned managed identity o
 
       ![](media/new/2.png)      
 
-1. Navigate back to **Azure Data Studio** in the **SQL VM**. Click on >  **SQLVM2022** **Azure SQL migration (1)** and select **+ New migration (2)**.
+1. Navigate back to **sql2022-<inject key="Suffix" enableCopy="false"/>** VM and click on **Azure Data Studio** in the **SQL VM**. Click on >  **SQLVM2022** **Azure SQL migration (1)** and select **+ New migration (2)**.
 
    ![](media/sql6.png)
 
