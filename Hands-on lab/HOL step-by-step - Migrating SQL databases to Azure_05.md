@@ -18,8 +18,6 @@ In this exercise, you will complete the following tasks:
 
 In this task, you perform some configuration for the `WideWorldImporters` database on the SQL Server 2022 instance to prepare it for migration.
 
-1. Navigate to the Azure portal: [https://portal.azure.com](https://portal.azure.com)
-
 1. On the **Azure portal**, in the **Search resources** box at the top, search for **Resource groups (1)** and then select **Resource groups (2)** from the results.
 
    ![](media/gs-g-et-4.png)
