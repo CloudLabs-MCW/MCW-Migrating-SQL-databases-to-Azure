@@ -127,7 +127,7 @@ To perform online data migrations, DMS looks for database and transaction log ba
 
 In this task, you use the Azure Cloud shell to retrieve the information necessary to connect to your sql2022-<inject key="Suffix" enableCopy="false"/> VM from DMS.
 
-1. Navigate back to **Azure Portal**, select the **Azure Cloud Shell** icon from the top menu.
+1. Navigate back to your VM and in **Azure Portal**, select the **Azure Cloud Shell** icon from the top menu.
 
    ![](media/gs-g-et-20.png)
 
@@ -175,7 +175,7 @@ In this task, you create a new online data migration project in DMS for the `Wid
 
 To run the migration, you must first enable a system-assigned managed identity on the machine hosting the Integration Runtime, and then assign the Storage Blob Data Contributor role to that managed identity on the storage account. 
 
-1. Navigate to the Azure Portal: [https://portal.azure.com](https://portal.azure.com). Search for **Virtual machines (1)** in te search bar and select **Virtual machines (2)** from the search results.
+1. Search for **Virtual machines (1)** in te search bar and select **Virtual machines (2)** from the search results.
 
    ![](media/E2T5S1-0701.png)
 
@@ -213,7 +213,7 @@ To run the migration, you must first enable a system-assigned managed identity o
 
       ![](media/new/2.png)      
 
-1. Navigate back to **Azure Data Studio** in the **SQL VM**. Click on >  **SQLVM2022** **Azure SQL migration (1)** and select **+ New migration (2)**.
+1. Navigate back to **sql2022-<inject key="Suffix" enableCopy="false"/>** VM and click on **Azure Data Studio** in the **SQL VM**. Click on >  **SQLVM2022** **Azure SQL migration (1)** and select **+ New migration (2)**.
 
    ![](media/sql6.png)
 
@@ -422,13 +422,6 @@ Since you performed an "online data migration," the migration wizard continuousl
 
 1. You have successfully migrated the `WideWorldImporters` database to Azure SQL Managed Instance.
 
-> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-- If you receive a success message, you can proceed to the next task.
-- If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-- If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
-    
-<validation step="4ed94186-c596-4679-9454-3df0065f9ca3" />
-
 ## Task 7: Verify database and transaction log migration
 
 In this task, you connect to the SQL MI database using SSMS and quickly verify the migration.
@@ -465,13 +458,6 @@ In this task, you connect to the SQL MI database using SSMS and quickly verify t
 1. Select **Execute** on the SSMS toolbar to run the query. Observe the records contained within the `Game` table, including the new `Space Adventure` game you added after initiating the migration process.
 
    ![In the new query window, the query above has been entered, and in the results pane, the new Space Adventure game is highlighted.](media/datamod8.png "SSMS Query")
-
-> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-- If you receive a success message, you can proceed to the next task.
-- If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-- If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
-
-<validation step="55806acb-164b-484c-a078-c15995984e0a" />
 
 ## Summary
 
