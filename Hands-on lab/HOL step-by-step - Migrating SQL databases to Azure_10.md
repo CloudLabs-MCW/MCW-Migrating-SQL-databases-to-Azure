@@ -1,12 +1,12 @@
-## Exercise 2: Enable Dynamic Data Masking
+# Exercise 2: Enable Dynamic Data Masking
 
-Duration: 15 minutes
+### Estimated Duration: 15 minutes
 
 In this exercise, you enable **Dynamic Data Masking** `https://docs.microsoft.com/azure/sql-database/sql-database-dynamic-data-masking-get-started` (DDM) on credit card numbers in the `WideWorldImporters` database. DDM limits sensitive data exposure by masking it to non-privileged users. This feature helps prevent unauthorized access to sensitive data by enabling customers to designate how much of the sensitive data to reveal with minimal impact on the application layer. It is a policy-based security feature that hides the sensitive data in the result set of a query over designated database fields while the data in the database is not changed.
 
 For example, a call centre's service representative may identify callers by several digits of their credit card number. However, the full credit card number should not be fully exposed to the service representative. A masking rule can be defined that obfuscates all but the last four digits of any credit card number in any query result. As another example, an appropriate data mask can be created to protect personally identifiable information (PII) data so that a developer can query production environments for troubleshooting purposes without violating compliance regulations.
 
-### Task 1: Enable DDM on credit card numbers
+## Task 1: Enable DDM on credit card numbers
 
 When inspecting the data in the `WideWorldImporters` database using the ADS Data Discovery & Classification tool, you set the Sensitivity label for credit card numbers to Highly Confidential. In this task, you take another step to protect this information by enabling DDM on the `CardNumber` field in the `CreditCard` table. DDM prevents queries against that table from returning the full credit card number.
 
@@ -31,12 +31,11 @@ When inspecting the data in the `WideWorldImporters` database using the ADS Data
    GRANT SELECT ON [Sales].[CreditCard] TO DDMUser;
    ```
 
-   > **Note:** The SQL script above creates a new user in the database named `DDMUser` and grants that user `SELECT` rights on the `Sales.CreditCard` table.
+      > **Note:** The SQL script above creates a new user in the database named `DDMUser` and grants that user `SELECT` rights on the `Sales.CreditCard` table.
 
 1. Select **Execute** from the SSMS toolbar to run the query. You will get a message that the **commands completed successfully** in the Messages pane.
 
-   ![](media/3.png)
-
+      ![](media/3.png)
 
 1. With the new user created, run a quick query to observe the results. In the same **Query** window replace the script with the following script:
 
@@ -48,7 +47,7 @@ When inspecting the data in the `WideWorldImporters` database using the ADS Data
 
 1. Select **Execute** from the toolbar and examine the Results pane. Notice the credit card number, as above, is visible in plain text.
 
-   ![The credit card number is unmasked in the query results.](media/ssms-sql-mi-ddm-results-unmasked.png "Query results")
+      ![The credit card number is unmasked in the query results.](media/ssms-sql-mi-ddm-results-unmasked.png "Query results")
 
 1. You now apply DDM on the `CardNumber` field to prevent it from being viewed in query results. In the same **Query** window replace the script with the following script to apply a mask to the `CardNumber` field and then select **Execute**.
 
@@ -105,14 +104,13 @@ From the findings of the Data Discovery & Classification report in ADS, you saw 
    ```
 
    ![The email addresses are masked in the query results.](media/ddm-select-gamer-results-masked.png "Query results")
-<!--
-> **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-- If you receive a success message, you can proceed to the next task.
-- If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-- If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-<validation step="506c984d-5214-4405-949b-a7954abb1e21" />
--->
+>**Congratulations** on completing the Task! Now, it's time to validate it. Here are the steps:
+> - Hit the Validate button for the corresponding task. If you receive a success message, you have successfully validated the lab. 
+> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com.
+
+   <validation step="506c984d-5214-4405-949b-a7954abb1e21" />
 
 ## Summary
 You've successfully applied Dynamic Data Masking to both the **'CardNumber'** field in the **'Sales.CreditCard'** table and the **'LoginEmail'** field in the **'dbo.Gamer'** table. This ensures that sensitive information is not fully exposed to non-privileged users, improving the security posture of the WideWorldImporters database.
