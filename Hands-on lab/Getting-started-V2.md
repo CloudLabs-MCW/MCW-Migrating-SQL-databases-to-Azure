@@ -6,8 +6,6 @@ Welcome to your Migrating SQL databases to Azure workshop! We've prepared a seam
  
 Once you're ready to dive in, your virtual machine and **Lab Guide** will be right at your fingertips within your web browser.
 
-   ![](./media/gt-sql-l2-1.png)
-
 ### **Virtual Machine & Lab Guide**
  
 Your virtual machine is your workhorse throughout the workshop. The lab guide is your roadmap to success.
@@ -15,38 +13,26 @@ Your virtual machine is your workhorse throughout the workshop. The lab guide is
 ## **Exploring Your Lab Resources**
  
 To get a better understanding of your lab resources and credentials, navigate to the **Environment** tab.
-
-   ![](./media/cor-op-rt-g-3.png)
  
 ## **Utilizing the Split Window Feature**
  
 For convenience, you can open the lab guide in a separate window by selecting the **Split Window** button from the Top right corner.
  
-   ![](./media/cor-op-rt-g-4.png)
- 
 ## **Managing Your Virtual Machine**
  
 Feel free to start, stop, or restart your virtual machine as needed from the **Resources** tab. Your experience is in your hands!
- 
-  ![](./media/cor-op-rt-g-6.png)
  
 ## **Let's Get Started with Azure Portal**
  
 1. On your virtual machine, click on the Azure Portal icon as shown below:
  
-    ![](./media/gt-sql-l2-2.png)
- 
 2. You'll see the **Sign into Microsoft Azure** tab. Here, enter your credentials:
  
    - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
  
-      ![](./media/GS2.png "Enter Email")
- 
-3. Next, provide your password: 
+3. Next, provide your Temporary Access Pass: 
  
    - **Password:** <inject key="AzureAdUserPassword"></inject>
- 
-      ![](./media/GS3.png "Enter Password")
 
 4.If **Action Required** pop-up window appears, click on **Ask later**.
 
