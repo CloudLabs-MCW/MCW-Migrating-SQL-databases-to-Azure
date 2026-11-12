@@ -8,7 +8,7 @@ In this exercise, you are able to set up some of the advanced security features 
 
 In this task, you review the [Data Discovery and Classification](https://docs.microsoft.com/azure/azure-sql/database/data-discovery-and-classification-overview) feature of Azure SQL. Data Discovery & Classification introduces a new tool for discovering, classifying, labelling, and reporting the sensitive data in your databases. It introduces a set of advanced services, forming a new SQL Information Protection paradigm aimed at protecting the data in your database, not just the database. Discovering and classifying your most sensitive data (e.g., business, financial, healthcare) can play a pivotal role in your organizational information protection stature.
 
-1. Navigate to the Azure portal: [https://portal.azure.com](https://portal.azure.com)
+1. Search and select **Resource groups**.
 
 1. On the **Resource groups** page, select the resource group **SQLMI-shared-RG (1)** from the list.
 
