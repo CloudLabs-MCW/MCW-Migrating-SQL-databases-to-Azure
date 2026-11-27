@@ -12,7 +12,7 @@ When inspecting the data in the `WideWorldImporters` database using the ADS Data
 
 1. On your SQL2008-<inject key="Suffix" enableCopy="false"/> VM, return to the SQL Server Management Studio (SSMS) window you opened previously.
 
-1. Expand **Database (1)**, expand the Database which you used in the previous Exercise name starting like **WideWorldImporters{suffix} (2)**. Expand **Tables (3)** under the database and locate the `Sales.CreditCard` table. 
+1. Expand **Database (1)**, expand the database **WideWorldImporters<inject key="Suffix" enableCopy="false"/> (2)** that you used in the previous exercise. Expand **Tables (3)** under the database and locate the `Sales.CreditCard` table. 
 
    ![](media/gt-sql-l2-25.png)
 
